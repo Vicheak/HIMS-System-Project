@@ -34,24 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPatient));
             this.dgvPatient = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmergencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmergencyRelation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmergencyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NationalCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsInpatient = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
-            this.MedicalHistory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBtnDetail = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-            this.Column18 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-            this.Column19 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.txtSearchEntry = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -89,6 +71,25 @@
             this.btnFilterPatientGroupBirthDate = new DevComponents.DotNetBar.ButtonX();
             this.btnClearFilter = new DevComponents.DotNetBar.ButtonX();
             this.btnAddNew = new DevComponents.DotNetBar.ButtonX();
+            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderKhmer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmergencyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmergencyRelation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmergencyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NationalCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsInpatient = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
+            this.MedicalHistory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBtnDetail = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
+            this.Column18 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
+            this.Column19 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -127,6 +128,7 @@
             this.LastName,
             this.FullName,
             this.Gender,
+            this.GenderKhmer,
             this.BirthDate,
             this.Address,
             this.PhoneNumber,
@@ -170,206 +172,9 @@
             this.dgvPatient.RowTemplate.Height = 35;
             this.dgvPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatient.Size = new System.Drawing.Size(1438, 456);
-            this.dgvPatient.TabIndex = 1;
+            this.dgvPatient.TabIndex = 0;
             this.dgvPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPatient_CellContentClick);
             this.dgvPatient.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvPatient_Paint);
-            // 
-            // PatientID
-            // 
-            this.PatientID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PatientID.DataPropertyName = "PatientID";
-            this.PatientID.HeaderText = "លេខកូដ";
-            this.PatientID.MinimumWidth = 6;
-            this.PatientID.Name = "PatientID";
-            this.PatientID.ReadOnly = true;
-            this.PatientID.Width = 108;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "នាមត្រកូល";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.Visible = false;
-            this.FirstName.Width = 125;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "នាមខ្លួន";
-            this.LastName.MinimumWidth = 6;
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Visible = false;
-            this.LastName.Width = 125;
-            // 
-            // FullName
-            // 
-            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.HeaderText = "ឈ្មោះពេញ";
-            this.FullName.MinimumWidth = 6;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "ភេទ";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 79;
-            // 
-            // BirthDate
-            // 
-            this.BirthDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BirthDate.DataPropertyName = "BirthDate";
-            this.BirthDate.HeaderText = "ថ្ងៃខែឆ្នាំកំណើត";
-            this.BirthDate.MinimumWidth = 6;
-            this.BirthDate.Name = "BirthDate";
-            this.BirthDate.ReadOnly = true;
-            this.BirthDate.Width = 162;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "អាស័យដ្ឋាន";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Visible = false;
-            this.Address.Width = 125;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            this.PhoneNumber.HeaderText = "លេខទូរស័ព្ទ";
-            this.PhoneNumber.MinimumWidth = 6;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 135;
-            // 
-            // EmergencyName
-            // 
-            this.EmergencyName.DataPropertyName = "EmergencyName";
-            this.EmergencyName.HeaderText = "ឈ្មោះទាក់ទងបន្ទាន់";
-            this.EmergencyName.MinimumWidth = 6;
-            this.EmergencyName.Name = "EmergencyName";
-            this.EmergencyName.ReadOnly = true;
-            this.EmergencyName.Visible = false;
-            this.EmergencyName.Width = 125;
-            // 
-            // EmergencyRelation
-            // 
-            this.EmergencyRelation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EmergencyRelation.DataPropertyName = "EmergencyRelation";
-            this.EmergencyRelation.HeaderText = "ត្រូវជា";
-            this.EmergencyRelation.MinimumWidth = 6;
-            this.EmergencyRelation.Name = "EmergencyRelation";
-            this.EmergencyRelation.ReadOnly = true;
-            this.EmergencyRelation.Width = 94;
-            // 
-            // EmergencyNumber
-            // 
-            this.EmergencyNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.EmergencyNumber.DataPropertyName = "EmergencyNumber";
-            this.EmergencyNumber.HeaderText = "លេខទាក់ទងបន្ទាន់";
-            this.EmergencyNumber.MinimumWidth = 6;
-            this.EmergencyNumber.Name = "EmergencyNumber";
-            this.EmergencyNumber.ReadOnly = true;
-            this.EmergencyNumber.Width = 184;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "អីម៉ែល";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Visible = false;
-            this.Email.Width = 125;
-            // 
-            // NationalCardID
-            // 
-            this.NationalCardID.DataPropertyName = "NationalCardID";
-            this.NationalCardID.HeaderText = "លេខអត្តសញ្ញាណប័ត្រ";
-            this.NationalCardID.MinimumWidth = 6;
-            this.NationalCardID.Name = "NationalCardID";
-            this.NationalCardID.ReadOnly = true;
-            this.NationalCardID.Visible = false;
-            this.NationalCardID.Width = 125;
-            // 
-            // IsInpatient
-            // 
-            this.IsInpatient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.IsInpatient.Checked = true;
-            this.IsInpatient.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.IsInpatient.CheckValue = "N";
-            this.IsInpatient.DataPropertyName = "IsInpatient";
-            this.IsInpatient.HeaderText = "ស្នាក់នៅមន្ទីរពេទ្យ";
-            this.IsInpatient.MinimumWidth = 6;
-            this.IsInpatient.Name = "IsInpatient";
-            this.IsInpatient.ReadOnly = true;
-            this.IsInpatient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IsInpatient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.IsInpatient.ToolTipText = "គ្រីសប្រសិនបើអ្នកជំងឺស្នាក់នៅក្នុងមន្ទីរពេទ្យ";
-            this.IsInpatient.Width = 181;
-            // 
-            // MedicalHistory
-            // 
-            this.MedicalHistory.DataPropertyName = "MedicalHistory";
-            this.MedicalHistory.HeaderText = "ប្រវត្តិវេជ្ជសាស្ត្រ";
-            this.MedicalHistory.MinimumWidth = 6;
-            this.MedicalHistory.Name = "MedicalHistory";
-            this.MedicalHistory.ReadOnly = true;
-            this.MedicalHistory.Visible = false;
-            this.MedicalHistory.Width = 125;
-            // 
-            // dgvBtnDetail
-            // 
-            this.dgvBtnDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvBtnDetail.HeaderText = "លម្អិត";
-            this.dgvBtnDetail.Image = ((System.Drawing.Image)(resources.GetObject("dgvBtnDetail.Image")));
-            this.dgvBtnDetail.MinimumWidth = 6;
-            this.dgvBtnDetail.Name = "dgvBtnDetail";
-            this.dgvBtnDetail.ReadOnly = true;
-            this.dgvBtnDetail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBtnDetail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgvBtnDetail.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.dgvBtnDetail.Text = null;
-            this.dgvBtnDetail.Width = 92;
-            // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column18.HeaderText = "កែប្រែ";
-            this.Column18.Image = ((System.Drawing.Image)(resources.GetObject("Column18.Image")));
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column18.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.Column18.Text = null;
-            this.Column18.Width = 95;
-            // 
-            // Column19
-            // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column19.HeaderText = "លុប";
-            this.Column19.Image = ((System.Drawing.Image)(resources.GetObject("Column19.Image")));
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column19.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.Column19.Text = null;
-            this.Column19.Width = 80;
             // 
             // btnSearch
             // 
@@ -448,7 +253,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(1163, 5);
+            this.labelX1.Location = new System.Drawing.Point(989, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(270, 39);
             this.labelX1.TabIndex = 15;
@@ -463,7 +268,7 @@
             this.cbFilterTopPatientRecord.ForeColor = System.Drawing.Color.Black;
             this.cbFilterTopPatientRecord.FormattingEnabled = true;
             this.cbFilterTopPatientRecord.ItemHeight = 44;
-            this.cbFilterTopPatientRecord.Location = new System.Drawing.Point(1163, 50);
+            this.cbFilterTopPatientRecord.Location = new System.Drawing.Point(989, 49);
             this.cbFilterTopPatientRecord.Name = "cbFilterTopPatientRecord";
             this.cbFilterTopPatientRecord.Size = new System.Drawing.Size(286, 50);
             this.cbFilterTopPatientRecord.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
@@ -592,6 +397,7 @@
             this.numericUpDownFilterPatientGroupByGenderAmount.Name = "numericUpDownFilterPatientGroupByGenderAmount";
             this.numericUpDownFilterPatientGroupByGenderAmount.Size = new System.Drawing.Size(68, 49);
             this.numericUpDownFilterPatientGroupByGenderAmount.TabIndex = 20;
+            this.numericUpDownFilterPatientGroupByGenderAmount.TabStop = false;
             this.numericUpDownFilterPatientGroupByGenderAmount.Value = new decimal(new int[] {
             1,
             0,
@@ -685,6 +491,7 @@
             this.dateTimeFilterPatientStartBirthDate.Size = new System.Drawing.Size(156, 49);
             this.dateTimeFilterPatientStartBirthDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeFilterPatientStartBirthDate.TabIndex = 16;
+            this.dateTimeFilterPatientStartBirthDate.TabStop = false;
             this.dateTimeFilterPatientStartBirthDate.TimeSelectorType = DevComponents.Editors.DateTimeAdv.eTimeSelectorType.TouchStyle;
             // 
             // groupPanel2
@@ -741,6 +548,7 @@
             this.numericUpDownFilterPatientGroupByIsInpatientAmount.Name = "numericUpDownFilterPatientGroupByIsInpatientAmount";
             this.numericUpDownFilterPatientGroupByIsInpatientAmount.Size = new System.Drawing.Size(68, 49);
             this.numericUpDownFilterPatientGroupByIsInpatientAmount.TabIndex = 21;
+            this.numericUpDownFilterPatientGroupByIsInpatientAmount.TabStop = false;
             this.numericUpDownFilterPatientGroupByIsInpatientAmount.Value = new decimal(new int[] {
             1,
             0,
@@ -891,6 +699,7 @@
             this.dateTimeFilterPatientEndBirthDate.Size = new System.Drawing.Size(156, 49);
             this.dateTimeFilterPatientEndBirthDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeFilterPatientEndBirthDate.TabIndex = 18;
+            this.dateTimeFilterPatientEndBirthDate.TabStop = false;
             this.dateTimeFilterPatientEndBirthDate.TimeSelectorType = DevComponents.Editors.DateTimeAdv.eTimeSelectorType.TouchStyle;
             // 
             // labelX9
@@ -945,6 +754,7 @@
             this.numericUpDownPatientOffset.Name = "numericUpDownPatientOffset";
             this.numericUpDownPatientOffset.Size = new System.Drawing.Size(68, 49);
             this.numericUpDownPatientOffset.TabIndex = 21;
+            this.numericUpDownPatientOffset.TabStop = false;
             this.numericUpDownPatientOffset.Value = new decimal(new int[] {
             1,
             0,
@@ -995,14 +805,223 @@
             this.btnAddNew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
             this.btnAddNew.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnAddNew.Location = new System.Drawing.Point(1283, 184);
+            this.btnAddNew.Location = new System.Drawing.Point(1284, 4);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(166, 97);
+            this.btnAddNew.Size = new System.Drawing.Size(166, 95);
             this.btnAddNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnAddNew.TabIndex = 27;
+            this.btnAddNew.TabIndex = 1;
             this.btnAddNew.Text = "ចុះឈ្មោះអ្នកជំងឺថ្មី";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // PatientID
+            // 
+            this.PatientID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PatientID.DataPropertyName = "PatientID";
+            this.PatientID.HeaderText = "លេខកូដ";
+            this.PatientID.MinimumWidth = 6;
+            this.PatientID.Name = "PatientID";
+            this.PatientID.ReadOnly = true;
+            this.PatientID.Width = 108;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "នាមត្រកូល";
+            this.FirstName.MinimumWidth = 6;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            this.FirstName.Visible = false;
+            this.FirstName.Width = 125;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "នាមខ្លួន";
+            this.LastName.MinimumWidth = 6;
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            this.LastName.Visible = false;
+            this.LastName.Width = 125;
+            // 
+            // FullName
+            // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "ឈ្មោះពេញ";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "ភេទអង់គ្លេស";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Visible = false;
+            this.Gender.Width = 125;
+            // 
+            // GenderKhmer
+            // 
+            this.GenderKhmer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.GenderKhmer.DataPropertyName = "GenderKhmer";
+            this.GenderKhmer.HeaderText = "ភេទ";
+            this.GenderKhmer.MinimumWidth = 6;
+            this.GenderKhmer.Name = "GenderKhmer";
+            this.GenderKhmer.ReadOnly = true;
+            this.GenderKhmer.Width = 79;
+            // 
+            // BirthDate
+            // 
+            this.BirthDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BirthDate.DataPropertyName = "BirthDate";
+            this.BirthDate.HeaderText = "ថ្ងៃខែឆ្នាំកំណើត";
+            this.BirthDate.MinimumWidth = 6;
+            this.BirthDate.Name = "BirthDate";
+            this.BirthDate.ReadOnly = true;
+            this.BirthDate.Width = 162;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "អាស័យដ្ឋាន";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Visible = false;
+            this.Address.Width = 125;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            this.PhoneNumber.HeaderText = "លេខទូរស័ព្ទ";
+            this.PhoneNumber.MinimumWidth = 6;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Width = 135;
+            // 
+            // EmergencyName
+            // 
+            this.EmergencyName.DataPropertyName = "EmergencyName";
+            this.EmergencyName.HeaderText = "ឈ្មោះទាក់ទងបន្ទាន់";
+            this.EmergencyName.MinimumWidth = 6;
+            this.EmergencyName.Name = "EmergencyName";
+            this.EmergencyName.ReadOnly = true;
+            this.EmergencyName.Visible = false;
+            this.EmergencyName.Width = 125;
+            // 
+            // EmergencyRelation
+            // 
+            this.EmergencyRelation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EmergencyRelation.DataPropertyName = "EmergencyRelation";
+            this.EmergencyRelation.HeaderText = "ត្រូវជា";
+            this.EmergencyRelation.MinimumWidth = 6;
+            this.EmergencyRelation.Name = "EmergencyRelation";
+            this.EmergencyRelation.ReadOnly = true;
+            this.EmergencyRelation.Width = 94;
+            // 
+            // EmergencyNumber
+            // 
+            this.EmergencyNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.EmergencyNumber.DataPropertyName = "EmergencyNumber";
+            this.EmergencyNumber.HeaderText = "លេខទាក់ទងបន្ទាន់";
+            this.EmergencyNumber.MinimumWidth = 6;
+            this.EmergencyNumber.Name = "EmergencyNumber";
+            this.EmergencyNumber.ReadOnly = true;
+            this.EmergencyNumber.Width = 184;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "អីម៉ែល";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Visible = false;
+            this.Email.Width = 125;
+            // 
+            // NationalCardID
+            // 
+            this.NationalCardID.DataPropertyName = "NationalCardID";
+            this.NationalCardID.HeaderText = "លេខអត្តសញ្ញាណប័ត្រ";
+            this.NationalCardID.MinimumWidth = 6;
+            this.NationalCardID.Name = "NationalCardID";
+            this.NationalCardID.ReadOnly = true;
+            this.NationalCardID.Visible = false;
+            this.NationalCardID.Width = 125;
+            // 
+            // IsInpatient
+            // 
+            this.IsInpatient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IsInpatient.Checked = true;
+            this.IsInpatient.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.IsInpatient.CheckValue = "N";
+            this.IsInpatient.DataPropertyName = "IsInpatient";
+            this.IsInpatient.HeaderText = "ស្នាក់នៅមន្ទីរពេទ្យ";
+            this.IsInpatient.MinimumWidth = 6;
+            this.IsInpatient.Name = "IsInpatient";
+            this.IsInpatient.ReadOnly = true;
+            this.IsInpatient.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsInpatient.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.IsInpatient.ToolTipText = "គ្រីសប្រសិនបើអ្នកជំងឺស្នាក់នៅក្នុងមន្ទីរពេទ្យ";
+            this.IsInpatient.Width = 181;
+            // 
+            // MedicalHistory
+            // 
+            this.MedicalHistory.DataPropertyName = "MedicalHistory";
+            this.MedicalHistory.HeaderText = "ប្រវត្តិវេជ្ជសាស្ត្រ";
+            this.MedicalHistory.MinimumWidth = 6;
+            this.MedicalHistory.Name = "MedicalHistory";
+            this.MedicalHistory.ReadOnly = true;
+            this.MedicalHistory.Visible = false;
+            this.MedicalHistory.Width = 125;
+            // 
+            // dgvBtnDetail
+            // 
+            this.dgvBtnDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvBtnDetail.HeaderText = "លម្អិត";
+            this.dgvBtnDetail.Image = ((System.Drawing.Image)(resources.GetObject("dgvBtnDetail.Image")));
+            this.dgvBtnDetail.MinimumWidth = 6;
+            this.dgvBtnDetail.Name = "dgvBtnDetail";
+            this.dgvBtnDetail.ReadOnly = true;
+            this.dgvBtnDetail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBtnDetail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvBtnDetail.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.dgvBtnDetail.Text = null;
+            this.dgvBtnDetail.Width = 92;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column18.HeaderText = "កែប្រែ";
+            this.Column18.Image = ((System.Drawing.Image)(resources.GetObject("Column18.Image")));
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column18.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.Column18.Text = null;
+            this.Column18.Width = 95;
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column19.HeaderText = "លុប";
+            this.Column19.Image = ((System.Drawing.Image)(resources.GetObject("Column19.Image")));
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column19.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.Column19.Text = null;
+            this.Column19.Width = 80;
             // 
             // FrmPatient
             // 
@@ -1052,24 +1071,6 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvPatient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PatientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyRelation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NationalCardID;
-        private DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn IsInpatient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedicalHistory;
-        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn dgvBtnDetail;
-        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column18;
-        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column19;
         private DevComponents.DotNetBar.ButtonX btnSearch;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchEntry;
         private DevComponents.DotNetBar.LabelX labelX3;
@@ -1107,5 +1108,24 @@
         private DevComponents.DotNetBar.ButtonX btnFilterPatientGroupBirthDate;
         private DevComponents.DotNetBar.ButtonX btnClearFilter;
         public DevComponents.DotNetBar.ButtonX btnAddNew;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PatientID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GenderKhmer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyRelation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmergencyNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NationalCardID;
+        private DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn IsInpatient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MedicalHistory;
+        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn dgvBtnDetail;
+        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column18;
+        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column19;
     }
 }

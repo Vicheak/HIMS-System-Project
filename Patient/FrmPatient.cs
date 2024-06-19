@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HIMS.Helper;
+using HIMS.RoomBed;
 using HIMS.Utility;
 
 namespace HIMS.Patient
@@ -43,6 +45,128 @@ namespace HIMS.Patient
             patientAdapter.SelectCommand.Parameters.Add("@numberOfRecords", SqlDbType.Int, 0)
                 .Direction = ParameterDirection.Input;
 
+            patientAdapter.InsertCommand = new SqlCommand
+            {
+                CommandText = "spInsertPatientInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+            patientAdapter.InsertCommand.Parameters.Add("@PatientID", SqlDbType.Char, 6, "PatientID")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50, "FirstName")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add("@LastName", SqlDbType.NVarChar, 50, "LastName")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add("@Gender", SqlDbType.NChar, 1, "Gender")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add("@BirthDate", SqlDbType.Date, 0, "BirthDate")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@Address", SqlDbType.NVarChar, 255, "Address")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar, 20, "PhoneNumber")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@EmergencyName", SqlDbType.NVarChar, 50, "EmergencyName")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@EmergencyRelation", SqlDbType.NVarChar, 50, "EmergencyRelation")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@EmergencyNumber", SqlDbType.NVarChar, 20, "EmergencyNumber")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50, "Email")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@NationalCardID", SqlDbType.NVarChar, 50, "NationalCardID")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add("@IsInpatient", SqlDbType.Bit, 0, "IsInpatient")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.InsertCommand.Parameters.Add(new SqlParameter("@MedicalHistory", SqlDbType.NVarChar, 255, "MedicalHistory")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.InsertCommand.Parameters.Add("@PatientIDOutput", SqlDbType.Char, 6)
+                .Direction = ParameterDirection.Output;
+
+            patientAdapter.UpdateCommand = new SqlCommand
+            {
+                CommandText = "spUpdatePatientInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+            patientAdapter.UpdateCommand.Parameters.Add("@PatientID", SqlDbType.Char, 6, "PatientID")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50, "FirstName")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add("@LastName", SqlDbType.NVarChar, 50, "LastName")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add("@Gender", SqlDbType.NChar, 1, "Gender")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add("@BirthDate", SqlDbType.Date, 0, "BirthDate")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@Address", SqlDbType.NVarChar, 255, "Address")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar, 20, "PhoneNumber")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@EmergencyName", SqlDbType.NVarChar, 50, "EmergencyName")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@EmergencyRelation", SqlDbType.NVarChar, 50, "EmergencyRelation")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@EmergencyNumber", SqlDbType.NVarChar, 20, "EmergencyNumber")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@Email", SqlDbType.VarChar, 50, "Email")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@NationalCardID", SqlDbType.NVarChar, 50, "NationalCardID")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            patientAdapter.UpdateCommand.Parameters.Add("@IsInpatient", SqlDbType.Bit, 0, "IsInpatient")
+                .Direction = ParameterDirection.Input;
+            patientAdapter.UpdateCommand.Parameters.Add(new SqlParameter("@MedicalHistory", SqlDbType.NVarChar, 255, "MedicalHistory")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+
+            patientAdapter.DeleteCommand = new SqlCommand
+            {
+                CommandText = "spDeletePatientInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+            patientAdapter.DeleteCommand.Parameters.Add("@PatientID", SqlDbType.Char, 6, "PatientID")
+                .Direction = ParameterDirection.Input;
         }
 
         protected void FillData()
@@ -401,15 +525,79 @@ namespace HIMS.Patient
             if(e.ColumnIndex == 0)
             {
                 FrmPatientDetail frmPatientDetail = new FrmPatientDetail();
+                frmPatientDetail.dataSet = dataSet; 
                 frmPatientDetail.patientAdapter = patientAdapter; 
                 frmPatientDetail.patientBindingSource = patientBindingSource; 
                 frmPatientDetail.ShowDialog(); 
             }else if (e.ColumnIndex == 1)
             {
+                FrmAddOrModifyPatient frmAddOrModifyPatient = new FrmAddOrModifyPatient();
+                frmAddOrModifyPatient.patientBindingSource = patientBindingSource;
+                frmAddOrModifyPatient.isAdded = false;
+                frmAddOrModifyPatient.ShowDialog();
 
-            }else if(e.ColumnIndex == 2)
+                if (frmAddOrModifyPatient.DialogResult == DialogResult.OK)
+                {
+                    patientBindingSource.EndEdit();
+                    //refresh patient record
+                    patientBindingSource.ResetCurrentItem(); 
+                    patientAdapter.Update(dataSet, VIEW_PATIENT_INFO);
+
+                    NotificationUtil.AlertNotificationEdit();
+                }
+            }
+            else if(e.ColumnIndex == 2)
             {
+                if (patientBindingSource.Count == 0) return;
 
+                var currentRow = patientBindingSource.Current as DataRowView;
+                string patientID = Convert.ToString(currentRow.Row["PatientID"]);
+
+                CustomMessageBox result = new CustomMessageBox($"តើលោកអ្នកពិតជាចង់លុប​ព័ត៌មានអ្នកជំងឺ #{patientID} មែនដែរឬទេ?");
+                result.ShowDialog();
+                if (result.DialogResult == DialogResult.OK)
+                {
+                    patientBindingSource.RemoveCurrent();
+                    patientBindingSource.EndEdit();
+
+                    patientAdapter.Update(dataSet, VIEW_PATIENT_INFO);
+
+                    NotificationUtil.AlertNotificationDelete();
+                }
+            }
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            FrmAddOrModifyPatient frmAddOrModifyPatient = new FrmAddOrModifyPatient();
+            frmAddOrModifyPatient.patientBindingSource = patientBindingSource;
+            frmAddOrModifyPatient.isAdded = true;
+            frmAddOrModifyPatient.ShowDialog();
+
+            if (frmAddOrModifyPatient.DialogResult == DialogResult.OK)
+            {
+                patientBindingSource.EndEdit();
+                patientAdapter.Update(dataSet, VIEW_PATIENT_INFO);
+
+                string patientID = Convert.ToString(patientAdapter.InsertCommand.Parameters["@PatientIDOutput"].Value);
+
+                NotificationUtil.AlertNotificationInsert();
+
+                patientAdapter.SelectCommand = new SqlCommand
+                {
+                    CommandText = "spSearchPatientInfoByID",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = this.connection
+                };
+                patientAdapter.SelectCommand.Parameters.Add("@PatientID", SqlDbType.VarChar, 6)
+                   .Direction = ParameterDirection.Input;
+
+                var currentRow = patientBindingSource.Current as DataRowView;
+
+                patientAdapter.SelectCommand.Parameters["@PatientID"].Value = patientID; 
+
+                dataSet.Tables[VIEW_PATIENT_INFO].Clear();
+                patientAdapter.Fill(dataSet);
             }
         }
     }

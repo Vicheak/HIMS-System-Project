@@ -386,6 +386,7 @@
             this.btnSave.TabIndex = 52;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "រក្សាទុក";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -401,6 +402,7 @@
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "កែប្រែព័ត៌មានអ្នកជំងឺ";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // labelX14
             // 
@@ -458,9 +460,9 @@
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.ForeColor = System.Drawing.Color.White;
-            this.labelX13.Location = new System.Drawing.Point(6, 692);
+            this.labelX13.Location = new System.Drawing.Point(5, 682);
             this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(145, 39);
+            this.labelX13.Size = new System.Drawing.Size(145, 57);
             this.labelX13.TabIndex = 47;
             this.labelX13.Text = "ប្រវត្តិវេជ្ជសាស្ត្រ ៖";
             // 
@@ -774,9 +776,9 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.ForeColor = System.Drawing.Color.White;
-            this.labelX9.Location = new System.Drawing.Point(6, 477);
+            this.labelX9.Location = new System.Drawing.Point(6, 465);
             this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(112, 39);
+            this.labelX9.Size = new System.Drawing.Size(112, 59);
             this.labelX9.TabIndex = 38;
             this.labelX9.Text = "ត្រូវជា ៖";
             // 
