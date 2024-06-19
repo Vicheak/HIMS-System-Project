@@ -39,3 +39,5 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.RoomBed.FrmAd
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.RoomBed.FrmBed.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatient.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientDetail.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmAddOrModifyPatient.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientEmergency.resources

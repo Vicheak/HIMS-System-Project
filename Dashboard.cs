@@ -84,5 +84,26 @@ namespace HIMS
             FrmPatient frmPatient = new FrmPatient(); 
             PopUpForm(frmPatient);
         }
+
+        private void btnAddNewPatient_Click(object sender, EventArgs e)
+        {
+            FrmPatient frmPatient;
+            if (mainPanel.Controls.Contains(currentForm))
+            {
+                if (!(currentForm is FrmPatient))
+                {
+                    frmPatient = new FrmPatient(); 
+                    PopUpForm(frmPatient);
+                    frmPatient.btnAddNew.PerformClick();
+                    return;
+                }
+                frmPatient = currentForm as FrmPatient; 
+                frmPatient.btnAddNew.PerformClick();
+                return;
+            }
+            frmPatient = new FrmPatient();
+            PopUpForm(frmPatient);
+            frmPatient.btnAddNew.PerformClick();
+        }
     }
 }
