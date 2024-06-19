@@ -108,6 +108,18 @@
     <Compile Include="Helper\FrmExit.Designer.cs">
       <DependentUpon>FrmExit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\FrmPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmPatient.Designer.cs">
+      <DependentUpon>FrmPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FrmPatientDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmPatientDetail.Designer.cs">
+      <DependentUpon>FrmPatientDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomBed\FrmAddOrModifyBed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Helper\FrmExit.resx">
       <DependentUpon>FrmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmPatient.resx">
+      <DependentUpon>FrmPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmPatientDetail.resx">
+      <DependentUpon>FrmPatientDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomBed\FrmAddOrModifyBed.resx">
       <DependentUpon>FrmAddOrModifyBed.cs</DependentUpon>
@@ -166,7 +184,6 @@
     <Folder Include="Appointment\" />
     <Folder Include="Function\" />
     <Folder Include="Medicine\" />
-    <Folder Include="Patient\" />
     <Folder Include="Report\" />
     <Folder Include="Staff\" />
     <Folder Include="User\" />
