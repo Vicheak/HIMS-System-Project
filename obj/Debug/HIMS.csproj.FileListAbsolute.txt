@@ -37,3 +37,5 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Helper.Custom
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.GeneratedMSBuildEditorConfig.editorconfig
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.RoomBed.FrmAddOrModifyBed.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.RoomBed.FrmBed.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatient.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientDetail.resources

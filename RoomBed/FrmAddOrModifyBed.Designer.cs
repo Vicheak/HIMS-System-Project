@@ -100,7 +100,7 @@
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.ForeColor = System.Drawing.Color.Black;
-            this.labelX5.Location = new System.Drawing.Point(44, 95);
+            this.labelX5.Location = new System.Drawing.Point(44, 86);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(121, 39);
             this.labelX5.TabIndex = 15;
@@ -247,7 +247,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(216, 39);
             this.labelX1.TabIndex = 19;
-            this.labelX1.Text = "សូមគ្រើសបើគ្រែទំនេរ";
+            this.labelX1.Text = "សូមគ្រីសបើគ្រែទំនេរ";
             // 
             // labelX2
             // 
@@ -302,7 +302,7 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(44, 626);
+            this.labelX3.Location = new System.Drawing.Point(44, 621);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(121, 39);
             this.labelX3.TabIndex = 23;
