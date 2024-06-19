@@ -1,4 +1,5 @@
 ﻿using HIMS.Helper;
+using HIMS.Patient;
 using HIMS.RoomBed;
 using System;
 using System.Collections.Generic;
@@ -59,15 +60,29 @@ namespace HIMS
 
         private void btnAddNewBed_Click(object sender, EventArgs e)
         {
+            FrmBed frmBed; 
             if (mainPanel.Controls.Contains(currentForm))
             {
-                FrmBed currentFrmBed = currentForm as FrmBed; 
-                currentFrmBed.btnAddNew.PerformClick();
+                if (!(currentForm is FrmBed))
+                {
+                    frmBed = new FrmBed(); 
+                    PopUpForm(frmBed);
+                    frmBed.btnAddNew.PerformClick();
+                    return; 
+                }
+                frmBed = currentForm as FrmBed;
+                frmBed.btnAddNew.PerformClick();
                 return; 
             }
-            FrmBed frmBed = new FrmBed();
+            frmBed = new FrmBed();
             PopUpForm(frmBed); 
             frmBed.btnAddNew.PerformClick(); 
+        }
+
+        private void btnListPatient_Click(object sender, EventArgs e)
+        {
+            FrmPatient frmPatient = new FrmPatient(); 
+            PopUpForm(frmPatient);
         }
     }
 }

@@ -91,7 +91,7 @@ namespace HIMS.RoomBed
                 //user updates existing record
                 var currentRow = bedBindingSource.Current as DataRowView;
 
-                panelTitle.Text = $"កែប្រែព័ត៌មានគ្រែ #{currentRow.Row["BedID"]} នៃបន្ទប់ Room #{currentRow.Row["RoomNumber"]}";
+                panelTitle.Text = $"កែប្រែព័ត៌មានគ្រែ #{currentRow.Row["BedID"]} នៃបន្ទប់ #{currentRow.Row["RoomNumber"]}";
                 txtBedID.TextAlign = HorizontalAlignment.Left; 
                 txtBedID.WatermarkText = "";
                 txtBedID.Text = currentRow.Row["BedID"].ToString();
