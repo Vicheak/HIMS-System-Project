@@ -96,6 +96,18 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function\FrmAddOrModifyStaffActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyStaffActivity.Designer.cs">
+      <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmStaffActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmStaffActivity.Designer.cs">
+      <DependentUpon>FrmStaffActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </Compile>
     <Compile Include="Patient\FrmInpatientResidence.Designer.cs">
       <DependentUpon>FrmInpatientResidence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FrmInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmInsurance.Designer.cs">
+      <DependentUpon>FrmInsurance.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\FrmPatient.cs">
       <SubType>Form</SubType>
@@ -159,6 +177,12 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAddOrModifyStaffActivity.resx">
+      <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmStaffActivity.resx">
+      <DependentUpon>FrmStaffActivity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Helper\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmAddOrModifyPatient.resx">
       <DependentUpon>FrmAddOrModifyPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmInsurance.resx">
+      <DependentUpon>FrmInsurance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmPatient.resx">
       <DependentUpon>FrmPatient.cs</DependentUpon>
@@ -208,7 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Appointment\" />
-    <Folder Include="Function\" />
     <Folder Include="Medicine\" />
     <Folder Include="Report\" />
     <Folder Include="Staff\" />

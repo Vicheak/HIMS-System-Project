@@ -41,3 +41,6 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPa
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientDetail.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmAddOrModifyPatient.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientEmergency.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAddOrModifyStaffActivity.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmStaffActivity.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmInsurance.resources

@@ -98,7 +98,7 @@ namespace HIMS.RoomBed
                 cbRoomType.SelectedValue = Convert.ToInt32(currentRow.Row["RoomTypeID"]);
                 cbRoom.SelectedValue = Convert.ToInt32(currentRow.Row["RoomID"]);
                 checkBoxBedStatus.Checked = Convert.ToInt16(currentRow.Row["Status"]) == 1;
-                txtBedDesc.Text = currentRow.Row["BedDescription"].ToString().Equals("No Description") ? "" :
+                txtBedDesc.Text = currentRow.Row["BedDescription"].ToString().Equals("គ្មានការបរិយាយ") ? "" :
                     currentRow.Row["BedDescription"].ToString();
             }
         }

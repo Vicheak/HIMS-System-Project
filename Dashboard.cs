@@ -1,4 +1,5 @@
-﻿using HIMS.Helper;
+﻿using HIMS.Function;
+using HIMS.Helper;
 using HIMS.Patient;
 using HIMS.RoomBed;
 using System;
@@ -104,6 +105,18 @@ namespace HIMS
             frmPatient = new FrmPatient();
             PopUpForm(frmPatient);
             frmPatient.btnAddNew.PerformClick();
+        }
+
+        private void btnListStaffActivity_Click(object sender, EventArgs e)
+        {
+            FrmStaffActivity frmStaffActivity = new FrmStaffActivity();
+            PopUpForm(frmStaffActivity); 
+        }
+
+        private void btnListInsurance_Click(object sender, EventArgs e)
+        {
+            FrmInsurance frmInsurance = new FrmInsurance(); 
+            PopUpForm(frmInsurance);
         }
     }
 }
