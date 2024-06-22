@@ -35,12 +35,12 @@ namespace HIMS.RoomBed
         public FrmBed()
         {
             InitializeComponent();
-            setUpCommand();
+            SetUpCommand();
             FillData();
-            setUpBinding();
+            SetUpBinding();
         }
 
-        protected void setUpCommand()
+        protected void SetUpCommand()
         {
             //set up command for tbBed
             bedAdapter.SelectCommand = new SqlCommand
@@ -126,7 +126,7 @@ namespace HIMS.RoomBed
             roomBindingSource.DataMember = VIEW_ROOM_SELECT;
         }
 
-        protected void setUpBinding()
+        protected void SetUpBinding()
         {
             //bind to control
             dgvBed.DataSource = bedBindingSource;

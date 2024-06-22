@@ -28,12 +28,12 @@ namespace HIMS.Patient
         public FrmPatient()
         {
             InitializeComponent();
-            setUpCommand();
+            SetUpCommand();
             FillData();
-            setUpBinding();
+            SetUpBinding();
         }
 
-        protected void setUpCommand()
+        protected void SetUpCommand()
         {
             //set up command for tbPatient
             patientAdapter.SelectCommand = new SqlCommand
@@ -178,7 +178,7 @@ namespace HIMS.Patient
             patientBindingSource.DataMember = VIEW_PATIENT_INFO;
         }
 
-        protected void setUpBinding()
+        protected void SetUpBinding()
         {
             //bind to control
             dgvPatient.DataSource = patientBindingSource;
@@ -313,7 +313,7 @@ namespace HIMS.Patient
                 dateTimeFilterPatientStartBirthDate.Focus();
                 return;
             }
-            if(dateTimeFilterPatientStartBirthDate.Value.Day > dateTimeFilterPatientEndBirthDate.Value.Day)
+            if(dateTimeFilterPatientStartBirthDate.Value > dateTimeFilterPatientEndBirthDate.Value)
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសថ្ងៃខែឆ្នាំកំណើតរបស់អ្នកជំងឺអោយបានត្រឹមត្រូវ", Color.Yellow);
                 dateTimeFilterPatientStartBirthDate.Focus();
