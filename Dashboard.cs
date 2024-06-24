@@ -118,5 +118,11 @@ namespace HIMS
             FrmInsurance frmInsurance = new FrmInsurance(); 
             PopUpForm(frmInsurance);
         }
+
+        private void btnListInpatientResidence_Click(object sender, EventArgs e)
+        {
+            FrmInpatientResidence frmInpatientResidence = new FrmInpatientResidence();
+            PopUpForm(frmInpatientResidence);
+        }
     }
 }

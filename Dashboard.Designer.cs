@@ -35,7 +35,7 @@
             this.PatientTab4 = new DevComponents.DotNetBar.RibbonBar();
             this.btnListInsurance = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab3 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListInpatientResidence = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
@@ -295,7 +295,7 @@
             this.PatientTab3.Dock = System.Windows.Forms.DockStyle.Left;
             this.PatientTab3.DragDropSupport = true;
             this.PatientTab3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem7,
+            this.btnListInpatientResidence,
             this.buttonItem8});
             this.PatientTab3.Location = new System.Drawing.Point(795, 0);
             this.PatientTab3.Name = "PatientTab3";
@@ -313,13 +313,14 @@
             this.PatientTab3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.PatientTab3.TitleVisible = false;
             // 
-            // buttonItem7
+            // btnListInpatientResidence
             // 
-            this.buttonItem7.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem7.Image")));
-            this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.SubItemsExpandWidth = 14;
-            this.buttonItem7.Text = "ការសម្រាកនៅមន្ទីរពេទ្យ";
+            this.btnListInpatientResidence.Image = ((System.Drawing.Image)(resources.GetObject("btnListInpatientResidence.Image")));
+            this.btnListInpatientResidence.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListInpatientResidence.Name = "btnListInpatientResidence";
+            this.btnListInpatientResidence.SubItemsExpandWidth = 14;
+            this.btnListInpatientResidence.Text = "ការសម្រាកនៅមន្ទីរពេទ្យ";
+            this.btnListInpatientResidence.Click += new System.EventHandler(this.btnListInpatientResidence_Click);
             // 
             // buttonItem8
             // 
@@ -1810,7 +1811,7 @@
         private DevComponents.DotNetBar.RibbonBar PatientTab4;
         private DevComponents.DotNetBar.ButtonItem btnListInsurance;
         private DevComponents.DotNetBar.RibbonBar PatientTab3;
-        private DevComponents.DotNetBar.ButtonItem buttonItem7;
+        private DevComponents.DotNetBar.ButtonItem btnListInpatientResidence;
         private DevComponents.DotNetBar.ButtonItem buttonItem8;
         private DevComponents.DotNetBar.RibbonBar PatientTab2;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;

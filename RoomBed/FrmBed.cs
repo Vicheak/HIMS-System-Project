@@ -17,7 +17,7 @@ namespace HIMS.RoomBed
     {
         protected SqlConnection connection = ConnectionUtil.GetConnection();
 
-           protected DataSet dataSet = new DataSet();
+        protected DataSet dataSet = new DataSet();
 
         protected SqlDataAdapter bedAdapter = new SqlDataAdapter();
         protected BindingSource bedBindingSource = new BindingSource();
