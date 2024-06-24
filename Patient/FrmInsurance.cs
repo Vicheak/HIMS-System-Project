@@ -212,7 +212,7 @@ namespace HIMS.Patient
                 dateTimeEffectiveDate.Focus();
                 return;
             }
-            if (dateTimeEffectiveDate.Value > dateTimeExpirationDate.Value)
+            if (dateTimeEffectiveDate.Value >= dateTimeExpirationDate.Value)
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសកាលបរិច្ឆេទប្រសិទ្ធភាពនិងផុតកំណត់អោយបានត្រឹមត្រូវ", Color.Yellow);
                 dateTimeEffectiveDate.Focus();

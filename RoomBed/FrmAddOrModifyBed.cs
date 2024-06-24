@@ -31,12 +31,12 @@ namespace HIMS.RoomBed
         public FrmAddOrModifyBed()
         {
             InitializeComponent();
-            setUpCommand();
+            SetUpCommand();
             FillData();
-            setUpBinding();
+            SetUpBinding();
         }
 
-        protected void setUpCommand()
+        protected void SetUpCommand()
         {
             //set up command for tbRoomType
             roomTypeAdapter.SelectCommand = new SqlCommand($"SELECT * FROM {FrmBed.VIEW_ROOM_TYPE_SELECT}",
@@ -66,7 +66,7 @@ namespace HIMS.RoomBed
             roomBindingSource.DataMember = FrmBed.VIEW_ROOM_SELECT;
         }
 
-        protected void setUpBinding()
+        protected void SetUpBinding()
         {
             cbRoomType.DisplayMember = "RoomTypeName";
             cbRoomType.ValueMember = "RoomTypeID";

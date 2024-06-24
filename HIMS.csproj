@@ -132,6 +132,12 @@
     <Compile Include="Patient\FrmInpatientResidence.Designer.cs">
       <DependentUpon>FrmInpatientResidence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\FrmInpatientResidenceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmInpatientResidenceDetail.Designer.cs">
+      <DependentUpon>FrmInpatientResidenceDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\FrmInsurance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmAddOrModifyPatient.resx">
       <DependentUpon>FrmAddOrModifyPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmInpatientResidence.resx">
+      <DependentUpon>FrmInpatientResidence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmInpatientResidenceDetail.resx">
+      <DependentUpon>FrmInpatientResidenceDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmInsurance.resx">
       <DependentUpon>FrmInsurance.cs</DependentUpon>

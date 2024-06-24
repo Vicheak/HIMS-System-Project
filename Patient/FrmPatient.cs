@@ -313,7 +313,7 @@ namespace HIMS.Patient
                 dateTimeFilterPatientStartBirthDate.Focus();
                 return;
             }
-            if(dateTimeFilterPatientStartBirthDate.Value > dateTimeFilterPatientEndBirthDate.Value)
+            if(dateTimeFilterPatientStartBirthDate.Value >= dateTimeFilterPatientEndBirthDate.Value)
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសថ្ងៃខែឆ្នាំកំណើតរបស់អ្នកជំងឺអោយបានត្រឹមត្រូវ", Color.Yellow);
                 dateTimeFilterPatientStartBirthDate.Focus();
