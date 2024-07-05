@@ -120,6 +120,14 @@ namespace HIMS.Patient
             toolStripLblTotalInpatientResidence.Text = inpatientResidenceBindingSource.Count.ToString(); 
         }
 
+        private void btnAssignStaff_Click(object sender, EventArgs e)
+        {
+            FrmAddOrModifyStaffInpatientResidence frmAddOrModifyStaffInpatientResidence = new FrmAddOrModifyStaffInpatientResidence(); 
+            frmAddOrModifyStaffInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource;
+            frmAddOrModifyStaffInpatientResidence.isAdded = true; 
+            frmAddOrModifyStaffInpatientResidence.ShowDialog(); 
+        }
+
         private void dgvInpatientResidence_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //ColumnIindex = 0 (Detail), 1 (Update), 2 (Delete)

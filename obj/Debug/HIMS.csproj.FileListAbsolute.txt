@@ -46,3 +46,4 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmS
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmInsurance.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmInpatientResidence.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmInpatientResidenceDetail.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmAddOrModifyStaffInpatientResidence.resources

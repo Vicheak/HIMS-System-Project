@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,6 +31,9 @@ namespace HIMS.Patient
 
         protected SqlDataAdapter bedAdapter = new SqlDataAdapter();
         protected BindingSource bedBindingSource = new BindingSource();
+
+        protected SqlDataAdapter staffInpatientResidenceAdapter = new SqlDataAdapter();
+        protected BindingSource staffInpatientResidenceBindingSource = new BindingSource();
 
         public FrmInpatientResidenceDetail()
         {
@@ -118,7 +122,29 @@ namespace HIMS.Patient
             cbBed.ValueMember = "BedID"; 
             cbBed.SelectedValue = currentRow.Row["BedID"];
 
-            txtBedDescription.Text = currentRow.Row["BedDescription"].ToString(); 
+            txtBedDescription.Text = currentRow.Row["BedDescription"].ToString();
+
+            //load associated staff for inpatient residence
+            //set up command for tbStaffInpatientResidence
+            staffInpatientResidenceAdapter.SelectCommand = new SqlCommand($"SELECT * FROM fnStaffInpatientResidenceInfo({currentRow.Row["InpatientResidenceID"].ToString()})", 
+                this.connection);
+
+            staffInpatientResidenceAdapter.TableMappings.Add("Table", "tbStaffInpatientResidence");
+
+            if (dataSet.Tables.Contains("tbStaffInpatientResidence"))
+            {
+                dataSet.Tables["tbStaffInpatientResidence"].Clear(); 
+            }
+
+            staffInpatientResidenceAdapter.Fill(dataSet);
+            staffInpatientResidenceBindingSource.DataSource = dataSet;
+            staffInpatientResidenceBindingSource.DataMember = "tbStaffInpatientResidence";
+
+            dgvStaffInpatientResidence.DataSource = staffInpatientResidenceBindingSource;
+
+            txtRoleInCare.DataBindings.Add(new Binding("Text", staffInpatientResidenceBindingSource, "RoleInCare"));
+            txtStaffCareDescription.DataBindings.Add(new Binding("Text", staffInpatientResidenceBindingSource, "Description"));
+            txtStaffPhone.DataBindings.Add(new Binding("Text", staffInpatientResidenceBindingSource, "PhoneNumber"));
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
