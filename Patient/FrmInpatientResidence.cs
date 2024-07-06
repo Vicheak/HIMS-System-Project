@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,6 +44,29 @@ namespace HIMS.Patient
             inpatientResidenceAdapter.SelectCommand.Parameters.Add("@numberOfRecords", SqlDbType.Int, 0)
                 .Direction = ParameterDirection.Input;
 
+            inpatientResidenceAdapter.InsertCommand = new SqlCommand
+            {
+                CommandText = "spInsertInpatientResidenceInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add("@AdmissionDate", SqlDbType.Date, 0, "AdmissionDate")
+                   .Direction = ParameterDirection.Input;
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add("@DischargeDate", SqlDbType.Date, 0, "DischargeDate")
+                   .Direction = ParameterDirection.Input;
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status")
+                   .Direction = ParameterDirection.Input;
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add(new SqlParameter("@Description", SqlDbType.NVarChar, 255, "Description")
+            {
+                IsNullable = true,
+                Direction = ParameterDirection.Input
+            });
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add("@PatientID", SqlDbType.Char, 6, "PatientID")
+                .Direction = ParameterDirection.Input;
+            inpatientResidenceAdapter.InsertCommand.Parameters.Add("@BedID", SqlDbType.Int, 0, "BedID")
+              .Direction = ParameterDirection.Input;
+
             inpatientResidenceAdapter.UpdateCommand = new SqlCommand
             {
                 CommandText = "spUpdateInpatientResidenceInfo",
@@ -62,7 +86,17 @@ namespace HIMS.Patient
             {
                 IsNullable = true,
                 Direction = ParameterDirection.Input
-            });   
+            });
+
+            inpatientResidenceAdapter.DeleteCommand = new SqlCommand
+            {
+                CommandText = "spDeleteInpatientResidenceInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+
+            inpatientResidenceAdapter.DeleteCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
+                   .Direction = ParameterDirection.Input;
         }
 
         protected void FillData()
@@ -120,17 +154,23 @@ namespace HIMS.Patient
             toolStripLblTotalInpatientResidence.Text = inpatientResidenceBindingSource.Count.ToString(); 
         }
 
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            FmrAddOrModifyInpatientResidence fmrAddOrModifyInpatientResidence = new FmrAddOrModifyInpatientResidence();
+            fmrAddOrModifyInpatientResidence.inpatientResidenceAdapter = inpatientResidenceAdapter;
+            fmrAddOrModifyInpatientResidence.ShowDialog(); 
+        }
+
         private void btnAssignStaff_Click(object sender, EventArgs e)
         {
             FrmAddOrModifyStaffInpatientResidence frmAddOrModifyStaffInpatientResidence = new FrmAddOrModifyStaffInpatientResidence(); 
             frmAddOrModifyStaffInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource;
-            frmAddOrModifyStaffInpatientResidence.isAdded = true; 
             frmAddOrModifyStaffInpatientResidence.ShowDialog(); 
         }
 
         private void dgvInpatientResidence_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //ColumnIindex = 0 (Detail), 1 (Update), 2 (Delete)
+            //ColumnIindex = 0 (Detail), 1 (Delete)
             if (e.RowIndex == -1) return;
             if (e.ColumnIndex == 0)
             {
@@ -142,11 +182,7 @@ namespace HIMS.Patient
             }
             else if (e.ColumnIndex == 1)
             {
-              
-            }
-            else if (e.ColumnIndex == 2)
-            {
-               
+          
             }
         }
     }

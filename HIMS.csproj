@@ -120,6 +120,12 @@
     <Compile Include="Helper\FrmExit.Designer.cs">
       <DependentUpon>FrmExit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\FmrAddOrModifyInpatientResidence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FmrAddOrModifyInpatientResidence.Designer.cs">
+      <DependentUpon>FmrAddOrModifyInpatientResidence.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\FrmAddOrModifyPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Helper\FrmExit.resx">
       <DependentUpon>FrmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FmrAddOrModifyInpatientResidence.resx">
+      <DependentUpon>FmrAddOrModifyInpatientResidence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmAddOrModifyPatient.resx">
       <DependentUpon>FrmAddOrModifyPatient.cs</DependentUpon>

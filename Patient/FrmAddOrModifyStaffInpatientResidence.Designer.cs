@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddOrModifyStaffInpatientResidence));
             this.panelTitle = new DevComponents.DotNetBar.PanelEx();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtStaffPosition = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txtStaffPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.txtStaffName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -74,6 +76,8 @@
             // 
             this.groupPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel2.Controls.Add(this.txtStaffPosition);
+            this.groupPanel2.Controls.Add(this.labelX5);
             this.groupPanel2.Controls.Add(this.txtStaffPhone);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.txtStaffName);
@@ -85,7 +89,7 @@
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Location = new System.Drawing.Point(26, 70);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(655, 281);
+            this.groupPanel2.Size = new System.Drawing.Size(655, 339);
             // 
             // 
             // 
@@ -117,6 +121,38 @@
             this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "បុគ្គលិកដែលទទួលខុសត្រូវលើអ្នកជំងឺ";
             // 
+            // txtStaffPosition
+            // 
+            this.txtStaffPosition.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtStaffPosition.Border.Class = "TextBoxBorder";
+            this.txtStaffPosition.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtStaffPosition.DisabledBackColor = System.Drawing.Color.White;
+            this.txtStaffPosition.ForeColor = System.Drawing.Color.Black;
+            this.txtStaffPosition.Location = new System.Drawing.Point(278, 176);
+            this.txtStaffPosition.Name = "txtStaffPosition";
+            this.txtStaffPosition.PreventEnterBeep = true;
+            this.txtStaffPosition.ReadOnly = true;
+            this.txtStaffPosition.Size = new System.Drawing.Size(354, 49);
+            this.txtStaffPosition.TabIndex = 24;
+            this.txtStaffPosition.TabStop = false;
+            // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.ForeColor = System.Drawing.Color.White;
+            this.labelX5.Location = new System.Drawing.Point(17, 180);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(175, 39);
+            this.labelX5.TabIndex = 23;
+            this.labelX5.Text = "តួនាទីបុគ្គលិក​ ៖";
+            // 
             // txtStaffPhone
             // 
             this.txtStaffPhone.BackColor = System.Drawing.Color.White;
@@ -127,7 +163,7 @@
             this.txtStaffPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtStaffPhone.DisabledBackColor = System.Drawing.Color.White;
             this.txtStaffPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtStaffPhone.Location = new System.Drawing.Point(278, 176);
+            this.txtStaffPhone.Location = new System.Drawing.Point(278, 231);
             this.txtStaffPhone.Name = "txtStaffPhone";
             this.txtStaffPhone.PreventEnterBeep = true;
             this.txtStaffPhone.ReadOnly = true;
@@ -143,7 +179,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.ForeColor = System.Drawing.Color.White;
-            this.labelX2.Location = new System.Drawing.Point(17, 180);
+            this.labelX2.Location = new System.Drawing.Point(17, 235);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(175, 39);
             this.labelX2.TabIndex = 21;
@@ -252,7 +288,7 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(46, 363);
+            this.labelX3.Location = new System.Drawing.Point(46, 430);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(175, 39);
             this.labelX3.TabIndex = 21;
@@ -268,7 +304,7 @@
             this.txtRoleInCare.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtRoleInCare.DisabledBackColor = System.Drawing.Color.White;
             this.txtRoleInCare.ForeColor = System.Drawing.Color.Black;
-            this.txtRoleInCare.Location = new System.Drawing.Point(227, 357);
+            this.txtRoleInCare.Location = new System.Drawing.Point(227, 424);
             this.txtRoleInCare.Name = "txtRoleInCare";
             this.txtRoleInCare.PreventEnterBeep = true;
             this.txtRoleInCare.Size = new System.Drawing.Size(354, 49);
@@ -281,7 +317,7 @@
             // 
             this.txtDescription.BackgroundStyle.Class = "RichTextBoxBorder";
             this.txtDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDescription.Location = new System.Drawing.Point(227, 412);
+            this.txtDescription.Location = new System.Drawing.Point(227, 479);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
     "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
@@ -297,7 +333,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(46, 408);
+            this.labelX4.Location = new System.Drawing.Point(46, 475);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(148, 39);
             this.labelX4.TabIndex = 24;
@@ -310,7 +346,7 @@
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(10, 604);
+            this.btnCancel.Location = new System.Drawing.Point(10, 671);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(146, 55);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
@@ -325,7 +361,7 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(549, 604);
+            this.btnSave.Location = new System.Drawing.Point(549, 671);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(146, 55);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
@@ -337,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(707, 671);
+            this.ClientSize = new System.Drawing.Size(707, 737);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
@@ -374,5 +410,7 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtStaffPosition;
+        private DevComponents.DotNetBar.LabelX labelX5;
     }
 }

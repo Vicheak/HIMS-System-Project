@@ -1,4 +1,5 @@
-﻿using HIMS.RoomBed;
+﻿using HIMS.Helper;
+using HIMS.RoomBed;
 using HIMS.Utility;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,35 @@ namespace HIMS.Patient
             };
 
             bedAdapter.SelectCommand.Parameters.Add("@roomID", SqlDbType.Int, 0)
+                .Direction = ParameterDirection.Input;
+
+            staffInpatientResidenceAdapter.UpdateCommand = new SqlCommand
+            {
+                CommandText = "spUpdateStaffInpatientResidenceInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+
+            //set up command for tbStaffInpatientResidence
+            staffInpatientResidenceAdapter.UpdateCommand.Parameters.Add("@StaffID", SqlDbType.SmallInt, 0, "StaffID")
+               .Direction = ParameterDirection.Input;
+            staffInpatientResidenceAdapter.UpdateCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
+                .Direction = ParameterDirection.Input;
+            staffInpatientResidenceAdapter.UpdateCommand.Parameters.Add("@RoleInCare", SqlDbType.NVarChar, 50, "RoleInCare")
+                .Direction = ParameterDirection.Input;
+            staffInpatientResidenceAdapter.UpdateCommand.Parameters.Add("@Description", SqlDbType.NVarChar, 150, "Description")
+                .Direction = ParameterDirection.Input;
+
+            staffInpatientResidenceAdapter.DeleteCommand = new SqlCommand
+            {
+                CommandText = "spDeleteStaffInpatientResidenceInfo",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+
+            staffInpatientResidenceAdapter.DeleteCommand.Parameters.Add("@StaffID", SqlDbType.SmallInt, 0, "StaffID")
+              .Direction = ParameterDirection.Input;
+            staffInpatientResidenceAdapter.DeleteCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
                 .Direction = ParameterDirection.Input;
         }
 
@@ -219,6 +249,39 @@ namespace HIMS.Patient
             dateTimeDischargeDate.Enabled = false;
             txtStatus.ReadOnly = true;
             txtDescription.ReadOnly = true;
+        }
+
+        private void btnSaveStaffInpatient_Click(object sender, EventArgs e)
+        {
+            this.staffInpatientResidenceBindingSource.EndEdit();
+            this.staffInpatientResidenceAdapter.Update(dataSet, "tbStaffInpatientResidence");
+            NotificationUtil.AlertNotificationEdit();
+        }
+
+        private void btnDeleteStaffInpatientResidence_Click(object sender, EventArgs e)
+        {
+            if (staffInpatientResidenceBindingSource.Count == 0)
+            {
+                NotificationUtil.AlertNotificationWarning("warning", "មិនមានព័ត៌មានដែលត្រូវលុប", Color.Yellow);
+                return;
+            }
+
+            CustomMessageBox result = new CustomMessageBox($"តើអ្នកពិតជាចង់លុបព័ត៌មាននេះមែនទេ?");
+            if (result.ShowDialog() == DialogResult.OK)
+            {
+                this.staffInpatientResidenceBindingSource.RemoveCurrent();
+                this.staffInpatientResidenceBindingSource.EndEdit();
+
+                this.staffInpatientResidenceAdapter.Update(dataSet, "tbStaffInpatientResidence");
+
+                NotificationUtil.AlertNotificationDelete();
+            }
+        }
+
+        private void btnCancelStaffInpatientResidence_Click(object sender, EventArgs e)
+        {
+            this.staffInpatientResidenceBindingSource.CancelEdit();
+            this.dataSet.Tables["tbStaffInpatientResidence"].RejectChanges(); 
         }
     }
 }

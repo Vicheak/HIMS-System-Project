@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInpatientResidence));
             this.dgvInpatientResidence = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLblTotalInpatientResidence = new System.Windows.Forms.ToolStripLabel();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.cbFilterTopInpatientResidenceRecord = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnAssignStaff = new DevComponents.DotNetBar.ButtonX();
             this.InpatientResidenceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DischargeDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,15 +53,8 @@
             this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBtnDetail = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-            this.Column18 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
             this.Column19 = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLblTotalInpatientResidence = new System.Windows.Forms.ToolStripLabel();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cbFilterTopInpatientResidenceRecord = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnAssignStaff = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddNew = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInpatientResidence)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,14 +69,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInpatientResidence.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInpatientResidence.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInpatientResidence.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvInpatientResidence.ColumnHeadersHeight = 45;
             this.dgvInpatientResidence.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInpatientResidence.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,40 +92,120 @@
             this.RoomID,
             this.RoomTypeID,
             this.dgvBtnDetail,
-            this.Column18,
             this.Column19});
             this.dgvInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInpatientResidence.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInpatientResidence.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvInpatientResidence.EnableHeadersVisualStyles = false;
             this.dgvInpatientResidence.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvInpatientResidence.Location = new System.Drawing.Point(12, 312);
             this.dgvInpatientResidence.Name = "dgvInpatientResidence";
             this.dgvInpatientResidence.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInpatientResidence.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInpatientResidence.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvInpatientResidence.RowHeadersWidth = 51;
             this.dgvInpatientResidence.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvInpatientResidence.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvInpatientResidence.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvInpatientResidence.RowTemplate.Height = 35;
             this.dgvInpatientResidence.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInpatientResidence.Size = new System.Drawing.Size(1385, 318);
             this.dgvInpatientResidence.TabIndex = 1;
             this.dgvInpatientResidence.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInpatientResidence_CellContentClick);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Font = new System.Drawing.Font("Khmer Kep", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2,
+            this.toolStripLblTotalInpatientResidence});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 648);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1409, 31);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(0, 28);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(135, 28);
+            this.toolStripLabel2.Text = "ចំនួននៃការសម្រាកសរុប ៖";
+            // 
+            // toolStripLblTotalInpatientResidence
+            // 
+            this.toolStripLblTotalInpatientResidence.ForeColor = System.Drawing.Color.White;
+            this.toolStripLblTotalInpatientResidence.Name = "toolStripLblTotalInpatientResidence";
+            this.toolStripLblTotalInpatientResidence.Size = new System.Drawing.Size(18, 28);
+            this.toolStripLblTotalInpatientResidence.Text = "?";
+            // 
+            // labelX1
+            // 
+            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(1110, 12);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(270, 39);
+            this.labelX1.TabIndex = 19;
+            this.labelX1.Text = "ជ្រើសរើសចំនួនកំណត់ត្រា​ ៖";
+            // 
+            // cbFilterTopInpatientResidenceRecord
+            // 
+            this.cbFilterTopInpatientResidenceRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFilterTopInpatientResidenceRecord.DisplayMember = "Text";
+            this.cbFilterTopInpatientResidenceRecord.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFilterTopInpatientResidenceRecord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilterTopInpatientResidenceRecord.ForeColor = System.Drawing.Color.Black;
+            this.cbFilterTopInpatientResidenceRecord.FormattingEnabled = true;
+            this.cbFilterTopInpatientResidenceRecord.ItemHeight = 44;
+            this.cbFilterTopInpatientResidenceRecord.Location = new System.Drawing.Point(1110, 57);
+            this.cbFilterTopInpatientResidenceRecord.Name = "cbFilterTopInpatientResidenceRecord";
+            this.cbFilterTopInpatientResidenceRecord.Size = new System.Drawing.Size(286, 50);
+            this.cbFilterTopInpatientResidenceRecord.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.cbFilterTopInpatientResidenceRecord.TabIndex = 18;
+            this.cbFilterTopInpatientResidenceRecord.TabStop = false;
+            this.cbFilterTopInpatientResidenceRecord.SelectedIndexChanged += new System.EventHandler(this.cbFilterTopInpatientResidenceRecord_SelectedIndexChanged);
+            // 
+            // btnAssignStaff
+            // 
+            this.btnAssignStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAssignStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAssignStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAssignStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAssignStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAssignStaff.Image")));
+            this.btnAssignStaff.Location = new System.Drawing.Point(1129, 244);
+            this.btnAssignStaff.Name = "btnAssignStaff";
+            this.btnAssignStaff.Size = new System.Drawing.Size(268, 49);
+            this.btnAssignStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnAssignStaff.TabIndex = 62;
+            this.btnAssignStaff.TabStop = false;
+            this.btnAssignStaff.Text = "ចាត់បុគ្គលិកទទួលខុសត្រូវ";
+            this.btnAssignStaff.Click += new System.EventHandler(this.btnAssignStaff_Click);
             // 
             // InpatientResidenceID
             // 
@@ -252,20 +332,6 @@
             this.dgvBtnDetail.Text = null;
             this.dgvBtnDetail.Width = 92;
             // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column18.HeaderText = "កែប្រែ";
-            this.Column18.Image = ((System.Drawing.Image)(resources.GetObject("Column18.Image")));
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column18.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.Column18.Text = null;
-            this.Column18.Width = 95;
-            // 
             // Column19
             // 
             this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -280,92 +346,29 @@
             this.Column19.Text = null;
             this.Column19.Width = 80;
             // 
-            // toolStrip1
+            // btnAddNew
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Font = new System.Drawing.Font("Khmer Kep", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2,
-            this.toolStripLblTotalInpatientResidence});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 648);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1409, 31);
-            this.toolStrip1.TabIndex = 17;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(0, 28);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(135, 28);
-            this.toolStripLabel2.Text = "ចំនួននៃការសម្រាកសរុប ៖";
-            // 
-            // toolStripLblTotalInpatientResidence
-            // 
-            this.toolStripLblTotalInpatientResidence.ForeColor = System.Drawing.Color.White;
-            this.toolStripLblTotalInpatientResidence.Name = "toolStripLblTotalInpatientResidence";
-            this.toolStripLblTotalInpatientResidence.Size = new System.Drawing.Size(18, 28);
-            this.toolStripLblTotalInpatientResidence.Text = "?";
-            // 
-            // labelX1
-            // 
-            this.labelX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(1110, 12);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(270, 39);
-            this.labelX1.TabIndex = 19;
-            this.labelX1.Text = "ជ្រើសរើសចំនួនកំណត់ត្រា​ ៖";
-            // 
-            // cbFilterTopInpatientResidenceRecord
-            // 
-            this.cbFilterTopInpatientResidenceRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbFilterTopInpatientResidenceRecord.DisplayMember = "Text";
-            this.cbFilterTopInpatientResidenceRecord.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbFilterTopInpatientResidenceRecord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFilterTopInpatientResidenceRecord.ForeColor = System.Drawing.Color.Black;
-            this.cbFilterTopInpatientResidenceRecord.FormattingEnabled = true;
-            this.cbFilterTopInpatientResidenceRecord.ItemHeight = 44;
-            this.cbFilterTopInpatientResidenceRecord.Location = new System.Drawing.Point(1110, 57);
-            this.cbFilterTopInpatientResidenceRecord.Name = "cbFilterTopInpatientResidenceRecord";
-            this.cbFilterTopInpatientResidenceRecord.Size = new System.Drawing.Size(286, 50);
-            this.cbFilterTopInpatientResidenceRecord.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.cbFilterTopInpatientResidenceRecord.TabIndex = 18;
-            this.cbFilterTopInpatientResidenceRecord.TabStop = false;
-            this.cbFilterTopInpatientResidenceRecord.SelectedIndexChanged += new System.EventHandler(this.cbFilterTopInpatientResidenceRecord_SelectedIndexChanged);
-            // 
-            // btnAssignStaff
-            // 
-            this.btnAssignStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAssignStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAssignStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAssignStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAssignStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAssignStaff.Image")));
-            this.btnAssignStaff.Location = new System.Drawing.Point(1129, 244);
-            this.btnAssignStaff.Name = "btnAssignStaff";
-            this.btnAssignStaff.Size = new System.Drawing.Size(268, 49);
-            this.btnAssignStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnAssignStaff.TabIndex = 62;
-            this.btnAssignStaff.TabStop = false;
-            this.btnAssignStaff.Text = "ចាត់បុគ្គលិកទទួលខុសត្រូវ";
-            this.btnAssignStaff.Click += new System.EventHandler(this.btnAssignStaff_Click);
+            this.btnAddNew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
+            this.btnAddNew.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnAddNew.Location = new System.Drawing.Point(1230, 128);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(166, 95);
+            this.btnAddNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnAddNew.TabIndex = 63;
+            this.btnAddNew.TabStop = false;
+            this.btnAddNew.Text = "បញ្ចូលការសម្រាកថ្មី";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // FrmInpatientResidence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1409, 679);
+            this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.btnAssignStaff);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.cbFilterTopInpatientResidenceRecord);
@@ -393,6 +396,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLblTotalInpatientResidence;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbFilterTopInpatientResidenceRecord;
+        private DevComponents.DotNetBar.ButtonX btnAssignStaff;
         private System.Windows.Forms.DataGridViewTextBoxColumn InpatientResidenceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn AdmissionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DischargeDate;
@@ -405,8 +409,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomTypeID;
         private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn dgvBtnDetail;
-        private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column18;
         private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn Column19;
-        private DevComponents.DotNetBar.ButtonX btnAssignStaff;
+        public DevComponents.DotNetBar.ButtonX btnAddNew;
     }
 }
