@@ -40,7 +40,23 @@
             this.btnPrintPatientReport = new DevComponents.DotNetBar.ButtonX();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnCancelStaffInpatientResidence = new DevComponents.DotNetBar.ButtonX();
+            this.btnDeleteStaffInpatientResidence = new DevComponents.DotNetBar.ButtonX();
+            this.btnSaveStaffInpatient = new DevComponents.DotNetBar.ButtonX();
+            this.txtStaffPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.txtStaffCareDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.txtRoleInCare = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.dgvStaffInpatientResidence = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InpatientResidenceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleInCare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtInpatientResidenceID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtBedDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
@@ -64,22 +80,6 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.dateTimeAdmissionDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InpatientResidenceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoleInCare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtStaffCareDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.txtRoleInCare = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.txtStaffPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.btnSaveStaffInpatient = new DevComponents.DotNetBar.ButtonX();
-            this.btnCancelStaffInpatientResidence = new DevComponents.DotNetBar.ButtonX();
-            this.btnDeleteStaffInpatientResidence = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -248,6 +248,146 @@
             this.groupPanel2.TabIndex = 1;
             this.groupPanel2.Text = "ព័ត៌មានបុគ្គលិកដែលទទួលខុសត្រូវលើអ្នកជំងឺ";
             // 
+            // btnCancelStaffInpatientResidence
+            // 
+            this.btnCancelStaffInpatientResidence.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancelStaffInpatientResidence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelStaffInpatientResidence.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancelStaffInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelStaffInpatientResidence.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelStaffInpatientResidence.Image")));
+            this.btnCancelStaffInpatientResidence.Location = new System.Drawing.Point(543, 392);
+            this.btnCancelStaffInpatientResidence.Name = "btnCancelStaffInpatientResidence";
+            this.btnCancelStaffInpatientResidence.Size = new System.Drawing.Size(146, 55);
+            this.btnCancelStaffInpatientResidence.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnCancelStaffInpatientResidence.TabIndex = 66;
+            this.btnCancelStaffInpatientResidence.TabStop = false;
+            this.btnCancelStaffInpatientResidence.Text = "ត្រឡប់";
+            this.btnCancelStaffInpatientResidence.Click += new System.EventHandler(this.btnCancelStaffInpatientResidence_Click);
+            // 
+            // btnDeleteStaffInpatientResidence
+            // 
+            this.btnDeleteStaffInpatientResidence.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDeleteStaffInpatientResidence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteStaffInpatientResidence.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDeleteStaffInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteStaffInpatientResidence.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStaffInpatientResidence.Image")));
+            this.btnDeleteStaffInpatientResidence.Location = new System.Drawing.Point(631, 272);
+            this.btnDeleteStaffInpatientResidence.Name = "btnDeleteStaffInpatientResidence";
+            this.btnDeleteStaffInpatientResidence.Size = new System.Drawing.Size(58, 49);
+            this.btnDeleteStaffInpatientResidence.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnDeleteStaffInpatientResidence.TabIndex = 65;
+            this.btnDeleteStaffInpatientResidence.TabStop = false;
+            this.btnDeleteStaffInpatientResidence.Click += new System.EventHandler(this.btnDeleteStaffInpatientResidence_Click);
+            // 
+            // btnSaveStaffInpatient
+            // 
+            this.btnSaveStaffInpatient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSaveStaffInpatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveStaffInpatient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSaveStaffInpatient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveStaffInpatient.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveStaffInpatient.Image")));
+            this.btnSaveStaffInpatient.Location = new System.Drawing.Point(543, 332);
+            this.btnSaveStaffInpatient.Name = "btnSaveStaffInpatient";
+            this.btnSaveStaffInpatient.Size = new System.Drawing.Size(146, 49);
+            this.btnSaveStaffInpatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnSaveStaffInpatient.TabIndex = 64;
+            this.btnSaveStaffInpatient.TabStop = false;
+            this.btnSaveStaffInpatient.Text = "រក្សាទុក";
+            this.btnSaveStaffInpatient.Click += new System.EventHandler(this.btnSaveStaffInpatient_Click);
+            // 
+            // txtStaffPhone
+            // 
+            this.txtStaffPhone.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtStaffPhone.Border.Class = "TextBoxBorder";
+            this.txtStaffPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtStaffPhone.DisabledBackColor = System.Drawing.Color.White;
+            this.txtStaffPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtStaffPhone.Location = new System.Drawing.Point(198, 267);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.PreventEnterBeep = true;
+            this.txtStaffPhone.ReadOnly = true;
+            this.txtStaffPhone.Size = new System.Drawing.Size(354, 49);
+            this.txtStaffPhone.TabIndex = 30;
+            this.txtStaffPhone.TabStop = false;
+            // 
+            // labelX14
+            // 
+            this.labelX14.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.ForeColor = System.Drawing.Color.White;
+            this.labelX14.Location = new System.Drawing.Point(17, 272);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(175, 39);
+            this.labelX14.TabIndex = 29;
+            this.labelX14.Text = "លេខទូរស័ព្ទបុគ្គលិក​ ៖";
+            // 
+            // txtStaffCareDescription
+            // 
+            // 
+            // 
+            // 
+            this.txtStaffCareDescription.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.txtStaffCareDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtStaffCareDescription.Location = new System.Drawing.Point(198, 76);
+            this.txtStaffCareDescription.Name = "txtStaffCareDescription";
+            this.txtStaffCareDescription.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
+    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
+    "ar\r\n}\r\n";
+            this.txtStaffCareDescription.Size = new System.Drawing.Size(420, 185);
+            this.txtStaffCareDescription.TabIndex = 26;
+            this.txtStaffCareDescription.TabStop = false;
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.ForeColor = System.Drawing.Color.White;
+            this.labelX12.Location = new System.Drawing.Point(17, 72);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(148, 39);
+            this.labelX12.TabIndex = 28;
+            this.labelX12.Text = "បរិយាយ​ ៖";
+            // 
+            // txtRoleInCare
+            // 
+            this.txtRoleInCare.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtRoleInCare.Border.Class = "TextBoxBorder";
+            this.txtRoleInCare.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRoleInCare.DisabledBackColor = System.Drawing.Color.White;
+            this.txtRoleInCare.ForeColor = System.Drawing.Color.Black;
+            this.txtRoleInCare.Location = new System.Drawing.Point(198, 21);
+            this.txtRoleInCare.Name = "txtRoleInCare";
+            this.txtRoleInCare.PreventEnterBeep = true;
+            this.txtRoleInCare.Size = new System.Drawing.Size(354, 49);
+            this.txtRoleInCare.TabIndex = 25;
+            this.txtRoleInCare.TabStop = false;
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.ForeColor = System.Drawing.Color.White;
+            this.labelX13.Location = new System.Drawing.Point(17, 27);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(175, 39);
+            this.labelX13.TabIndex = 27;
+            this.labelX13.Text = "តួនាទីថែទាំ ៖";
+            // 
             // dgvStaffInpatientResidence
             // 
             this.dgvStaffInpatientResidence.AllowUserToAddRows = false;
@@ -308,6 +448,76 @@
             this.dgvStaffInpatientResidence.Size = new System.Drawing.Size(683, 266);
             this.dgvStaffInpatientResidence.TabIndex = 2;
             this.dgvStaffInpatientResidence.TabStop = false;
+            // 
+            // StaffID
+            // 
+            this.StaffID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.StaffID.DataPropertyName = "StaffID";
+            this.StaffID.HeaderText = "ល.បុគ្គលិក";
+            this.StaffID.MinimumWidth = 6;
+            this.StaffID.Name = "StaffID";
+            this.StaffID.ReadOnly = true;
+            this.StaffID.Width = 131;
+            // 
+            // InpatientResidenceID
+            // 
+            this.InpatientResidenceID.DataPropertyName = "InpatientResidenceID";
+            this.InpatientResidenceID.HeaderText = "InpatientResidenceID";
+            this.InpatientResidenceID.MinimumWidth = 6;
+            this.InpatientResidenceID.Name = "InpatientResidenceID";
+            this.InpatientResidenceID.ReadOnly = true;
+            this.InpatientResidenceID.Visible = false;
+            this.InpatientResidenceID.Width = 125;
+            // 
+            // RoleInCare
+            // 
+            this.RoleInCare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RoleInCare.DataPropertyName = "RoleInCare";
+            this.RoleInCare.HeaderText = "មើលថែ";
+            this.RoleInCare.MinimumWidth = 6;
+            this.RoleInCare.Name = "RoleInCare";
+            this.RoleInCare.ReadOnly = true;
+            this.RoleInCare.Visible = false;
+            this.RoleInCare.Width = 107;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Visible = false;
+            this.Description.Width = 125;
+            // 
+            // StaffName
+            // 
+            this.StaffName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StaffName.DataPropertyName = "StaffName";
+            this.StaffName.HeaderText = "ឈ្មោះបុគ្គលិក";
+            this.StaffName.MinimumWidth = 6;
+            this.StaffName.Name = "StaffName";
+            this.StaffName.ReadOnly = true;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            this.PhoneNumber.HeaderText = "PhoneNumber";
+            this.PhoneNumber.MinimumWidth = 6;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Visible = false;
+            this.PhoneNumber.Width = 172;
+            // 
+            // StaffPosition
+            // 
+            this.StaffPosition.DataPropertyName = "StaffPosition";
+            this.StaffPosition.HeaderText = "តួ​នាទី";
+            this.StaffPosition.MinimumWidth = 6;
+            this.StaffPosition.Name = "StaffPosition";
+            this.StaffPosition.ReadOnly = true;
+            this.StaffPosition.Width = 125;
             // 
             // groupPanel1
             // 
@@ -775,213 +985,6 @@
             this.labelX3.Size = new System.Drawing.Size(91, 39);
             this.labelX3.TabIndex = 27;
             this.labelX3.Text = "លេខកូដ ៖";
-            // 
-            // StaffID
-            // 
-            this.StaffID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.HeaderText = "ល.បុគ្គលិក";
-            this.StaffID.MinimumWidth = 6;
-            this.StaffID.Name = "StaffID";
-            this.StaffID.ReadOnly = true;
-            this.StaffID.Width = 131;
-            // 
-            // InpatientResidenceID
-            // 
-            this.InpatientResidenceID.DataPropertyName = "InpatientResidenceID";
-            this.InpatientResidenceID.HeaderText = "InpatientResidenceID";
-            this.InpatientResidenceID.MinimumWidth = 6;
-            this.InpatientResidenceID.Name = "InpatientResidenceID";
-            this.InpatientResidenceID.ReadOnly = true;
-            this.InpatientResidenceID.Visible = false;
-            this.InpatientResidenceID.Width = 125;
-            // 
-            // RoleInCare
-            // 
-            this.RoleInCare.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.RoleInCare.DataPropertyName = "RoleInCare";
-            this.RoleInCare.HeaderText = "មើលថែ";
-            this.RoleInCare.MinimumWidth = 6;
-            this.RoleInCare.Name = "RoleInCare";
-            this.RoleInCare.ReadOnly = true;
-            this.RoleInCare.Visible = false;
-            this.RoleInCare.Width = 107;
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Visible = false;
-            this.Description.Width = 125;
-            // 
-            // StaffName
-            // 
-            this.StaffName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StaffName.DataPropertyName = "StaffName";
-            this.StaffName.HeaderText = "ឈ្មោះបុគ្គលិក";
-            this.StaffName.MinimumWidth = 6;
-            this.StaffName.Name = "StaffName";
-            this.StaffName.ReadOnly = true;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            this.PhoneNumber.HeaderText = "PhoneNumber";
-            this.PhoneNumber.MinimumWidth = 6;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Visible = false;
-            this.PhoneNumber.Width = 172;
-            // 
-            // StaffPosition
-            // 
-            this.StaffPosition.DataPropertyName = "StaffPosition";
-            this.StaffPosition.HeaderText = "តួ​នាទី";
-            this.StaffPosition.MinimumWidth = 6;
-            this.StaffPosition.Name = "StaffPosition";
-            this.StaffPosition.ReadOnly = true;
-            this.StaffPosition.Width = 125;
-            // 
-            // txtStaffCareDescription
-            // 
-            // 
-            // 
-            // 
-            this.txtStaffCareDescription.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.txtStaffCareDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStaffCareDescription.Location = new System.Drawing.Point(198, 76);
-            this.txtStaffCareDescription.Name = "txtStaffCareDescription";
-            this.txtStaffCareDescription.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
-    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
-    "ar\r\n}\r\n";
-            this.txtStaffCareDescription.Size = new System.Drawing.Size(420, 185);
-            this.txtStaffCareDescription.TabIndex = 26;
-            this.txtStaffCareDescription.TabStop = false;
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.ForeColor = System.Drawing.Color.White;
-            this.labelX12.Location = new System.Drawing.Point(17, 72);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(148, 39);
-            this.labelX12.TabIndex = 28;
-            this.labelX12.Text = "បរិយាយ​ ៖";
-            // 
-            // txtRoleInCare
-            // 
-            this.txtRoleInCare.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtRoleInCare.Border.Class = "TextBoxBorder";
-            this.txtRoleInCare.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRoleInCare.DisabledBackColor = System.Drawing.Color.White;
-            this.txtRoleInCare.ForeColor = System.Drawing.Color.Black;
-            this.txtRoleInCare.Location = new System.Drawing.Point(198, 21);
-            this.txtRoleInCare.Name = "txtRoleInCare";
-            this.txtRoleInCare.PreventEnterBeep = true;
-            this.txtRoleInCare.Size = new System.Drawing.Size(354, 49);
-            this.txtRoleInCare.TabIndex = 25;
-            this.txtRoleInCare.TabStop = false;
-            // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.ForeColor = System.Drawing.Color.White;
-            this.labelX13.Location = new System.Drawing.Point(17, 27);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(175, 39);
-            this.labelX13.TabIndex = 27;
-            this.labelX13.Text = "តួនាទីថែទាំ ៖";
-            // 
-            // txtStaffPhone
-            // 
-            this.txtStaffPhone.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtStaffPhone.Border.Class = "TextBoxBorder";
-            this.txtStaffPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStaffPhone.DisabledBackColor = System.Drawing.Color.White;
-            this.txtStaffPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtStaffPhone.Location = new System.Drawing.Point(198, 267);
-            this.txtStaffPhone.Name = "txtStaffPhone";
-            this.txtStaffPhone.PreventEnterBeep = true;
-            this.txtStaffPhone.ReadOnly = true;
-            this.txtStaffPhone.Size = new System.Drawing.Size(354, 49);
-            this.txtStaffPhone.TabIndex = 30;
-            this.txtStaffPhone.TabStop = false;
-            // 
-            // labelX14
-            // 
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.ForeColor = System.Drawing.Color.White;
-            this.labelX14.Location = new System.Drawing.Point(17, 272);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(175, 39);
-            this.labelX14.TabIndex = 29;
-            this.labelX14.Text = "លេខទូរស័ព្ទបុគ្គលិក​ ៖";
-            // 
-            // btnSaveStaffInpatient
-            // 
-            this.btnSaveStaffInpatient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSaveStaffInpatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveStaffInpatient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveStaffInpatient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveStaffInpatient.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveStaffInpatient.Image")));
-            this.btnSaveStaffInpatient.Location = new System.Drawing.Point(543, 332);
-            this.btnSaveStaffInpatient.Name = "btnSaveStaffInpatient";
-            this.btnSaveStaffInpatient.Size = new System.Drawing.Size(146, 49);
-            this.btnSaveStaffInpatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnSaveStaffInpatient.TabIndex = 64;
-            this.btnSaveStaffInpatient.TabStop = false;
-            this.btnSaveStaffInpatient.Text = "រក្សាទុក";
-            // 
-            // btnCancelStaffInpatientResidence
-            // 
-            this.btnCancelStaffInpatientResidence.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCancelStaffInpatientResidence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelStaffInpatientResidence.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancelStaffInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelStaffInpatientResidence.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelStaffInpatientResidence.Image")));
-            this.btnCancelStaffInpatientResidence.Location = new System.Drawing.Point(543, 392);
-            this.btnCancelStaffInpatientResidence.Name = "btnCancelStaffInpatientResidence";
-            this.btnCancelStaffInpatientResidence.Size = new System.Drawing.Size(146, 55);
-            this.btnCancelStaffInpatientResidence.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnCancelStaffInpatientResidence.TabIndex = 66;
-            this.btnCancelStaffInpatientResidence.TabStop = false;
-            this.btnCancelStaffInpatientResidence.Text = "ត្រឡប់";
-            // 
-            // btnDeleteStaffInpatientResidence
-            // 
-            this.btnDeleteStaffInpatientResidence.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDeleteStaffInpatientResidence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteStaffInpatientResidence.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDeleteStaffInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteStaffInpatientResidence.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStaffInpatientResidence.Image")));
-            this.btnDeleteStaffInpatientResidence.Location = new System.Drawing.Point(631, 272);
-            this.btnDeleteStaffInpatientResidence.Name = "btnDeleteStaffInpatientResidence";
-            this.btnDeleteStaffInpatientResidence.Size = new System.Drawing.Size(58, 49);
-            this.btnDeleteStaffInpatientResidence.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnDeleteStaffInpatientResidence.TabIndex = 65;
-            this.btnDeleteStaffInpatientResidence.TabStop = false;
             // 
             // FrmInpatientResidenceDetail
             // 

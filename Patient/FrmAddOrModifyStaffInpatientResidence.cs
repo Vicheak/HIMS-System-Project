@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,6 @@ namespace HIMS.Patient
         protected BindingSource staffBindingSource = new BindingSource();  
        
         public BindingSource inpatientResidenceBindingSource; 
-        public bool isAdded = false;
 
         protected SqlDataAdapter staffInpatientResidenceAdapter = new SqlDataAdapter(); 
 
@@ -56,14 +56,7 @@ namespace HIMS.Patient
         private void FrmAddOrModifyStaffInpatientResidence_Load(object sender, EventArgs e)
         {
             var currentRow = inpatientResidenceBindingSource.Current as DataRowView;
-            if (isAdded)
-            {
-                panelTitle.Text = $"បញ្ចូលព័ត៌មានបុគ្គលិកដែលទទួលខុសត្រូវលើអ្នកជំងឺនៃការសម្រាក #{currentRow.Row["InpatientResidenceID"].ToString()}"; 
-            }
-            else
-            {
-                panelTitle.Text = $"កែប្រែព័ត៌មានបុគ្គលិកដែលទទួលខុសត្រូវលើអ្នកជំងឺនៃការសម្រាក #{currentRow.Row["InpatientResidenceID"].ToString()}"; 
-            }
+            panelTitle.Text = $"បញ្ចូលព័ត៌មានបុគ្គលិកដែលទទួលខុសត្រូវលើអ្នកជំងឺនៃការសម្រាក #{currentRow.Row["InpatientResidenceID"].ToString()}"; 
         }
 
         private void txtSearchEntry_TextChanged(object sender, EventArgs e)
@@ -111,6 +104,7 @@ namespace HIMS.Patient
 
             txtStaffID.Text = currentStaff.Row["StaffID"].ToString();
             txtStaffName.Text = currentStaff.Row["FullName"].ToString();
+            txtStaffPosition.Text = currentStaff.Row["StaffPositionName"].ToString(); 
             txtStaffPhone.Text = currentStaff.Row["PhoneNumber"].ToString(); 
         }
 
@@ -150,23 +144,16 @@ namespace HIMS.Patient
             }
             cmdCheck.Connection.Close();
 
-            if (isAdded)
-            {
-                staffInpatientResidenceAdapter.InsertCommand.Parameters["@StaffID"].Value = txtStaffID.Text;
-                staffInpatientResidenceAdapter.InsertCommand.Parameters["@InpatientResidenceID"].Value = inpatientResidenceID; 
-                staffInpatientResidenceAdapter.InsertCommand.Parameters["@RoleInCare"].Value = roleInCareValue;
-                staffInpatientResidenceAdapter.InsertCommand.Parameters["@Description"].Value = descriptionValue;
+            staffInpatientResidenceAdapter.InsertCommand.Parameters["@StaffID"].Value = txtStaffID.Text;
+            staffInpatientResidenceAdapter.InsertCommand.Parameters["@InpatientResidenceID"].Value = inpatientResidenceID; 
+            staffInpatientResidenceAdapter.InsertCommand.Parameters["@RoleInCare"].Value = roleInCareValue;
+            staffInpatientResidenceAdapter.InsertCommand.Parameters["@Description"].Value = descriptionValue;
 
-                staffInpatientResidenceAdapter.InsertCommand.Connection.Open(); 
-                staffInpatientResidenceAdapter.InsertCommand.ExecuteNonQuery();
-                staffInpatientResidenceAdapter.InsertCommand.Connection.Close(); 
+            staffInpatientResidenceAdapter.InsertCommand.Connection.Open(); 
+            staffInpatientResidenceAdapter.InsertCommand.ExecuteNonQuery();
+            staffInpatientResidenceAdapter.InsertCommand.Connection.Close(); 
 
-                NotificationUtil.AlertNotificationInsert();
-            }
-            else
-            {
-
-            }
+            NotificationUtil.AlertNotificationInsert();
 
             //close the form itself
             this.DialogResult = DialogResult.OK;
