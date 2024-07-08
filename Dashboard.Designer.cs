@@ -36,7 +36,7 @@
             this.btnListInsurance = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab3 = new DevComponents.DotNetBar.RibbonBar();
             this.btnListInpatientResidence = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnTransferPatient = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
@@ -296,7 +296,7 @@
             this.PatientTab3.DragDropSupport = true;
             this.PatientTab3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnListInpatientResidence,
-            this.buttonItem8});
+            this.btnTransferPatient});
             this.PatientTab3.Location = new System.Drawing.Point(795, 0);
             this.PatientTab3.Name = "PatientTab3";
             this.PatientTab3.Size = new System.Drawing.Size(361, 131);
@@ -322,13 +322,14 @@
             this.btnListInpatientResidence.Text = "ការសម្រាកនៅមន្ទីរពេទ្យ";
             this.btnListInpatientResidence.Click += new System.EventHandler(this.btnListInpatientResidence_Click);
             // 
-            // buttonItem8
+            // btnTransferPatient
             // 
-            this.buttonItem8.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem8.Image")));
-            this.buttonItem8.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem8.Name = "buttonItem8";
-            this.buttonItem8.SubItemsExpandWidth = 14;
-            this.buttonItem8.Text = "ផ្ទេរអ្នកជំងឺ";
+            this.btnTransferPatient.Image = ((System.Drawing.Image)(resources.GetObject("btnTransferPatient.Image")));
+            this.btnTransferPatient.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnTransferPatient.Name = "btnTransferPatient";
+            this.btnTransferPatient.SubItemsExpandWidth = 14;
+            this.btnTransferPatient.Text = "ផ្ទេរអ្នកជំងឺ";
+            this.btnTransferPatient.Click += new System.EventHandler(this.btnTransferPatient_Click);
             // 
             // PatientTab2
             // 
@@ -1812,7 +1813,7 @@
         private DevComponents.DotNetBar.ButtonItem btnListInsurance;
         private DevComponents.DotNetBar.RibbonBar PatientTab3;
         private DevComponents.DotNetBar.ButtonItem btnListInpatientResidence;
-        private DevComponents.DotNetBar.ButtonItem buttonItem8;
+        private DevComponents.DotNetBar.ButtonItem btnTransferPatient;
         private DevComponents.DotNetBar.RibbonBar PatientTab2;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
