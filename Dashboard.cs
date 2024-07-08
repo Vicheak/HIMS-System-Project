@@ -124,5 +124,11 @@ namespace HIMS
             FrmInpatientResidence frmInpatientResidence = new FrmInpatientResidence();
             PopUpForm(frmInpatientResidence);
         }
+
+        private void btnTransferPatient_Click(object sender, EventArgs e)
+        {
+            FrmPatientTransfer frmPatientTransfer = new FrmPatientTransfer();
+            PopUpForm(frmPatientTransfer);
+        }
     }
 }

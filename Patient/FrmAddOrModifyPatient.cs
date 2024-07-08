@@ -72,6 +72,11 @@ namespace HIMS.Patient
                 txtNationalCardID.Text = currentRow.Row["NationalCardID"].ToString();
                 txtMedicalHistory.Text = currentRow.Row["MedicalHistory"].ToString();
                 checkBoxIsInpatient.Checked = Convert.ToInt16(currentRow.Row["IsInpatient"]) == 1;
+
+                //supply form patient emergency
+                frmPatientEmergency.EmergencyName = currentRow.Row["EmergencyName"].ToString();
+                frmPatientEmergency.EmergencyRelation = currentRow.Row["EmergencyRelation"].ToString();
+                frmPatientEmergency.EmergencyPhone = currentRow.Row["EmergencyNumber"].ToString();
             }
         }
 

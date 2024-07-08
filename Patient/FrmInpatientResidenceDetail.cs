@@ -253,6 +253,12 @@ namespace HIMS.Patient
 
         private void btnSaveStaffInpatient_Click(object sender, EventArgs e)
         {
+            if (staffInpatientResidenceBindingSource.Count == 0)
+            {
+                NotificationUtil.AlertNotificationWarning("warning", "មិនមានព័ត៌មានដែលត្រូវធ្វើបច្ចុប្បន្នភាពទេ", Color.Yellow);
+                return;
+            }
+
             this.staffInpatientResidenceBindingSource.EndEdit();
             this.staffInpatientResidenceAdapter.Update(dataSet, "tbStaffInpatientResidence");
             NotificationUtil.AlertNotificationEdit();
@@ -282,6 +288,22 @@ namespace HIMS.Patient
         {
             this.staffInpatientResidenceBindingSource.CancelEdit();
             this.dataSet.Tables["tbStaffInpatientResidence"].RejectChanges(); 
+        }
+
+        private void dgvStaffInpatientResidence_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgvStaffInpatientResidence.Rows.Count == 0)
+            {
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    "ព័ត៌មានមិនត្រូវបានស្វែងរកឃើញទេ...",
+                    new Font(dgvStaffInpatientResidence.Font.FontFamily, 12, FontStyle.Regular),
+                    dgvStaffInpatientResidence.ClientRectangle,
+                    dgvStaffInpatientResidence.ForeColor,
+                    dgvStaffInpatientResidence.BackgroundColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace HIMS.Patient
 {
-    partial class FmrAddOrModifyInpatientResidence
+    partial class FrmPatientTransfer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrAddOrModifyInpatientResidence));
-            this.panelTitle = new DevComponents.DotNetBar.PanelEx();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -44,61 +42,30 @@
             this.txtSearchPatientID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.cbRoom = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.cbRoomType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtPatientMedicalHistory = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtBedDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.cbBed = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtPatientMedicalHistory = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimeDischargeDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimeAdmissionDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.txtDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.cbRoom = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.cbRoomType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.txtStatus = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePatientBirthDate)).BeginInit();
-            this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeDischargeDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeAdmissionDate)).BeginInit();
+            this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelTitle.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.panelTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelTitle.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1351, 64);
-            this.panelTitle.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelTitle.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelTitle.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelTitle.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelTitle.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelTitle.Style.GradientAngle = 90;
-            this.panelTitle.Style.MarginLeft = 20;
-            this.panelTitle.StyleMouseOver.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            this.panelTitle.StyleMouseOver.MarginLeft = 20;
-            this.panelTitle.TabIndex = 16;
-            this.panelTitle.Text = "បញ្ចូលព័ត៌មានការសម្រាកថ្មី";
             // 
             // groupPanel2
             // 
             this.groupPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel2.Controls.Add(this.txtPatientMedicalHistory);
             this.groupPanel2.Controls.Add(this.labelX13);
             this.groupPanel2.Controls.Add(this.labelX2);
             this.groupPanel2.Controls.Add(this.txtPatientPhoneNumber);
@@ -113,7 +80,7 @@
             this.groupPanel2.Controls.Add(this.labelX8);
             this.groupPanel2.Controls.Add(this.labelX7);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel2.Location = new System.Drawing.Point(12, 79);
+            this.groupPanel2.Location = new System.Drawing.Point(12, 12);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(655, 491);
             // 
@@ -144,8 +111,8 @@
             // 
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel2.TabIndex = 1;
-            this.groupPanel2.Text = "ការសម្រាករបស់អ្នកជំងឺ";
+            this.groupPanel2.TabIndex = 2;
+            this.groupPanel2.Text = "ការផ្ទេររបស់អ្នកជំងឺ";
             // 
             // labelX13
             // 
@@ -352,7 +319,6 @@
             this.txtSearchPatientID.Size = new System.Drawing.Size(354, 49);
             this.txtSearchPatientID.TabIndex = 0;
             this.txtSearchPatientID.TabStop = false;
-            this.txtSearchPatientID.TextChanged += new System.EventHandler(this.txtSearchPatientID_TextChanged);
             // 
             // labelX8
             // 
@@ -382,139 +348,22 @@
             this.labelX7.TabIndex = 16;
             this.labelX7.Text = "វាយបញ្ចូលលេខសម្គាល់អ្នកជំងឺ ៖";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(1030, 766);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(146, 55);
-            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnCancel.TabIndex = 65;
-            this.btnCancel.TabStop = false;
-            this.btnCancel.Text = "ចាកចេញ";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(1193, 766);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(146, 55);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnSave.TabIndex = 64;
-            this.btnSave.TabStop = false;
-            this.btnSave.Text = "រក្សាទុក";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.Controls.Add(this.labelX3);
-            this.groupPanel1.Controls.Add(this.cbRoom);
-            this.groupPanel1.Controls.Add(this.labelX5);
-            this.groupPanel1.Controls.Add(this.cbRoomType);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Location = new System.Drawing.Point(682, 79);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(655, 186);
+            // txtPatientMedicalHistory
             // 
             // 
             // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 66;
-            this.groupPanel1.Text = "សូមជ្រើសរើសបន្ទប់និងប្រភេទបន្ទប់";
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.ForeColor = System.Drawing.Color.White;
-            this.labelX3.Location = new System.Drawing.Point(17, 77);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(131, 39);
-            this.labelX3.TabIndex = 18;
-            this.labelX3.Text = "ជម្រើសបន្ទប់​ ៖";
-            // 
-            // cbRoom
-            // 
-            this.cbRoom.DisplayMember = "Text";
-            this.cbRoom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRoom.ForeColor = System.Drawing.Color.Black;
-            this.cbRoom.FormattingEnabled = true;
-            this.cbRoom.ItemHeight = 44;
-            this.cbRoom.Location = new System.Drawing.Point(192, 70);
-            this.cbRoom.Name = "cbRoom";
-            this.cbRoom.Size = new System.Drawing.Size(420, 50);
-            this.cbRoom.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.cbRoom.TabIndex = 1;
-            this.cbRoom.TabStop = false;
-            // 
-            // labelX5
-            // 
-            this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.ForeColor = System.Drawing.Color.White;
-            this.labelX5.Location = new System.Drawing.Point(17, 21);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(131, 39);
-            this.labelX5.TabIndex = 16;
-            this.labelX5.Text = "ប្រភេទបន្ទប់​ ៖";
-            // 
-            // cbRoomType
-            // 
-            this.cbRoomType.DisplayMember = "Text";
-            this.cbRoomType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRoomType.ForeColor = System.Drawing.Color.Black;
-            this.cbRoomType.FormattingEnabled = true;
-            this.cbRoomType.ItemHeight = 44;
-            this.cbRoomType.Location = new System.Drawing.Point(192, 14);
-            this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(420, 50);
-            this.cbRoomType.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.cbRoomType.TabIndex = 0;
-            this.cbRoomType.TabStop = false;
-            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
+            this.txtPatientMedicalHistory.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.txtPatientMedicalHistory.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientMedicalHistory.Location = new System.Drawing.Point(278, 341);
+            this.txtPatientMedicalHistory.Name = "txtPatientMedicalHistory";
+            this.txtPatientMedicalHistory.ReadOnly = true;
+            this.txtPatientMedicalHistory.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
+    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
+    "ar\r\n}\r\n";
+            this.txtPatientMedicalHistory.Size = new System.Drawing.Size(354, 86);
+            this.txtPatientMedicalHistory.TabIndex = 92;
+            this.txtPatientMedicalHistory.TabStop = false;
             // 
             // groupPanel3
             // 
@@ -525,7 +374,7 @@
             this.groupPanel3.Controls.Add(this.labelX9);
             this.groupPanel3.Controls.Add(this.cbBed);
             this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Location = new System.Drawing.Point(682, 271);
+            this.groupPanel3.Location = new System.Drawing.Point(686, 204);
             this.groupPanel3.Name = "groupPanel3";
             this.groupPanel3.Size = new System.Drawing.Size(655, 299);
             // 
@@ -556,7 +405,7 @@
             // 
             // 
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 67;
+            this.groupPanel3.TabIndex = 69;
             this.groupPanel3.Text = "សូមជ្រើសរើសគ្រែ";
             // 
             // txtBedDescription
@@ -620,176 +469,106 @@
             this.cbBed.TabIndex = 0;
             this.cbBed.TabStop = false;
             // 
-            // txtPatientMedicalHistory
+            // groupPanel1
+            // 
+            this.groupPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.Controls.Add(this.labelX3);
+            this.groupPanel1.Controls.Add(this.cbRoom);
+            this.groupPanel1.Controls.Add(this.labelX5);
+            this.groupPanel1.Controls.Add(this.cbRoomType);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel1.Location = new System.Drawing.Point(686, 12);
+            this.groupPanel1.Name = "groupPanel1";
+            this.groupPanel1.Size = new System.Drawing.Size(655, 186);
             // 
             // 
             // 
-            // 
-            this.txtPatientMedicalHistory.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.txtPatientMedicalHistory.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientMedicalHistory.Location = new System.Drawing.Point(293, 467);
-            this.txtPatientMedicalHistory.Name = "txtPatientMedicalHistory";
-            this.txtPatientMedicalHistory.ReadOnly = true;
-            this.txtPatientMedicalHistory.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
-    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
-    "ar\r\n}\r\n";
-            this.txtPatientMedicalHistory.Size = new System.Drawing.Size(354, 86);
-            this.txtPatientMedicalHistory.TabIndex = 91;
-            this.txtPatientMedicalHistory.TabStop = false;
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(19, 651);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(151, 39);
-            this.labelX10.TabIndex = 95;
-            this.labelX10.Text = "កាលបរិច្ឆេទចេញ ៖";
-            // 
-            // dateTimeDischargeDate
+            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel1.Style.BackColorGradientAngle = 90;
+            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderBottomWidth = 1;
+            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderLeftWidth = 1;
+            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderRightWidth = 1;
+            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderTopWidth = 1;
+            this.groupPanel1.Style.CornerDiameter = 4;
+            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            // 
-            this.dateTimeDischargeDate.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateTimeDischargeDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeDischargeDate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateTimeDischargeDate.ButtonDropDown.Visible = true;
-            this.dateTimeDischargeDate.CustomFormat = "dd-MM-yyyy";
-            this.dateTimeDischargeDate.IsInputReadOnly = true;
-            this.dateTimeDischargeDate.IsPopupCalendarOpen = false;
-            this.dateTimeDischargeDate.Location = new System.Drawing.Point(170, 645);
+            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
+            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel1.TabIndex = 68;
+            this.groupPanel1.Text = "សូមជ្រើសរើសបន្ទប់និងប្រភេទបន្ទប់";
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.dateTimeDischargeDate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeDischargeDate.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dateTimeDischargeDate.MonthCalendar.ClearButtonVisible = true;
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.ForeColor = System.Drawing.Color.White;
+            this.labelX3.Location = new System.Drawing.Point(17, 77);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(131, 39);
+            this.labelX3.TabIndex = 18;
+            this.labelX3.Text = "ជម្រើសបន្ទប់​ ៖";
+            // 
+            // cbRoom
+            // 
+            this.cbRoom.DisplayMember = "Text";
+            this.cbRoom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRoom.ForeColor = System.Drawing.Color.Black;
+            this.cbRoom.FormattingEnabled = true;
+            this.cbRoom.ItemHeight = 44;
+            this.cbRoom.Location = new System.Drawing.Point(192, 70);
+            this.cbRoom.Name = "cbRoom";
+            this.cbRoom.Size = new System.Drawing.Size(420, 50);
+            this.cbRoom.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.cbRoom.TabIndex = 1;
+            this.cbRoom.TabStop = false;
+            // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateTimeDischargeDate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeDischargeDate.MonthCalendar.DisplayMonth = new System.DateTime(2024, 6, 1, 0, 0, 0, 0);
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.ForeColor = System.Drawing.Color.White;
+            this.labelX5.Location = new System.Drawing.Point(17, 21);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(131, 39);
+            this.labelX5.TabIndex = 16;
+            this.labelX5.Text = "ប្រភេទបន្ទប់​ ៖";
             // 
+            // cbRoomType
             // 
-            // 
-            this.dateTimeDischargeDate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateTimeDischargeDate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeDischargeDate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateTimeDischargeDate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeDischargeDate.MonthCalendar.TodayButtonVisible = true;
-            this.dateTimeDischargeDate.Name = "dateTimeDischargeDate";
-            this.dateTimeDischargeDate.Size = new System.Drawing.Size(373, 49);
-            this.dateTimeDischargeDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateTimeDischargeDate.TabIndex = 94;
-            this.dateTimeDischargeDate.TabStop = false;
-            this.dateTimeDischargeDate.TimeSelectorType = DevComponents.Editors.DateTimeAdv.eTimeSelectorType.TouchStyle;
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(19, 596);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(145, 39);
-            this.labelX12.TabIndex = 93;
-            this.labelX12.Text = "កាលបរិច្ឆេទចូល ៖";
-            // 
-            // dateTimeAdmissionDate
-            // 
-            // 
-            // 
-            // 
-            this.dateTimeAdmissionDate.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateTimeAdmissionDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeAdmissionDate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateTimeAdmissionDate.ButtonDropDown.Visible = true;
-            this.dateTimeAdmissionDate.CustomFormat = "dd-MM-yyyy";
-            this.dateTimeAdmissionDate.IsInputReadOnly = true;
-            this.dateTimeAdmissionDate.IsPopupCalendarOpen = false;
-            this.dateTimeAdmissionDate.Location = new System.Drawing.Point(170, 590);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.dateTimeAdmissionDate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeAdmissionDate.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dateTimeAdmissionDate.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateTimeAdmissionDate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeAdmissionDate.MonthCalendar.DisplayMonth = new System.DateTime(2024, 6, 1, 0, 0, 0, 0);
-            // 
-            // 
-            // 
-            this.dateTimeAdmissionDate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateTimeAdmissionDate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateTimeAdmissionDate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateTimeAdmissionDate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateTimeAdmissionDate.MonthCalendar.TodayButtonVisible = true;
-            this.dateTimeAdmissionDate.Name = "dateTimeAdmissionDate";
-            this.dateTimeAdmissionDate.Size = new System.Drawing.Size(373, 49);
-            this.dateTimeAdmissionDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateTimeAdmissionDate.TabIndex = 92;
-            this.dateTimeAdmissionDate.TabStop = false;
-            this.dateTimeAdmissionDate.TimeSelectorType = DevComponents.Editors.DateTimeAdv.eTimeSelectorType.TouchStyle;
-            // 
-            // txtDescription
-            // 
-            // 
-            // 
-            // 
-            this.txtDescription.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.txtDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDescription.Location = new System.Drawing.Point(715, 671);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
-    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
-    "ar\r\n}\r\n";
-            this.txtDescription.Size = new System.Drawing.Size(622, 75);
-            this.txtDescription.TabIndex = 99;
-            this.txtDescription.TabStop = false;
-            // 
-            // labelX14
-            // 
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.ForeColor = System.Drawing.Color.Black;
-            this.labelX14.Location = new System.Drawing.Point(564, 671);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(151, 39);
-            this.labelX14.TabIndex = 98;
-            this.labelX14.Text = "បរិយាយ ៖";
+            this.cbRoomType.DisplayMember = "Text";
+            this.cbRoomType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRoomType.ForeColor = System.Drawing.Color.Black;
+            this.cbRoomType.FormattingEnabled = true;
+            this.cbRoomType.ItemHeight = 44;
+            this.cbRoomType.Location = new System.Drawing.Point(192, 14);
+            this.cbRoomType.Name = "cbRoomType";
+            this.cbRoomType.Size = new System.Drawing.Size(420, 50);
+            this.cbRoomType.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.cbRoomType.TabIndex = 0;
+            this.cbRoomType.TabStop = false;
             // 
             // txtStatus
             // 
@@ -798,13 +577,13 @@
             // 
             this.txtStatus.BackgroundStyle.Class = "RichTextBoxBorder";
             this.txtStatus.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStatus.Location = new System.Drawing.Point(715, 590);
+            this.txtStatus.Location = new System.Drawing.Point(810, 524);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
     "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
     "ar\r\n}\r\n";
-            this.txtStatus.Size = new System.Drawing.Size(622, 75);
-            this.txtStatus.TabIndex = 97;
+            this.txtStatus.Size = new System.Drawing.Size(531, 130);
+            this.txtStatus.TabIndex = 99;
             this.txtStatus.TabStop = false;
             // 
             // labelX15
@@ -815,84 +594,62 @@
             // 
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.ForeColor = System.Drawing.Color.Black;
-            this.labelX15.Location = new System.Drawing.Point(564, 590);
+            this.labelX15.Location = new System.Drawing.Point(635, 524);
             this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(151, 39);
-            this.labelX15.TabIndex = 96;
-            this.labelX15.Text = "បរិយាយស្ថានភាព ៖";
+            this.labelX15.Size = new System.Drawing.Size(177, 39);
+            this.labelX15.TabIndex = 98;
+            this.labelX15.Text = "បរិយាយមូលហេតុ ៖";
             // 
-            // FmrAddOrModifyInpatientResidence
+            // FrmPatientTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1351, 835);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.labelX14);
+            this.ClientSize = new System.Drawing.Size(1745, 666);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.labelX15);
-            this.Controls.Add(this.labelX10);
-            this.Controls.Add(this.dateTimeDischargeDate);
-            this.Controls.Add(this.labelX12);
-            this.Controls.Add(this.dateTimeAdmissionDate);
-            this.Controls.Add(this.txtPatientMedicalHistory);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupPanel2);
-            this.Controls.Add(this.panelTitle);
             this.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.Name = "FmrAddOrModifyInpatientResidence";
+            this.Name = "FrmPatientTransfer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FmrAddOrModifyInpatientResidence_Load);
+            this.Text = "FrmPatientTransfer";
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePatientBirthDate)).EndInit();
-            this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeDischargeDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeAdmissionDate)).EndInit();
+            this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.PanelEx panelTitle;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
+        private DevComponents.DotNetBar.LabelX labelX13;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientPhoneNumber;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePatientBirthDate;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbPatientGender;
+        private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPatientID;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchPatientID;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbPatientGender;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimePatientBirthDate;
-        private DevComponents.DotNetBar.ButtonX btnCancel;
-        private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtPatientMedicalHistory;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
+        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtBedDescription;
+        private DevComponents.DotNetBar.LabelX labelX11;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbBed;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbRoom;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbRoomType;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.LabelX labelX9;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbBed;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtBedDescription;
-        private DevComponents.DotNetBar.LabelX labelX11;
-        private DevComponents.DotNetBar.LabelX labelX13;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientPhoneNumber;
-        private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtPatientMedicalHistory;
-        private DevComponents.DotNetBar.LabelX labelX10;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeDischargeDate;
-        private DevComponents.DotNetBar.LabelX labelX12;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeAdmissionDate;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtDescription;
-        private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.Controls.RichTextBoxEx txtStatus;
         private DevComponents.DotNetBar.LabelX labelX15;
     }

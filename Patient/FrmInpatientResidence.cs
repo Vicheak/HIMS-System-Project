@@ -23,6 +23,8 @@ namespace HIMS.Patient
         protected SqlDataAdapter inpatientResidenceAdapter = new SqlDataAdapter();
         protected BindingSource inpatientResidenceBindingSource = new BindingSource();
 
+        protected SqlDataAdapter staffInpatientResidenceAdapter = new SqlDataAdapter();
+
         public static string VIEW_INPATIENT_RESIDENCE_INFO = "vInpatientResidenceInfo";
 
         public FrmInpatientResidence()
@@ -97,6 +99,17 @@ namespace HIMS.Patient
 
             inpatientResidenceAdapter.DeleteCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
                    .Direction = ParameterDirection.Input;
+
+            //command for staff inpatient residence
+            staffInpatientResidenceAdapter.DeleteCommand = new SqlCommand
+            {
+                CommandText = "spDeleteStaffInpatientResidenceInfoByInpatientResidenceID",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+
+            staffInpatientResidenceAdapter.DeleteCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
+                .Direction = ParameterDirection.Input;
         }
 
         protected void FillData()
@@ -158,7 +171,16 @@ namespace HIMS.Patient
         {
             FmrAddOrModifyInpatientResidence fmrAddOrModifyInpatientResidence = new FmrAddOrModifyInpatientResidence();
             fmrAddOrModifyInpatientResidence.inpatientResidenceAdapter = inpatientResidenceAdapter;
-            fmrAddOrModifyInpatientResidence.ShowDialog(); 
+            fmrAddOrModifyInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource; 
+            fmrAddOrModifyInpatientResidence.ShowDialog();
+
+            if (fmrAddOrModifyInpatientResidence.DialogResult == DialogResult.OK)
+            {
+                inpatientResidenceBindingSource.EndEdit();
+                inpatientResidenceAdapter.Update(dataSet, VIEW_INPATIENT_RESIDENCE_INFO);
+
+                NotificationUtil.AlertNotificationInsert();
+            }
         }
 
         private void btnAssignStaff_Click(object sender, EventArgs e)
@@ -182,7 +204,46 @@ namespace HIMS.Patient
             }
             else if (e.ColumnIndex == 1)
             {
-          
+                if (inpatientResidenceBindingSource.Count == 0) return;
+
+                var currentRow = inpatientResidenceBindingSource.Current as DataRowView;
+                string patientID = Convert.ToString(currentRow.Row["PatientID"]);
+
+                CustomMessageBox result = new CustomMessageBox($"តើលោកអ្នកពិតជាចង់លុប​ព័ត៌មាននៃការស្នាក់នៅរបស់អ្នកជំងឺ #{patientID} មែនដែរឬទេ?");
+                result.ShowDialog();
+                if (result.DialogResult == DialogResult.OK)
+                {
+                    //remove all associated records first
+                    
+                    staffInpatientResidenceAdapter.DeleteCommand.Parameters["@InpatientResidenceID"].Value = Convert.ToInt32(currentRow.Row["InpatientResidenceID"]);
+
+                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Open(); 
+                    staffInpatientResidenceAdapter.DeleteCommand.ExecuteNonQuery();
+                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Close(); 
+
+                    inpatientResidenceBindingSource.RemoveCurrent();
+                    inpatientResidenceBindingSource.EndEdit();
+
+                    inpatientResidenceAdapter.Update(dataSet, VIEW_INPATIENT_RESIDENCE_INFO);
+
+                    NotificationUtil.AlertNotificationDelete();
+                }
+            }
+        }
+
+        private void dgvInpatientResidence_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgvInpatientResidence.Rows.Count == 0)
+            {
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    "ព័ត៌មានមិនត្រូវបានស្វែងរកឃើញទេ...",
+                    new Font(dgvInpatientResidence.Font.FontFamily, 12, FontStyle.Regular),
+                    dgvInpatientResidence.ClientRectangle,
+                    dgvInpatientResidence.ForeColor,
+                    dgvInpatientResidence.BackgroundColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                );
             }
         }
     }

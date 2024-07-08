@@ -22,6 +22,7 @@ namespace HIMS.Patient
         protected DataSet dataSet = new DataSet();
 
         public SqlDataAdapter inpatientResidenceAdapter = new SqlDataAdapter();
+        public BindingSource inpatientResidenceBindingSource = new BindingSource(); 
 
         protected SqlDataAdapter patientAdapter = new SqlDataAdapter();
         protected BindingSource patientBindingSource = new BindingSource();
@@ -245,7 +246,78 @@ namespace HIMS.Patient
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //validate
+            if (string.IsNullOrWhiteSpace(dateTimeAdmissionDate.Text) ||
+                string.IsNullOrWhiteSpace(dateTimeDischargeDate.Text))
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសកាលបរិច្ឆេទចូលនិងចេញ", Color.Yellow);
+                dateTimeAdmissionDate.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtStatus.Text))
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សូមវាយបញ្ចូលការបរិយាយស្ថានភាពការស្នាក់នៅ", Color.Yellow);
+                txtStatus.Focus();
+                return;
+            }
+            if (dateTimeAdmissionDate.Value >= dateTimeDischargeDate.Value)
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសកាលបរិច្ឆេទចូលនិងចេញរបស់អ្នកជំងឺអោយបានត្រឹមត្រូវ", Color.Yellow);
+                dateTimeAdmissionDate.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtPatientID.Text))
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមវាយបញ្ចូលលេខសម្គាល់អ្នកជំងឺ", Color.Yellow);
+                dateTimeAdmissionDate.Focus();
+                return;
+            }
+            if (cbBed.DataSource == null)
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសគ្រែអ្នកជំងឺ", Color.Yellow);
+                dateTimeAdmissionDate.Focus();
+                return;
+            }
 
+            //check if the patient is inpatient 
+            SqlCommand cmdCheck = new SqlCommand($"SELECT dbo.fnCheckPatientIsInpatient('{txtPatientID.Text}');",
+                this.connection);
+            cmdCheck.Connection.Open();
+            var result = cmdCheck.ExecuteScalar();
+            if ((bool)result == false)
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "អ្នកជំងឺនេះមិនបានស្នាក់នៅក្នុងមន្ទីរពេទ្យទេ", Color.Yellow);
+                cmdCheck.Connection.Close();
+                return;
+            }
+            cmdCheck.Connection.Close();
+
+            var descriptionValue = new object();
+            if (string.IsNullOrWhiteSpace(txtDescription.Text) || txtDescription.Text.Equals("គ្មា​នការបរិយាយ"))
+                descriptionValue = DBNull.Value;
+            else descriptionValue = txtDescription.Text;
+
+            inpatientResidenceBindingSource.AddNew();
+
+            var newRow = inpatientResidenceBindingSource.Current as DataRowView;
+
+            newRow.Row.ItemArray = new object[]
+            {
+                DBNull.Value,
+                dateTimeAdmissionDate.Value,
+                dateTimeDischargeDate.Value,
+                txtStatus.Text,
+                descriptionValue,
+                txtPatientID.Text,
+                DBNull.Value,
+                cbBed.Text,
+                cbBed.SelectedValue,
+                cbRoom.SelectedValue,
+                cbRoomType.SelectedValue
+            };
+
+            //close the form itself
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

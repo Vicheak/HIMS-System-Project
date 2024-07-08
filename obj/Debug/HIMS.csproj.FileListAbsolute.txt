@@ -48,3 +48,4 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmIn
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmInpatientResidenceDetail.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmAddOrModifyStaffInpatientResidence.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FmrAddOrModifyInpatientResidence.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmPatientTransfer.resources
