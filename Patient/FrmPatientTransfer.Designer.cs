@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPatientTransfer));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtPatientMedicalHistory = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.txtPatientPhoneNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -42,7 +48,6 @@
             this.txtSearchPatientID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.txtPatientMedicalHistory = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtBedDescription = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
@@ -53,12 +58,29 @@
             this.cbRoom = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.cbRoomType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtStatus = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.txtTransferReason = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.dgvInpatientResidence = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.InpatientResidenceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DischargeDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.btnRefresh = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePatientBirthDate)).BeginInit();
             this.groupPanel3.SuspendLayout();
             this.groupPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInpatientResidence)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel2
@@ -113,6 +135,23 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 2;
             this.groupPanel2.Text = "ការផ្ទេររបស់អ្នកជំងឺ";
+            // 
+            // txtPatientMedicalHistory
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientMedicalHistory.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.txtPatientMedicalHistory.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientMedicalHistory.Location = new System.Drawing.Point(278, 341);
+            this.txtPatientMedicalHistory.Name = "txtPatientMedicalHistory";
+            this.txtPatientMedicalHistory.ReadOnly = true;
+            this.txtPatientMedicalHistory.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
+    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
+    "ar\r\n}\r\n";
+            this.txtPatientMedicalHistory.Size = new System.Drawing.Size(354, 86);
+            this.txtPatientMedicalHistory.TabIndex = 92;
+            this.txtPatientMedicalHistory.TabStop = false;
             // 
             // labelX13
             // 
@@ -319,6 +358,7 @@
             this.txtSearchPatientID.Size = new System.Drawing.Size(354, 49);
             this.txtSearchPatientID.TabIndex = 0;
             this.txtSearchPatientID.TabStop = false;
+            this.txtSearchPatientID.TextChanged += new System.EventHandler(this.txtSearchPatientID_TextChanged);
             // 
             // labelX8
             // 
@@ -347,23 +387,6 @@
             this.labelX7.Size = new System.Drawing.Size(255, 39);
             this.labelX7.TabIndex = 16;
             this.labelX7.Text = "វាយបញ្ចូលលេខសម្គាល់អ្នកជំងឺ ៖";
-            // 
-            // txtPatientMedicalHistory
-            // 
-            // 
-            // 
-            // 
-            this.txtPatientMedicalHistory.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.txtPatientMedicalHistory.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientMedicalHistory.Location = new System.Drawing.Point(278, 341);
-            this.txtPatientMedicalHistory.Name = "txtPatientMedicalHistory";
-            this.txtPatientMedicalHistory.ReadOnly = true;
-            this.txtPatientMedicalHistory.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
-    "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
-    "ar\r\n}\r\n";
-            this.txtPatientMedicalHistory.Size = new System.Drawing.Size(354, 86);
-            this.txtPatientMedicalHistory.TabIndex = 92;
-            this.txtPatientMedicalHistory.TabStop = false;
             // 
             // groupPanel3
             // 
@@ -569,22 +592,23 @@
             this.cbRoomType.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.cbRoomType.TabIndex = 0;
             this.cbRoomType.TabStop = false;
+            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
             // 
-            // txtStatus
+            // txtTransferReason
             // 
             // 
             // 
             // 
-            this.txtStatus.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.txtStatus.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtStatus.Location = new System.Drawing.Point(810, 524);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
+            this.txtTransferReason.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.txtTransferReason.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTransferReason.Location = new System.Drawing.Point(1357, 57);
+            this.txtTransferReason.Name = "txtTransferReason";
+            this.txtTransferReason.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\nouicompat\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 " +
     "Khmer Kep;}}\r\n{\\*\\generator Riched20 10.0.22621}\\viewkind4\\uc1 \r\n\\pard\\f0\\fs24\\p" +
     "ar\r\n}\r\n";
-            this.txtStatus.Size = new System.Drawing.Size(531, 130);
-            this.txtStatus.TabIndex = 99;
-            this.txtStatus.TabStop = false;
+            this.txtTransferReason.Size = new System.Drawing.Size(547, 446);
+            this.txtTransferReason.TabIndex = 99;
+            this.txtTransferReason.TabStop = false;
             // 
             // labelX15
             // 
@@ -594,18 +618,253 @@
             // 
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.ForeColor = System.Drawing.Color.Black;
-            this.labelX15.Location = new System.Drawing.Point(635, 524);
+            this.labelX15.Location = new System.Drawing.Point(1357, 12);
             this.labelX15.Name = "labelX15";
             this.labelX15.Size = new System.Drawing.Size(177, 39);
             this.labelX15.TabIndex = 98;
             this.labelX15.Text = "បរិយាយមូលហេតុ ៖";
             // 
+            // btnSave
+            // 
+            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(1743, 702);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(162, 54);
+            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnSave.TabIndex = 100;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "ផ្ទេរអ្នកជំងឺ";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dgvInpatientResidence
+            // 
+            this.dgvInpatientResidence.AllowUserToAddRows = false;
+            this.dgvInpatientResidence.AllowUserToDeleteRows = false;
+            this.dgvInpatientResidence.AllowUserToResizeColumns = false;
+            this.dgvInpatientResidence.AllowUserToResizeRows = false;
+            this.dgvInpatientResidence.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInpatientResidence.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInpatientResidence.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvInpatientResidence.ColumnHeadersHeight = 45;
+            this.dgvInpatientResidence.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvInpatientResidence.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.InpatientResidenceID,
+            this.AdmissionDate,
+            this.DischargeDate,
+            this.Status,
+            this.Description,
+            this.PatientID,
+            this.FullName,
+            this.BedID,
+            this.BedDescription,
+            this.RoomID,
+            this.RoomNumber,
+            this.RoomTypeID});
+            this.dgvInpatientResidence.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInpatientResidence.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvInpatientResidence.EnableHeadersVisualStyles = false;
+            this.dgvInpatientResidence.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvInpatientResidence.Location = new System.Drawing.Point(12, 549);
+            this.dgvInpatientResidence.Name = "dgvInpatientResidence";
+            this.dgvInpatientResidence.ReadOnly = true;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInpatientResidence.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvInpatientResidence.RowHeadersWidth = 51;
+            this.dgvInpatientResidence.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvInpatientResidence.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvInpatientResidence.RowTemplate.Height = 35;
+            this.dgvInpatientResidence.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInpatientResidence.Size = new System.Drawing.Size(1630, 207);
+            this.dgvInpatientResidence.TabIndex = 101;
+            this.dgvInpatientResidence.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvInpatientResidence_Paint);
+            // 
+            // InpatientResidenceID
+            // 
+            this.InpatientResidenceID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.InpatientResidenceID.DataPropertyName = "InpatientResidenceID";
+            this.InpatientResidenceID.HeaderText = "លេខកូដ";
+            this.InpatientResidenceID.MinimumWidth = 6;
+            this.InpatientResidenceID.Name = "InpatientResidenceID";
+            this.InpatientResidenceID.ReadOnly = true;
+            this.InpatientResidenceID.Width = 108;
+            // 
+            // AdmissionDate
+            // 
+            this.AdmissionDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.AdmissionDate.DataPropertyName = "AdmissionDate";
+            this.AdmissionDate.HeaderText = "កាលបរិច្ឆេទចូល";
+            this.AdmissionDate.MinimumWidth = 6;
+            this.AdmissionDate.Name = "AdmissionDate";
+            this.AdmissionDate.ReadOnly = true;
+            this.AdmissionDate.Width = 172;
+            // 
+            // DischargeDate
+            // 
+            this.DischargeDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DischargeDate.DataPropertyName = "DischargeDate";
+            this.DischargeDate.HeaderText = "កាលបរិច្ឆេទចេញ";
+            this.DischargeDate.MinimumWidth = 6;
+            this.DischargeDate.Name = "DischargeDate";
+            this.DischargeDate.ReadOnly = true;
+            this.DischargeDate.Width = 179;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "បរិយាយស្ថានភាព";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "បរិយាយ";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Visible = false;
+            this.Description.Width = 125;
+            // 
+            // PatientID
+            // 
+            this.PatientID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PatientID.DataPropertyName = "PatientID";
+            this.PatientID.HeaderText = "លេខសម្គាល់អ្នកជំងឺ";
+            this.PatientID.MinimumWidth = 6;
+            this.PatientID.Name = "PatientID";
+            this.PatientID.ReadOnly = true;
+            this.PatientID.Visible = false;
+            this.PatientID.Width = 195;
+            // 
+            // FullName
+            // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "ឈ្មោះពេញ";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Visible = false;
+            this.FullName.Width = 131;
+            // 
+            // BedID
+            // 
+            this.BedID.DataPropertyName = "BedID";
+            this.BedID.HeaderText = "លេខកូដគ្រែ";
+            this.BedID.MinimumWidth = 6;
+            this.BedID.Name = "BedID";
+            this.BedID.ReadOnly = true;
+            this.BedID.Width = 125;
+            // 
+            // BedDescription
+            // 
+            this.BedDescription.DataPropertyName = "BedDescription";
+            this.BedDescription.HeaderText = "បរិយាយពីគ្រែ";
+            this.BedDescription.MinimumWidth = 6;
+            this.BedDescription.Name = "BedDescription";
+            this.BedDescription.ReadOnly = true;
+            this.BedDescription.Visible = false;
+            this.BedDescription.Width = 125;
+            // 
+            // RoomID
+            // 
+            this.RoomID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RoomID.DataPropertyName = "RoomID";
+            this.RoomID.HeaderText = "លេខកូដបន្ទប់";
+            this.RoomID.MinimumWidth = 6;
+            this.RoomID.Name = "RoomID";
+            this.RoomID.ReadOnly = true;
+            this.RoomID.Visible = false;
+            this.RoomID.Width = 147;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RoomNumber.DataPropertyName = "RoomNumber";
+            this.RoomNumber.HeaderText = "លេខបន្ទប់";
+            this.RoomNumber.MinimumWidth = 6;
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.ReadOnly = true;
+            this.RoomNumber.Width = 123;
+            // 
+            // RoomTypeID
+            // 
+            this.RoomTypeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RoomTypeID.DataPropertyName = "RoomTypeID";
+            this.RoomTypeID.HeaderText = "លេខកូដប្រភេទបន្ទប់";
+            this.RoomTypeID.MinimumWidth = 6;
+            this.RoomTypeID.Name = "RoomTypeID";
+            this.RoomTypeID.ReadOnly = true;
+            this.RoomTypeID.Visible = false;
+            this.RoomTypeID.Width = 200;
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.ForeColor = System.Drawing.Color.Black;
+            this.labelX10.Location = new System.Drawing.Point(14, 509);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(275, 39);
+            this.labelX10.TabIndex = 102;
+            this.labelX10.Text = "ប្រវត្តិនៃការស្នាក់នៅរបស់អ្នកជំងឺ ៖";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnRefresh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(1656, 549);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(57, 49);
+            this.btnRefresh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnRefresh.TabIndex = 103;
+            this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // FrmPatientTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1745, 666);
-            this.Controls.Add(this.txtStatus);
+            this.ClientSize = new System.Drawing.Size(1917, 768);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.labelX10);
+            this.Controls.Add(this.dgvInpatientResidence);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtTransferReason);
             this.Controls.Add(this.labelX15);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
@@ -614,11 +873,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPatientTransfer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPatientTransfer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPatientTransfer_Load);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimePatientBirthDate)).EndInit();
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInpatientResidence)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,7 +911,23 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbRoom;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbRoomType;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtStatus;
+        private DevComponents.DotNetBar.Controls.RichTextBoxEx txtTransferReason;
         private DevComponents.DotNetBar.LabelX labelX15;
+        public DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvInpatientResidence;
+        private DevComponents.DotNetBar.LabelX labelX10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InpatientResidenceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdmissionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DischargeDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PatientID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomTypeID;
+        private DevComponents.DotNetBar.ButtonX btnRefresh;
     }
 }

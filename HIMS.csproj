@@ -90,6 +90,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment\FrmAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\FrmAppointment.Designer.cs">
+      <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Function\FrmAddOrModifyStaffActivity.Designer.cs">
       <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="Function\FrmStaffActivity.cs">
       <SubType>Form</SubType>
@@ -137,6 +149,12 @@
     </Compile>
     <Compile Include="Patient\FrmAddOrModifyStaffInpatientResidence.Designer.cs">
       <DependentUpon>FrmAddOrModifyStaffInpatientResidence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FrmAddOrModifyTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmAddOrModifyTreatment.Designer.cs">
+      <DependentUpon>FrmAddOrModifyTreatment.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\FrmInpatientResidence.cs">
       <SubType>Form</SubType>
@@ -180,6 +198,12 @@
     <Compile Include="Patient\FrmPatientTransfer.Designer.cs">
       <DependentUpon>FrmPatientTransfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\FrmTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmTreatment.Designer.cs">
+      <DependentUpon>FrmTreatment.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomBed\FrmAddOrModifyBed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,11 +222,17 @@
     <Compile Include="Utility\GeneralUtil.cs" />
     <Compile Include="Utility\NotificationUtil.cs" />
     <Compile Include="Utility\ValidateUtil.cs" />
+    <EmbeddedResource Include="Appointment\FrmAppointment.resx">
+      <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Function\FrmAddOrModifyStaffActivity.resx">
       <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Function\FrmStaffActivity.resx">
       <DependentUpon>FrmStaffActivity.cs</DependentUpon>
@@ -221,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmAddOrModifyStaffInpatientResidence.resx">
       <DependentUpon>FrmAddOrModifyStaffInpatientResidence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmAddOrModifyTreatment.resx">
+      <DependentUpon>FrmAddOrModifyTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmInpatientResidence.resx">
       <DependentUpon>FrmInpatientResidence.cs</DependentUpon>
@@ -242,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmPatientTransfer.resx">
       <DependentUpon>FrmPatientTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmTreatment.resx">
+      <DependentUpon>FrmTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomBed\FrmAddOrModifyBed.resx">
       <DependentUpon>FrmAddOrModifyBed.cs</DependentUpon>
@@ -273,7 +309,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Appointment\" />
     <Folder Include="Medicine\" />
     <Folder Include="Report\" />
     <Folder Include="Staff\" />

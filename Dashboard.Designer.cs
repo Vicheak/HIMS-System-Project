@@ -39,14 +39,14 @@
             this.btnTransferPatient = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListTreatment = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.PatientTab1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnAddNewPatient = new DevComponents.DotNetBar.ButtonItem();
             this.btnListPatient = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.FunctionTab4 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListDepartment = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab3 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab2 = new DevComponents.DotNetBar.RibbonBar();
@@ -56,6 +56,12 @@
             this.btnListStaffActivity = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnDiseaseType = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.AppointmentTab2 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
+            this.AppointmentTab1 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListAppointment = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ReportTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
@@ -82,12 +88,6 @@
             this.btnAddMedicineStock = new DevComponents.DotNetBar.ButtonItem();
             this.btnListMedicine = new DevComponents.DotNetBar.ButtonItem();
             this.btnStockStatus = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.AppointmentTab2 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
-            this.AppointmentTab1 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.StaffTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.btnStaffDocument = new DevComponents.DotNetBar.ButtonItem();
@@ -142,11 +142,11 @@
             this.menu.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
+            this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel10.SuspendLayout();
             this.ribbonPanel9.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
-            this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel8.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
@@ -162,11 +162,11 @@
             this.menu.CaptionVisible = true;
             this.menu.Controls.Add(this.ribbonPanel1);
             this.menu.Controls.Add(this.ribbonPanel6);
+            this.menu.Controls.Add(this.ribbonPanel3);
             this.menu.Controls.Add(this.ribbonPanel5);
             this.menu.Controls.Add(this.ribbonPanel10);
             this.menu.Controls.Add(this.ribbonPanel9);
             this.menu.Controls.Add(this.ribbonPanel4);
-            this.menu.Controls.Add(this.ribbonPanel3);
             this.menu.Controls.Add(this.ribbonPanel2);
             this.menu.Controls.Add(this.ribbonPanel8);
             this.menu.Controls.Add(this.ribbonPanel7);
@@ -347,7 +347,7 @@
             this.PatientTab2.DragDropSupport = true;
             this.PatientTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem4,
-            this.buttonItem5,
+            this.btnListTreatment,
             this.buttonItem6});
             this.PatientTab2.Location = new System.Drawing.Point(346, 0);
             this.PatientTab2.Name = "PatientTab2";
@@ -373,13 +373,14 @@
             this.buttonItem4.SubItemsExpandWidth = 14;
             this.buttonItem4.Text = "កំណត់រោគវិន័ច្ឆ័យ";
             // 
-            // buttonItem5
+            // btnListTreatment
             // 
-            this.buttonItem5.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem5.Image")));
-            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.SubItemsExpandWidth = 14;
-            this.buttonItem5.Text = "ការព្យាបាល";
+            this.btnListTreatment.Image = ((System.Drawing.Image)(resources.GetObject("btnListTreatment.Image")));
+            this.btnListTreatment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListTreatment.Name = "btnListTreatment";
+            this.btnListTreatment.SubItemsExpandWidth = 14;
+            this.btnListTreatment.Text = "ការព្យាបាល";
+            this.btnListTreatment.Click += new System.EventHandler(this.btnListTreatment_Click);
             // 
             // buttonItem6
             // 
@@ -482,7 +483,7 @@
             this.FunctionTab4.Dock = System.Windows.Forms.DockStyle.Left;
             this.FunctionTab4.DragDropSupport = true;
             this.FunctionTab4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem18});
+            this.btnListDepartment});
             this.FunctionTab4.Location = new System.Drawing.Point(1176, 0);
             this.FunctionTab4.Margin = new System.Windows.Forms.Padding(4);
             this.FunctionTab4.Name = "FunctionTab4";
@@ -500,13 +501,14 @@
             this.FunctionTab4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.FunctionTab4.TitleVisible = false;
             // 
-            // buttonItem18
+            // btnListDepartment
             // 
-            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
-            this.buttonItem18.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem18.Name = "buttonItem18";
-            this.buttonItem18.SubItemsExpandWidth = 14;
-            this.buttonItem18.Text = "បញ្ចូលជាន់អាគារ";
+            this.btnListDepartment.Image = ((System.Drawing.Image)(resources.GetObject("btnListDepartment.Image")));
+            this.btnListDepartment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListDepartment.Name = "btnListDepartment";
+            this.btnListDepartment.SubItemsExpandWidth = 14;
+            this.btnListDepartment.Text = "បញ្ចូលជាន់អាគារ";
+            this.btnListDepartment.Click += new System.EventHandler(this.btnListDepartment_Click);
             // 
             // FunctionTab3
             // 
@@ -658,6 +660,123 @@
             this.btnDiseaseType.Name = "btnDiseaseType";
             this.btnDiseaseType.SubItemsExpandWidth = 14;
             this.btnDiseaseType.Text = "បញ្ចូលប្រភេទជម្ងឺ";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.AppointmentTab2);
+            this.ribbonPanel3.Controls.Add(this.AppointmentTab1);
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1478, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // AppointmentTab2
+            // 
+            this.AppointmentTab2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab2.ContainerControlProcessDialogKey = true;
+            this.AppointmentTab2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AppointmentTab2.DragDropSupport = true;
+            this.AppointmentTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem12});
+            this.AppointmentTab2.Location = new System.Drawing.Point(366, 0);
+            this.AppointmentTab2.Margin = new System.Windows.Forms.Padding(4);
+            this.AppointmentTab2.Name = "AppointmentTab2";
+            this.AppointmentTab2.Size = new System.Drawing.Size(324, 131);
+            this.AppointmentTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AppointmentTab2.TabIndex = 6;
+            this.AppointmentTab2.Text = "AppointmentTab2";
+            // 
+            // 
+            // 
+            this.AppointmentTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab2.TitleVisible = false;
+            // 
+            // buttonItem12
+            // 
+            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
+            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem12.Name = "buttonItem12";
+            this.buttonItem12.SubItemsExpandWidth = 14;
+            this.buttonItem12.Text = "បញ្ជីកាលវិភាគវេជ្ជៈបណ្ខិត";
+            // 
+            // AppointmentTab1
+            // 
+            this.AppointmentTab1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab1.ContainerControlProcessDialogKey = true;
+            this.AppointmentTab1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AppointmentTab1.DragDropSupport = true;
+            this.AppointmentTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem10,
+            this.btnListAppointment});
+            this.AppointmentTab1.Location = new System.Drawing.Point(3, 0);
+            this.AppointmentTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.AppointmentTab1.Name = "AppointmentTab1";
+            this.AppointmentTab1.Size = new System.Drawing.Size(363, 131);
+            this.AppointmentTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AppointmentTab1.TabIndex = 5;
+            this.AppointmentTab1.Text = "AppointmentTab1";
+            // 
+            // 
+            // 
+            this.AppointmentTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab1.TitleVisible = false;
+            // 
+            // buttonItem10
+            // 
+            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
+            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem10.Name = "buttonItem10";
+            this.buttonItem10.SubItemsExpandWidth = 14;
+            this.buttonItem10.Text = "ទទួលការណាត់";
+            // 
+            // btnListAppointment
+            // 
+            this.btnListAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnListAppointment.Image")));
+            this.btnListAppointment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListAppointment.Name = "btnListAppointment";
+            this.btnListAppointment.SubItemsExpandWidth = 14;
+            this.btnListAppointment.Text = "បញ្ជីការណាត់ជួប";
+            this.btnListAppointment.Click += new System.EventHandler(this.btnListAppointment_Click);
             // 
             // ribbonPanel5
             // 
@@ -1118,122 +1237,6 @@
             this.btnStockStatus.Name = "btnStockStatus";
             this.btnStockStatus.SubItemsExpandWidth = 14;
             this.btnStockStatus.Text = "ស្ថានភាពស្តុកថ្នាំ";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Controls.Add(this.AppointmentTab2);
-            this.ribbonPanel3.Controls.Add(this.AppointmentTab1);
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // AppointmentTab2
-            // 
-            this.AppointmentTab2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab2.ContainerControlProcessDialogKey = true;
-            this.AppointmentTab2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AppointmentTab2.DragDropSupport = true;
-            this.AppointmentTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem12});
-            this.AppointmentTab2.Location = new System.Drawing.Point(366, 0);
-            this.AppointmentTab2.Margin = new System.Windows.Forms.Padding(4);
-            this.AppointmentTab2.Name = "AppointmentTab2";
-            this.AppointmentTab2.Size = new System.Drawing.Size(324, 131);
-            this.AppointmentTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.AppointmentTab2.TabIndex = 6;
-            this.AppointmentTab2.Text = "AppointmentTab2";
-            // 
-            // 
-            // 
-            this.AppointmentTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab2.TitleVisible = false;
-            // 
-            // buttonItem12
-            // 
-            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
-            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem12.Name = "buttonItem12";
-            this.buttonItem12.SubItemsExpandWidth = 14;
-            this.buttonItem12.Text = "បញ្ជីកាលវិភាគវេជ្ជៈបណ្ខិត";
-            // 
-            // AppointmentTab1
-            // 
-            this.AppointmentTab1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab1.ContainerControlProcessDialogKey = true;
-            this.AppointmentTab1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AppointmentTab1.DragDropSupport = true;
-            this.AppointmentTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem10,
-            this.buttonItem11});
-            this.AppointmentTab1.Location = new System.Drawing.Point(3, 0);
-            this.AppointmentTab1.Margin = new System.Windows.Forms.Padding(4);
-            this.AppointmentTab1.Name = "AppointmentTab1";
-            this.AppointmentTab1.Size = new System.Drawing.Size(363, 131);
-            this.AppointmentTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.AppointmentTab1.TabIndex = 5;
-            this.AppointmentTab1.Text = "AppointmentTab1";
-            // 
-            // 
-            // 
-            this.AppointmentTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab1.TitleVisible = false;
-            // 
-            // buttonItem10
-            // 
-            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
-            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem10.Name = "buttonItem10";
-            this.buttonItem10.SubItemsExpandWidth = 14;
-            this.buttonItem10.Text = "ទទួលការណាត់";
-            // 
-            // buttonItem11
-            // 
-            this.buttonItem11.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem11.Image")));
-            this.buttonItem11.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem11.Name = "buttonItem11";
-            this.buttonItem11.SubItemsExpandWidth = 14;
-            this.buttonItem11.Text = "បញ្ជីការណាត់ជួប";
             // 
             // ribbonPanel2
             // 
@@ -1793,11 +1796,11 @@
             this.menu.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
+            this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel10.ResumeLayout(false);
             this.ribbonPanel9.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
-            this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel8.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
@@ -1813,10 +1816,9 @@
         private DevComponents.DotNetBar.ButtonItem btnListInsurance;
         private DevComponents.DotNetBar.RibbonBar PatientTab3;
         private DevComponents.DotNetBar.ButtonItem btnListInpatientResidence;
-        private DevComponents.DotNetBar.ButtonItem btnTransferPatient;
         private DevComponents.DotNetBar.RibbonBar PatientTab2;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
-        private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem btnListTreatment;
         private DevComponents.DotNetBar.ButtonItem buttonItem6;
         private DevComponents.DotNetBar.RibbonBar PatientTab1;
         private DevComponents.DotNetBar.ButtonItem btnAddNewPatient;
@@ -1844,7 +1846,7 @@
         public DevComponents.DotNetBar.ButtonItem buttonItem12;
         private DevComponents.DotNetBar.RibbonBar AppointmentTab1;
         public DevComponents.DotNetBar.ButtonItem buttonItem10;
-        public DevComponents.DotNetBar.ButtonItem buttonItem11;
+        public DevComponents.DotNetBar.ButtonItem btnListAppointment;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel2;
         private DevComponents.DotNetBar.RibbonBar StaffTab2;
         public DevComponents.DotNetBar.ButtonItem btnStaffDocument;
@@ -1865,7 +1867,7 @@
         public DevComponents.DotNetBar.ButtonItem btnRetore;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel6;
         private DevComponents.DotNetBar.RibbonBar FunctionTab4;
-        public DevComponents.DotNetBar.ButtonItem buttonItem18;
+        public DevComponents.DotNetBar.ButtonItem btnListDepartment;
         private DevComponents.DotNetBar.RibbonBar FunctionTab3;
         public DevComponents.DotNetBar.ButtonItem buttonItem24;
         private DevComponents.DotNetBar.RibbonBar FunctionTab2;
@@ -1916,5 +1918,6 @@
         public DevComponents.DotNetBar.ButtonItem btnAddNewBed;
         public DevComponents.DotNetBar.ButtonItem btnListBed;
         public DevComponents.DotNetBar.ButtonItem btnListStaffActivity;
+        public DevComponents.DotNetBar.ButtonItem btnTransferPatient;
     }
 }

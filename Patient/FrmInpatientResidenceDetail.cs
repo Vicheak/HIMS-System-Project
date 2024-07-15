@@ -1,4 +1,5 @@
-﻿using HIMS.Helper;
+﻿using HIMS.Appointment;
+using HIMS.Helper;
 using HIMS.RoomBed;
 using HIMS.Utility;
 using System;
@@ -304,6 +305,13 @@ namespace HIMS.Patient
                     TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
                 );
             }
+        }
+
+        private void btnTransferPatient_Click(object sender, EventArgs e)
+        {
+            FrmPatientTransfer frmPatientTransfer = new FrmPatientTransfer();
+            frmPatientTransfer.TransferPatientID = txtPatientID.Text; 
+            frmPatientTransfer.ShowDialog(); 
         }
     }
 }
