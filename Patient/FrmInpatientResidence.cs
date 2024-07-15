@@ -77,7 +77,7 @@ namespace HIMS.Patient
             };
 
             inpatientResidenceAdapter.UpdateCommand.Parameters.Add("@InpatientResidenceID", SqlDbType.Int, 0, "InpatientResidenceID")
-                   .Direction = ParameterDirection.Input; 
+                   .Direction = ParameterDirection.Input;
             inpatientResidenceAdapter.UpdateCommand.Parameters.Add("@AdmissionDate", SqlDbType.Date, 0, "AdmissionDate")
                    .Direction = ParameterDirection.Input;
             inpatientResidenceAdapter.UpdateCommand.Parameters.Add("@DischargeDate", SqlDbType.Date, 0, "DischargeDate")
@@ -135,7 +135,14 @@ namespace HIMS.Patient
             });
             cbFilterTopInpatientResidenceRecord.SelectedIndex = 0;
 
-            ListChangeInpatientResidenceBindingSource(); 
+            cbSearchCriteria.Items.AddRange(new object[]
+            {
+                "ស្វែករកតាមលេខកូដអ្នកជំងឺ",
+                "ស្វែករកតាមឈ្មោះអ្នកជំងឺ"
+            });
+            cbSearchCriteria.SelectedIndex = 0;
+
+            ListChangeInpatientResidenceBindingSource();
             inpatientResidenceBindingSource.ListChanged += InpatientResidenceBindingSource_ListChanged;
         }
 
@@ -159,19 +166,19 @@ namespace HIMS.Patient
 
         private void InpatientResidenceBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
-            ListChangeInpatientResidenceBindingSource(); 
+            ListChangeInpatientResidenceBindingSource();
         }
 
         private void ListChangeInpatientResidenceBindingSource()
         {
-            toolStripLblTotalInpatientResidence.Text = inpatientResidenceBindingSource.Count.ToString(); 
+            toolStripLblTotalInpatientResidence.Text = inpatientResidenceBindingSource.Count.ToString();
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             FmrAddOrModifyInpatientResidence fmrAddOrModifyInpatientResidence = new FmrAddOrModifyInpatientResidence();
             fmrAddOrModifyInpatientResidence.inpatientResidenceAdapter = inpatientResidenceAdapter;
-            fmrAddOrModifyInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource; 
+            fmrAddOrModifyInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource;
             fmrAddOrModifyInpatientResidence.ShowDialog();
 
             if (fmrAddOrModifyInpatientResidence.DialogResult == DialogResult.OK)
@@ -185,9 +192,9 @@ namespace HIMS.Patient
 
         private void btnAssignStaff_Click(object sender, EventArgs e)
         {
-            FrmAddOrModifyStaffInpatientResidence frmAddOrModifyStaffInpatientResidence = new FrmAddOrModifyStaffInpatientResidence(); 
+            FrmAddOrModifyStaffInpatientResidence frmAddOrModifyStaffInpatientResidence = new FrmAddOrModifyStaffInpatientResidence();
             frmAddOrModifyStaffInpatientResidence.inpatientResidenceBindingSource = inpatientResidenceBindingSource;
-            frmAddOrModifyStaffInpatientResidence.ShowDialog(); 
+            frmAddOrModifyStaffInpatientResidence.ShowDialog();
         }
 
         private void dgvInpatientResidence_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -197,7 +204,7 @@ namespace HIMS.Patient
             if (e.ColumnIndex == 0)
             {
                 FrmInpatientResidenceDetail frmInpatientResidenceDetail = new FrmInpatientResidenceDetail();
-                frmInpatientResidenceDetail.dataSet = dataSet; 
+                frmInpatientResidenceDetail.dataSet = dataSet;
                 frmInpatientResidenceDetail.inpatientResidenceAdapter = inpatientResidenceAdapter;
                 frmInpatientResidenceDetail.inpatientResidenceBindingSource = inpatientResidenceBindingSource;
                 frmInpatientResidenceDetail.ShowDialog();
@@ -214,12 +221,12 @@ namespace HIMS.Patient
                 if (result.DialogResult == DialogResult.OK)
                 {
                     //remove all associated records first
-                    
+
                     staffInpatientResidenceAdapter.DeleteCommand.Parameters["@InpatientResidenceID"].Value = Convert.ToInt32(currentRow.Row["InpatientResidenceID"]);
 
-                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Open(); 
+                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Open();
                     staffInpatientResidenceAdapter.DeleteCommand.ExecuteNonQuery();
-                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Close(); 
+                    staffInpatientResidenceAdapter.DeleteCommand.Connection.Close();
 
                     inpatientResidenceBindingSource.RemoveCurrent();
                     inpatientResidenceBindingSource.EndEdit();
@@ -244,6 +251,68 @@ namespace HIMS.Patient
                     dgvInpatientResidence.BackgroundColor,
                     TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
                 );
+            }
+        }
+
+        private void searchByPatientID(string patientID)
+        {
+            inpatientResidenceAdapter.SelectCommand = new SqlCommand
+            {
+                CommandText = "spSelectInpatientResidenceByPatientID",
+                CommandType = CommandType.StoredProcedure,
+                Connection = this.connection
+            };
+            inpatientResidenceAdapter.SelectCommand.Parameters.Add("@PatientID", SqlDbType.Char, 6)
+               .Direction = ParameterDirection.Input;
+
+            inpatientResidenceAdapter.SelectCommand.Parameters["@PatientID"].Value = patientID;
+
+            dataSet.Tables[VIEW_INPATIENT_RESIDENCE_INFO].Clear();
+            inpatientResidenceAdapter.Fill(dataSet);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            var currentRow = inpatientResidenceBindingSource.Current as DataRowView;
+            string patientID = Convert.ToString(currentRow.Row["PatientID"]);
+
+            searchByPatientID(patientID); 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchEntry.Text)) return;
+
+            if (cbSearchCriteria.SelectedIndex == 0)
+            {
+                searchByPatientID(txtSearchEntry.Text); 
+            }
+            else if (cbSearchCriteria.SelectedIndex == 1)
+            {
+
+                inpatientResidenceAdapter.SelectCommand = new SqlCommand
+                {
+                    CommandText = "spSearchInpatientResidenceInfoByPatientName",
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = this.connection
+                };
+                inpatientResidenceAdapter.SelectCommand.Parameters.Add("@Name", SqlDbType.NVarChar, 50)
+                   .Direction = ParameterDirection.Input;
+
+                inpatientResidenceAdapter.SelectCommand.Parameters["@Name"].Value = txtSearchEntry.Text;
+
+                dataSet.Tables[VIEW_INPATIENT_RESIDENCE_INFO].Clear();
+                inpatientResidenceAdapter.Fill(dataSet);
+            }
+        }
+
+        private void txtSearchEntry_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnSearch_Click(null, EventArgs.Empty);
+                txtSearchEntry.Clear();
             }
         }
     }

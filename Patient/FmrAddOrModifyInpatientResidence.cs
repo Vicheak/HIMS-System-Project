@@ -269,13 +269,13 @@ namespace HIMS.Patient
             if (string.IsNullOrWhiteSpace(txtPatientID.Text))
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សួមវាយបញ្ចូលលេខសម្គាល់អ្នកជំងឺ", Color.Yellow);
-                dateTimeAdmissionDate.Focus();
+                txtSearchPatientID.Focus(); 
                 return;
             }
             if (cbBed.DataSource == null)
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសគ្រែអ្នកជំងឺ", Color.Yellow);
-                dateTimeAdmissionDate.Focus();
+                cbBed.Focus(); 
                 return;
             }
 

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HIMS.Appointment; 
 
 namespace HIMS
 {
@@ -129,6 +130,24 @@ namespace HIMS
         {
             FrmPatientTransfer frmPatientTransfer = new FrmPatientTransfer();
             PopUpForm(frmPatientTransfer);
+        }
+
+        private void btnListTreatment_Click(object sender, EventArgs e)
+        {
+            FrmTreatment frmTreatment = new FrmTreatment(); 
+            PopUpForm(frmTreatment);
+        }
+
+        private void btnListAppointment_Click(object sender, EventArgs e)
+        {
+            FrmAppointment frmAppointment = new FrmAppointment();
+            PopUpForm(frmAppointment); 
+        }
+
+        private void btnListDepartment_Click(object sender, EventArgs e)
+        {
+            FrmDepartment frmDepartment = new FrmDepartment();
+            PopUpForm(frmDepartment);
         }
     }
 }
