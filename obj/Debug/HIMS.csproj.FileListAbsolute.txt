@@ -53,3 +53,14 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmAd
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmTreatment.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Appointment.FrmAppointment.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmDepartment.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Medicine.FrmMedicine.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmStaffPosition.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAddOrModifyStaffPosition.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAddOrModifySpecialist.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmSpecialist.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAcademicDegree.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAddOrModifyAcademicDegree.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAddOrModifyAppointmentType.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAppointmentType.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Staff.FrmAddOrModifyStaff.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Staff.FrmStaff.resources

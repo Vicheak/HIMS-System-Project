@@ -11,7 +11,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HIMS.Appointment; 
+using HIMS.Appointment;
+using HIMS.Medicine;
+using HIMS.Visitor;
+using HIMS.Staff;
 
 namespace HIMS
 {
@@ -148,6 +151,75 @@ namespace HIMS
         {
             FrmDepartment frmDepartment = new FrmDepartment();
             PopUpForm(frmDepartment);
+        }
+
+        private void btnListDianogsis_Click_1(object sender, EventArgs e)
+        {
+            FrmDianogsis frmDianogsis = new FrmDianogsis();
+            PopUpForm(frmDianogsis);
+        }
+
+        private void btnListMedicine_Click(object sender, EventArgs e)
+        {
+            FrmMedicine frmMedicine = new FrmMedicine(); 
+            PopUpForm(frmMedicine);
+        }
+
+        private void btnListTreatmentType_Click(object sender, EventArgs e)
+        {
+            FrmTreatmentType frmTreatmentType = new FrmTreatmentType(); 
+            PopUpForm(frmTreatmentType);
+        }
+
+        private void btnListStaffPosition_Click(object sender, EventArgs e)
+        {
+            FrmStaffPosition frmStaffPosition = new FrmStaffPosition();
+            PopUpForm(frmStaffPosition); 
+        }
+
+        private void btnListStaffSpecialist_Click(object sender, EventArgs e)
+        {
+            FrmSpecialist frmSpecialist = new FrmSpecialist();
+            PopUpForm(frmSpecialist); 
+        }
+
+        private void btnListAcademicDegree_Click(object sender, EventArgs e)
+        {
+            FrmAcademicDegree frmAcademicDegree = new FrmAcademicDegree();
+            PopUpForm(frmAcademicDegree); 
+        }
+
+        private void btnListAppointmentType_Click(object sender, EventArgs e)
+        {
+            FrmAppointmentType frmAppointmentType = new FrmAppointmentType();
+            PopUpForm(frmAppointmentType); 
+        }
+
+        private void btnListStaff_Click(object sender, EventArgs e)
+        {
+            FrmStaff frmStaff = new FrmStaff(); 
+            PopUpForm(frmStaff);
+        }
+
+        private void btnStaffRegistration_Click(object sender, EventArgs e)
+        {
+            FrmStaff frmStaff; 
+            if (mainPanel.Controls.Contains(currentForm))
+            {
+                if (!(currentForm is FrmStaff))
+                {
+                    frmStaff = new FrmStaff();
+                    PopUpForm(frmStaff);
+                    frmStaff.btnAddNew.PerformClick();
+                    return;
+                }
+                frmStaff = currentForm as FrmStaff;
+                frmStaff.btnAddNew.PerformClick();
+                return;
+            }
+            frmStaff = new FrmStaff();
+            PopUpForm(frmStaff);
+            frmStaff.btnAddNew.PerformClick();
         }
     }
 }
