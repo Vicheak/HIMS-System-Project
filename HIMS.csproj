@@ -102,11 +102,47 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function\FrmAcademicDegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAcademicDegree.Designer.cs">
+      <DependentUpon>FrmAcademicDegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyAcademicDegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyAcademicDegree.Designer.cs">
+      <DependentUpon>FrmAddOrModifyAcademicDegree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyAppointmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyAppointmentType.Designer.cs">
+      <DependentUpon>FrmAddOrModifyAppointmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifySpecialist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifySpecialist.Designer.cs">
+      <DependentUpon>FrmAddOrModifySpecialist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function\FrmAddOrModifyStaffActivity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Function\FrmAddOrModifyStaffActivity.Designer.cs">
       <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyStaffPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAddOrModifyStaffPosition.Designer.cs">
+      <DependentUpon>FrmAddOrModifyStaffPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmAppointmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmAppointmentType.Designer.cs">
+      <DependentUpon>FrmAppointmentType.cs</DependentUpon>
     </Compile>
     <Compile Include="Function\FrmDepartment.cs">
       <SubType>Form</SubType>
@@ -114,11 +150,29 @@
     <Compile Include="Function\FrmDepartment.Designer.cs">
       <DependentUpon>FrmDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function\FrmSpecialist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmSpecialist.Designer.cs">
+      <DependentUpon>FrmSpecialist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function\FrmStaffActivity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Function\FrmStaffActivity.Designer.cs">
       <DependentUpon>FrmStaffActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmStaffPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmStaffPosition.Designer.cs">
+      <DependentUpon>FrmStaffPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\FrmTreatmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function\FrmTreatmentType.Designer.cs">
+      <DependentUpon>FrmTreatmentType.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\CustomMessageBox.cs">
       <SubType>Form</SubType>
@@ -131,6 +185,18 @@
     </Compile>
     <Compile Include="Helper\FrmExit.Designer.cs">
       <DependentUpon>FrmExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicine\FrmAddOrModifyMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicine\FrmAddOrModifyMedicine.Designer.cs">
+      <DependentUpon>FrmAddOrModifyMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicine\FrmMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicine\FrmMedicine.Designer.cs">
+      <DependentUpon>FrmMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\FmrAddOrModifyInpatientResidence.cs">
       <SubType>Form</SubType>
@@ -155,6 +221,12 @@
     </Compile>
     <Compile Include="Patient\FrmAddOrModifyTreatment.Designer.cs">
       <DependentUpon>FrmAddOrModifyTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FrmDianogsis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmDianogsis.Designer.cs">
+      <DependentUpon>FrmDianogsis.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\FrmInpatientResidence.cs">
       <SubType>Form</SubType>
@@ -218,30 +290,88 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff\FrmAddOrModifyStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\FrmAddOrModifyStaff.Designer.cs">
+      <DependentUpon>FrmAddOrModifyStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\FrmViewCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\FrmViewCertificate.Designer.cs">
+      <DependentUpon>FrmViewCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\ConnectionUtil.cs" />
     <Compile Include="Utility\GeneralUtil.cs" />
     <Compile Include="Utility\NotificationUtil.cs" />
     <Compile Include="Utility\ValidateUtil.cs" />
+    <Compile Include="Visitor\FrmAddOrModifyVisiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visitor\FrmAddOrModifyVisiting.Designer.cs">
+      <DependentUpon>FrmAddOrModifyVisiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor\FrmVisitorDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visitor\FrmVisitorDetail.Designer.cs">
+      <DependentUpon>FrmVisitorDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor\PatientSelectedEventArgs.cs" />
     <EmbeddedResource Include="Appointment\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAcademicDegree.resx">
+      <DependentUpon>FrmAcademicDegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAddOrModifyAcademicDegree.resx">
+      <DependentUpon>FrmAddOrModifyAcademicDegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAddOrModifyAppointmentType.resx">
+      <DependentUpon>FrmAddOrModifyAppointmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAddOrModifySpecialist.resx">
+      <DependentUpon>FrmAddOrModifySpecialist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Function\FrmAddOrModifyStaffActivity.resx">
       <DependentUpon>FrmAddOrModifyStaffActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAddOrModifyStaffPosition.resx">
+      <DependentUpon>FrmAddOrModifyStaffPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmAppointmentType.resx">
+      <DependentUpon>FrmAppointmentType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Function\FrmDepartment.resx">
       <DependentUpon>FrmDepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmSpecialist.resx">
+      <DependentUpon>FrmSpecialist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Function\FrmStaffActivity.resx">
       <DependentUpon>FrmStaffActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmStaffPosition.resx">
+      <DependentUpon>FrmStaffPosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helper\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helper\FrmExit.resx">
       <DependentUpon>FrmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicine\FrmMedicine.resx">
+      <DependentUpon>FrmMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\FmrAddOrModifyInpatientResidence.resx">
       <DependentUpon>FmrAddOrModifyInpatientResidence.cs</DependentUpon>
@@ -294,6 +424,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Staff\FrmAddOrModifyStaff.resx">
+      <DependentUpon>FrmAddOrModifyStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -309,11 +445,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Medicine\" />
     <Folder Include="Report\" />
-    <Folder Include="Staff\" />
     <Folder Include="User\" />
-    <Folder Include="Visitor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets" Condition="Exists('packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets')" />

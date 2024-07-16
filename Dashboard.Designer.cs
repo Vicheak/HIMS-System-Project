@@ -31,28 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.menu = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.PatientTab4 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnListInsurance = new DevComponents.DotNetBar.ButtonItem();
-            this.PatientTab3 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnListInpatientResidence = new DevComponents.DotNetBar.ButtonItem();
-            this.btnTransferPatient = new DevComponents.DotNetBar.ButtonItem();
-            this.PatientTab2 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListTreatment = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
-            this.PatientTab1 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnAddNewPatient = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListPatient = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.FunctionTab4 = new DevComponents.DotNetBar.RibbonBar();
             this.btnListDepartment = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab3 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListAppointmentType = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab2 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnEducationLevel = new DevComponents.DotNetBar.ButtonItem();
-            this.btnPosition = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSkill = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListTreatmentType = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListAcademicDegree = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListStaffPosition = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListStaffSpecialist = new DevComponents.DotNetBar.ButtonItem();
             this.btnListStaffActivity = new DevComponents.DotNetBar.ButtonItem();
             this.FunctionTab1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnDiseaseType = new DevComponents.DotNetBar.ButtonItem();
@@ -62,6 +50,19 @@
             this.AppointmentTab1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.btnListAppointment = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.PatientTab4 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnListInsurance = new DevComponents.DotNetBar.ButtonItem();
+            this.PatientTab3 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnListInpatientResidence = new DevComponents.DotNetBar.ButtonItem();
+            this.btnTransferPatient = new DevComponents.DotNetBar.ButtonItem();
+            this.PatientTab2 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnListDianogsis = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListTreatment = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListPrescription = new DevComponents.DotNetBar.ButtonItem();
+            this.PatientTab1 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnAddNewPatient = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListPatient = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ReportTab2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
@@ -70,6 +71,27 @@
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem27 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem28 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel9 = new DevComponents.DotNetBar.RibbonPanel();
+            this.Visitor2 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
+            this.Visitor1 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListVisitor = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.StaffTab2 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnStaffDocument = new DevComponents.DotNetBar.ButtonItem();
+            this.StaffTab1 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnStaffRegistration = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListStaff = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.UserTab = new DevComponents.DotNetBar.RibbonBar();
+            this.btnCreateUser = new DevComponents.DotNetBar.ButtonItem();
+            this.btnUserList = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.MedicineTab = new DevComponents.DotNetBar.RibbonBar();
+            this.btnAddMedicineStock = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListMedicine = new DevComponents.DotNetBar.ButtonItem();
+            this.btnStockStatus = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel10 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnAddNewBed = new DevComponents.DotNetBar.ButtonItem();
@@ -77,31 +99,10 @@
             this.RoomBedTab = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel9 = new DevComponents.DotNetBar.RibbonPanel();
-            this.Visitor2 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
-            this.Visitor1 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.MedicineTab = new DevComponents.DotNetBar.RibbonBar();
-            this.btnAddMedicineStock = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListMedicine = new DevComponents.DotNetBar.ButtonItem();
-            this.btnStockStatus = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.StaffTab2 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnStaffDocument = new DevComponents.DotNetBar.ButtonItem();
-            this.StaffTab1 = new DevComponents.DotNetBar.RibbonBar();
-            this.btnStaffRegistration = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListStaff = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel8 = new DevComponents.DotNetBar.RibbonPanel();
             this.BackupTab = new DevComponents.DotNetBar.RibbonBar();
             this.btnBackup = new DevComponents.DotNetBar.ButtonItem();
             this.btnRetore = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
-            this.UserTab = new DevComponents.DotNetBar.RibbonBar();
-            this.btnCreateUser = new DevComponents.DotNetBar.ButtonItem();
-            this.btnUserList = new DevComponents.DotNetBar.ButtonItem();
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.btnQuit = new DevComponents.DotNetBar.ButtonItem();
             this.btnHome = new DevComponents.DotNetBar.ButtonItem();
@@ -140,16 +141,16 @@
             this.buttonItem38 = new DevComponents.DotNetBar.ButtonItem();
             this.mainPanel = new DevComponents.DotNetBar.PanelEx();
             this.menu.SuspendLayout();
-            this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
+            this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
-            this.ribbonPanel10.SuspendLayout();
             this.ribbonPanel9.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
-            this.ribbonPanel8.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
+            this.ribbonPanel10.SuspendLayout();
+            this.ribbonPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -160,16 +161,16 @@
             // 
             this.menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.menu.CaptionVisible = true;
-            this.menu.Controls.Add(this.ribbonPanel1);
+            this.menu.Controls.Add(this.ribbonPanel2);
             this.menu.Controls.Add(this.ribbonPanel6);
             this.menu.Controls.Add(this.ribbonPanel3);
+            this.menu.Controls.Add(this.ribbonPanel1);
             this.menu.Controls.Add(this.ribbonPanel5);
-            this.menu.Controls.Add(this.ribbonPanel10);
             this.menu.Controls.Add(this.ribbonPanel9);
-            this.menu.Controls.Add(this.ribbonPanel4);
-            this.menu.Controls.Add(this.ribbonPanel2);
-            this.menu.Controls.Add(this.ribbonPanel8);
             this.menu.Controls.Add(this.ribbonPanel7);
+            this.menu.Controls.Add(this.ribbonPanel4);
+            this.menu.Controls.Add(this.ribbonPanel10);
+            this.menu.Controls.Add(this.ribbonPanel8);
             this.menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu.ForeColor = System.Drawing.Color.Black;
@@ -192,7 +193,7 @@
             this.menu.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1,
             this.qatCustomizeItem2});
-            this.menu.Size = new System.Drawing.Size(1478, 212);
+            this.menu.Size = new System.Drawing.Size(1817, 212);
             this.menu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.menu.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.menu.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -213,6 +214,357 @@
             this.menu.TabIndex = 1;
             this.menu.Text = "បច្ចុប្បន្នភាព";
             // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.FunctionTab4);
+            this.ribbonPanel6.Controls.Add(this.FunctionTab3);
+            this.ribbonPanel6.Controls.Add(this.FunctionTab2);
+            this.ribbonPanel6.Controls.Add(this.FunctionTab1);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel6.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 6;
+            this.ribbonPanel6.Visible = false;
+            // 
+            // FunctionTab4
+            // 
+            this.FunctionTab4.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.FunctionTab4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab4.ContainerControlProcessDialogKey = true;
+            this.FunctionTab4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FunctionTab4.DragDropSupport = true;
+            this.FunctionTab4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnListDepartment});
+            this.FunctionTab4.Location = new System.Drawing.Point(1470, 0);
+            this.FunctionTab4.Margin = new System.Windows.Forms.Padding(4);
+            this.FunctionTab4.Name = "FunctionTab4";
+            this.FunctionTab4.Size = new System.Drawing.Size(163, 131);
+            this.FunctionTab4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.FunctionTab4.TabIndex = 15;
+            this.FunctionTab4.Text = "FunctionTab4";
+            // 
+            // 
+            // 
+            this.FunctionTab4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab4.TitleVisible = false;
+            // 
+            // btnListDepartment
+            // 
+            this.btnListDepartment.Image = ((System.Drawing.Image)(resources.GetObject("btnListDepartment.Image")));
+            this.btnListDepartment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListDepartment.Name = "btnListDepartment";
+            this.btnListDepartment.SubItemsExpandWidth = 14;
+            this.btnListDepartment.Text = "បញ្ចូលជាន់អាគារ";
+            this.btnListDepartment.Click += new System.EventHandler(this.btnListDepartment_Click);
+            // 
+            // FunctionTab3
+            // 
+            this.FunctionTab3.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.FunctionTab3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab3.ContainerControlProcessDialogKey = true;
+            this.FunctionTab3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FunctionTab3.DragDropSupport = true;
+            this.FunctionTab3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnListAppointmentType});
+            this.FunctionTab3.Location = new System.Drawing.Point(1149, 0);
+            this.FunctionTab3.Margin = new System.Windows.Forms.Padding(4);
+            this.FunctionTab3.Name = "FunctionTab3";
+            this.FunctionTab3.Size = new System.Drawing.Size(321, 131);
+            this.FunctionTab3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.FunctionTab3.TabIndex = 14;
+            this.FunctionTab3.Text = "FunctionTab3";
+            // 
+            // 
+            // 
+            this.FunctionTab3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab3.TitleVisible = false;
+            // 
+            // btnListAppointmentType
+            // 
+            this.btnListAppointmentType.Image = ((System.Drawing.Image)(resources.GetObject("btnListAppointmentType.Image")));
+            this.btnListAppointmentType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListAppointmentType.Name = "btnListAppointmentType";
+            this.btnListAppointmentType.SubItemsExpandWidth = 14;
+            this.btnListAppointmentType.Text = "បញ្ចូលប្រភេទការណាត់ជួប";
+            this.btnListAppointmentType.Click += new System.EventHandler(this.btnListAppointmentType_Click);
+            // 
+            // FunctionTab2
+            // 
+            this.FunctionTab2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.FunctionTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab2.ContainerControlProcessDialogKey = true;
+            this.FunctionTab2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FunctionTab2.DragDropSupport = true;
+            this.FunctionTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnListTreatmentType,
+            this.btnListAcademicDegree,
+            this.btnListStaffPosition,
+            this.btnListStaffSpecialist,
+            this.btnListStaffActivity});
+            this.FunctionTab2.Location = new System.Drawing.Point(165, 0);
+            this.FunctionTab2.Margin = new System.Windows.Forms.Padding(4);
+            this.FunctionTab2.Name = "FunctionTab2";
+            this.FunctionTab2.Size = new System.Drawing.Size(984, 131);
+            this.FunctionTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.FunctionTab2.TabIndex = 13;
+            this.FunctionTab2.Text = "FunctionTab2";
+            // 
+            // 
+            // 
+            this.FunctionTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab2.TitleVisible = false;
+            // 
+            // btnListTreatmentType
+            // 
+            this.btnListTreatmentType.Image = ((System.Drawing.Image)(resources.GetObject("btnListTreatmentType.Image")));
+            this.btnListTreatmentType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListTreatmentType.Name = "btnListTreatmentType";
+            this.btnListTreatmentType.SubItemsExpandWidth = 14;
+            this.btnListTreatmentType.Text = "កត់ត្រាប្រភេទនៃការព្យាបាល";
+            this.btnListTreatmentType.Click += new System.EventHandler(this.btnListTreatmentType_Click);
+            // 
+            // btnListAcademicDegree
+            // 
+            this.btnListAcademicDegree.Image = ((System.Drawing.Image)(resources.GetObject("btnListAcademicDegree.Image")));
+            this.btnListAcademicDegree.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListAcademicDegree.Name = "btnListAcademicDegree";
+            this.btnListAcademicDegree.SubItemsExpandWidth = 14;
+            this.btnListAcademicDegree.Text = "បញ្ចូលកម្រិតវប្បធម៌";
+            this.btnListAcademicDegree.Click += new System.EventHandler(this.btnListAcademicDegree_Click);
+            // 
+            // btnListStaffPosition
+            // 
+            this.btnListStaffPosition.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaffPosition.Image")));
+            this.btnListStaffPosition.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListStaffPosition.Name = "btnListStaffPosition";
+            this.btnListStaffPosition.SubItemsExpandWidth = 14;
+            this.btnListStaffPosition.Text = "បញ្ចូលមុខតំណែង";
+            this.btnListStaffPosition.Click += new System.EventHandler(this.btnListStaffPosition_Click);
+            // 
+            // btnListStaffSpecialist
+            // 
+            this.btnListStaffSpecialist.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaffSpecialist.Image")));
+            this.btnListStaffSpecialist.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListStaffSpecialist.Name = "btnListStaffSpecialist";
+            this.btnListStaffSpecialist.SubItemsExpandWidth = 14;
+            this.btnListStaffSpecialist.Text = "បញ្ចូលជំនាញឯកទេស";
+            this.btnListStaffSpecialist.Click += new System.EventHandler(this.btnListStaffSpecialist_Click);
+            // 
+            // btnListStaffActivity
+            // 
+            this.btnListStaffActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaffActivity.Image")));
+            this.btnListStaffActivity.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListStaffActivity.Name = "btnListStaffActivity";
+            this.btnListStaffActivity.SubItemsExpandWidth = 14;
+            this.btnListStaffActivity.Text = "កត់ត្រាសកម្មភាពបុគ្គលិក";
+            this.btnListStaffActivity.Click += new System.EventHandler(this.btnListStaffActivity_Click);
+            // 
+            // FunctionTab1
+            // 
+            this.FunctionTab1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.FunctionTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab1.ContainerControlProcessDialogKey = true;
+            this.FunctionTab1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FunctionTab1.DragDropSupport = true;
+            this.FunctionTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnDiseaseType});
+            this.FunctionTab1.Location = new System.Drawing.Point(3, 0);
+            this.FunctionTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.FunctionTab1.Name = "FunctionTab1";
+            this.FunctionTab1.Size = new System.Drawing.Size(162, 131);
+            this.FunctionTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.FunctionTab1.TabIndex = 12;
+            this.FunctionTab1.Text = "FunctionTab1";
+            // 
+            // 
+            // 
+            this.FunctionTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.FunctionTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FunctionTab1.TitleVisible = false;
+            // 
+            // btnDiseaseType
+            // 
+            this.btnDiseaseType.Image = ((System.Drawing.Image)(resources.GetObject("btnDiseaseType.Image")));
+            this.btnDiseaseType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDiseaseType.Name = "btnDiseaseType";
+            this.btnDiseaseType.SubItemsExpandWidth = 14;
+            this.btnDiseaseType.Text = "បញ្ចូលប្រភេទជម្ងឺ";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.AppointmentTab2);
+            this.ribbonPanel3.Controls.Add(this.AppointmentTab1);
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // AppointmentTab2
+            // 
+            this.AppointmentTab2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab2.ContainerControlProcessDialogKey = true;
+            this.AppointmentTab2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AppointmentTab2.DragDropSupport = true;
+            this.AppointmentTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem12});
+            this.AppointmentTab2.Location = new System.Drawing.Point(366, 0);
+            this.AppointmentTab2.Margin = new System.Windows.Forms.Padding(4);
+            this.AppointmentTab2.Name = "AppointmentTab2";
+            this.AppointmentTab2.Size = new System.Drawing.Size(324, 131);
+            this.AppointmentTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AppointmentTab2.TabIndex = 6;
+            this.AppointmentTab2.Text = "AppointmentTab2";
+            // 
+            // 
+            // 
+            this.AppointmentTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab2.TitleVisible = false;
+            // 
+            // buttonItem12
+            // 
+            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
+            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem12.Name = "buttonItem12";
+            this.buttonItem12.SubItemsExpandWidth = 14;
+            this.buttonItem12.Text = "បញ្ជីកាលវិភាគវេជ្ជៈបណ្ខិត";
+            // 
+            // AppointmentTab1
+            // 
+            this.AppointmentTab1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab1.ContainerControlProcessDialogKey = true;
+            this.AppointmentTab1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AppointmentTab1.DragDropSupport = true;
+            this.AppointmentTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem10,
+            this.btnListAppointment});
+            this.AppointmentTab1.Location = new System.Drawing.Point(3, 0);
+            this.AppointmentTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.AppointmentTab1.Name = "AppointmentTab1";
+            this.AppointmentTab1.Size = new System.Drawing.Size(363, 131);
+            this.AppointmentTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AppointmentTab1.TabIndex = 5;
+            this.AppointmentTab1.Text = "AppointmentTab1";
+            // 
+            // 
+            // 
+            this.AppointmentTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.AppointmentTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AppointmentTab1.TitleVisible = false;
+            // 
+            // buttonItem10
+            // 
+            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
+            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem10.Name = "buttonItem10";
+            this.buttonItem10.SubItemsExpandWidth = 14;
+            this.buttonItem10.Text = "ទទួលការណាត់";
+            // 
+            // btnListAppointment
+            // 
+            this.btnListAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnListAppointment.Image")));
+            this.btnListAppointment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListAppointment.Name = "btnListAppointment";
+            this.btnListAppointment.SubItemsExpandWidth = 14;
+            this.btnListAppointment.Text = "បញ្ជីការណាត់ជួប";
+            this.btnListAppointment.Click += new System.EventHandler(this.btnListAppointment_Click);
+            // 
             // ribbonPanel1
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -224,7 +576,7 @@
             this.ribbonPanel1.Location = new System.Drawing.Point(0, 79);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1478, 133);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1817, 133);
             // 
             // 
             // 
@@ -238,6 +590,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // PatientTab4
             // 
@@ -346,9 +699,9 @@
             this.PatientTab2.Dock = System.Windows.Forms.DockStyle.Left;
             this.PatientTab2.DragDropSupport = true;
             this.PatientTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem4,
+            this.btnListDianogsis,
             this.btnListTreatment,
-            this.buttonItem6});
+            this.btnListPrescription});
             this.PatientTab2.Location = new System.Drawing.Point(346, 0);
             this.PatientTab2.Name = "PatientTab2";
             this.PatientTab2.Size = new System.Drawing.Size(449, 131);
@@ -365,13 +718,14 @@
             this.PatientTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.PatientTab2.TitleVisible = false;
             // 
-            // buttonItem4
+            // btnListDianogsis
             // 
-            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
-            this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.SubItemsExpandWidth = 14;
-            this.buttonItem4.Text = "កំណត់រោគវិន័ច្ឆ័យ";
+            this.btnListDianogsis.Image = ((System.Drawing.Image)(resources.GetObject("btnListDianogsis.Image")));
+            this.btnListDianogsis.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListDianogsis.Name = "btnListDianogsis";
+            this.btnListDianogsis.SubItemsExpandWidth = 14;
+            this.btnListDianogsis.Text = "កំណត់រោគវិន័ច្ឆ័យ";
+            this.btnListDianogsis.Click += new System.EventHandler(this.btnListDianogsis_Click_1);
             // 
             // btnListTreatment
             // 
@@ -382,13 +736,13 @@
             this.btnListTreatment.Text = "ការព្យាបាល";
             this.btnListTreatment.Click += new System.EventHandler(this.btnListTreatment_Click);
             // 
-            // buttonItem6
+            // btnListPrescription
             // 
-            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
-            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.SubItemsExpandWidth = 14;
-            this.buttonItem6.Text = "ចេញវេជ្ជបញ្ជា";
+            this.btnListPrescription.Image = ((System.Drawing.Image)(resources.GetObject("btnListPrescription.Image")));
+            this.btnListPrescription.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListPrescription.Name = "btnListPrescription";
+            this.btnListPrescription.SubItemsExpandWidth = 14;
+            this.btnListPrescription.Text = "ចេញវេជ្ជបញ្ជា";
             // 
             // PatientTab1
             // 
@@ -441,343 +795,6 @@
             this.btnListPatient.Text = "បញ្ជីឈ្មោះអ្នកជំងឺ";
             this.btnListPatient.Click += new System.EventHandler(this.btnListPatient_Click);
             // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Controls.Add(this.FunctionTab4);
-            this.ribbonPanel6.Controls.Add(this.FunctionTab3);
-            this.ribbonPanel6.Controls.Add(this.FunctionTab2);
-            this.ribbonPanel6.Controls.Add(this.FunctionTab1);
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel6.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 6;
-            this.ribbonPanel6.Visible = false;
-            // 
-            // FunctionTab4
-            // 
-            this.FunctionTab4.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.FunctionTab4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab4.ContainerControlProcessDialogKey = true;
-            this.FunctionTab4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FunctionTab4.DragDropSupport = true;
-            this.FunctionTab4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnListDepartment});
-            this.FunctionTab4.Location = new System.Drawing.Point(1176, 0);
-            this.FunctionTab4.Margin = new System.Windows.Forms.Padding(4);
-            this.FunctionTab4.Name = "FunctionTab4";
-            this.FunctionTab4.Size = new System.Drawing.Size(163, 131);
-            this.FunctionTab4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.FunctionTab4.TabIndex = 15;
-            this.FunctionTab4.Text = "FunctionTab4";
-            // 
-            // 
-            // 
-            this.FunctionTab4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab4.TitleVisible = false;
-            // 
-            // btnListDepartment
-            // 
-            this.btnListDepartment.Image = ((System.Drawing.Image)(resources.GetObject("btnListDepartment.Image")));
-            this.btnListDepartment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListDepartment.Name = "btnListDepartment";
-            this.btnListDepartment.SubItemsExpandWidth = 14;
-            this.btnListDepartment.Text = "បញ្ចូលជាន់អាគារ";
-            this.btnListDepartment.Click += new System.EventHandler(this.btnListDepartment_Click);
-            // 
-            // FunctionTab3
-            // 
-            this.FunctionTab3.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.FunctionTab3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab3.ContainerControlProcessDialogKey = true;
-            this.FunctionTab3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FunctionTab3.DragDropSupport = true;
-            this.FunctionTab3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem24});
-            this.FunctionTab3.Location = new System.Drawing.Point(855, 0);
-            this.FunctionTab3.Margin = new System.Windows.Forms.Padding(4);
-            this.FunctionTab3.Name = "FunctionTab3";
-            this.FunctionTab3.Size = new System.Drawing.Size(321, 131);
-            this.FunctionTab3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.FunctionTab3.TabIndex = 14;
-            this.FunctionTab3.Text = "FunctionTab3";
-            // 
-            // 
-            // 
-            this.FunctionTab3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab3.TitleVisible = false;
-            // 
-            // buttonItem24
-            // 
-            this.buttonItem24.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem24.Image")));
-            this.buttonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem24.Name = "buttonItem24";
-            this.buttonItem24.SubItemsExpandWidth = 14;
-            this.buttonItem24.Text = "បញ្ចូលប្រភេទនិងស្ថានភាពការណាត់ជួប";
-            // 
-            // FunctionTab2
-            // 
-            this.FunctionTab2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.FunctionTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab2.ContainerControlProcessDialogKey = true;
-            this.FunctionTab2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FunctionTab2.DragDropSupport = true;
-            this.FunctionTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnEducationLevel,
-            this.btnPosition,
-            this.btnSkill,
-            this.btnListStaffActivity});
-            this.FunctionTab2.Location = new System.Drawing.Point(165, 0);
-            this.FunctionTab2.Margin = new System.Windows.Forms.Padding(4);
-            this.FunctionTab2.Name = "FunctionTab2";
-            this.FunctionTab2.Size = new System.Drawing.Size(690, 131);
-            this.FunctionTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.FunctionTab2.TabIndex = 13;
-            this.FunctionTab2.Text = "FunctionTab2";
-            // 
-            // 
-            // 
-            this.FunctionTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab2.TitleVisible = false;
-            // 
-            // btnEducationLevel
-            // 
-            this.btnEducationLevel.Image = ((System.Drawing.Image)(resources.GetObject("btnEducationLevel.Image")));
-            this.btnEducationLevel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnEducationLevel.Name = "btnEducationLevel";
-            this.btnEducationLevel.SubItemsExpandWidth = 14;
-            this.btnEducationLevel.Text = "បញ្ចូលកម្រិតវប្បធម៌";
-            // 
-            // btnPosition
-            // 
-            this.btnPosition.Image = ((System.Drawing.Image)(resources.GetObject("btnPosition.Image")));
-            this.btnPosition.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnPosition.Name = "btnPosition";
-            this.btnPosition.SubItemsExpandWidth = 14;
-            this.btnPosition.Text = "បញ្ចូលមុខតំណែង";
-            // 
-            // btnSkill
-            // 
-            this.btnSkill.Image = ((System.Drawing.Image)(resources.GetObject("btnSkill.Image")));
-            this.btnSkill.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSkill.Name = "btnSkill";
-            this.btnSkill.SubItemsExpandWidth = 14;
-            this.btnSkill.Text = "បញ្ចូលជំនាញឯកទេស";
-            // 
-            // btnListStaffActivity
-            // 
-            this.btnListStaffActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaffActivity.Image")));
-            this.btnListStaffActivity.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListStaffActivity.Name = "btnListStaffActivity";
-            this.btnListStaffActivity.SubItemsExpandWidth = 14;
-            this.btnListStaffActivity.Text = "កត់ត្រាសកម្មភាពបុគ្គលិក";
-            this.btnListStaffActivity.Click += new System.EventHandler(this.btnListStaffActivity_Click);
-            // 
-            // FunctionTab1
-            // 
-            this.FunctionTab1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.FunctionTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab1.ContainerControlProcessDialogKey = true;
-            this.FunctionTab1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FunctionTab1.DragDropSupport = true;
-            this.FunctionTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnDiseaseType});
-            this.FunctionTab1.Location = new System.Drawing.Point(3, 0);
-            this.FunctionTab1.Margin = new System.Windows.Forms.Padding(4);
-            this.FunctionTab1.Name = "FunctionTab1";
-            this.FunctionTab1.Size = new System.Drawing.Size(162, 131);
-            this.FunctionTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.FunctionTab1.TabIndex = 12;
-            this.FunctionTab1.Text = "FunctionTab1";
-            // 
-            // 
-            // 
-            this.FunctionTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.FunctionTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.FunctionTab1.TitleVisible = false;
-            // 
-            // btnDiseaseType
-            // 
-            this.btnDiseaseType.Image = ((System.Drawing.Image)(resources.GetObject("btnDiseaseType.Image")));
-            this.btnDiseaseType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDiseaseType.Name = "btnDiseaseType";
-            this.btnDiseaseType.SubItemsExpandWidth = 14;
-            this.btnDiseaseType.Text = "បញ្ចូលប្រភេទជម្ងឺ";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Controls.Add(this.AppointmentTab2);
-            this.ribbonPanel3.Controls.Add(this.AppointmentTab1);
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // AppointmentTab2
-            // 
-            this.AppointmentTab2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab2.ContainerControlProcessDialogKey = true;
-            this.AppointmentTab2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AppointmentTab2.DragDropSupport = true;
-            this.AppointmentTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem12});
-            this.AppointmentTab2.Location = new System.Drawing.Point(366, 0);
-            this.AppointmentTab2.Margin = new System.Windows.Forms.Padding(4);
-            this.AppointmentTab2.Name = "AppointmentTab2";
-            this.AppointmentTab2.Size = new System.Drawing.Size(324, 131);
-            this.AppointmentTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.AppointmentTab2.TabIndex = 6;
-            this.AppointmentTab2.Text = "AppointmentTab2";
-            // 
-            // 
-            // 
-            this.AppointmentTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab2.TitleVisible = false;
-            // 
-            // buttonItem12
-            // 
-            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
-            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem12.Name = "buttonItem12";
-            this.buttonItem12.SubItemsExpandWidth = 14;
-            this.buttonItem12.Text = "បញ្ជីកាលវិភាគវេជ្ជៈបណ្ខិត";
-            // 
-            // AppointmentTab1
-            // 
-            this.AppointmentTab1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab1.ContainerControlProcessDialogKey = true;
-            this.AppointmentTab1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AppointmentTab1.DragDropSupport = true;
-            this.AppointmentTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem10,
-            this.btnListAppointment});
-            this.AppointmentTab1.Location = new System.Drawing.Point(3, 0);
-            this.AppointmentTab1.Margin = new System.Windows.Forms.Padding(4);
-            this.AppointmentTab1.Name = "AppointmentTab1";
-            this.AppointmentTab1.Size = new System.Drawing.Size(363, 131);
-            this.AppointmentTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.AppointmentTab1.TabIndex = 5;
-            this.AppointmentTab1.Text = "AppointmentTab1";
-            // 
-            // 
-            // 
-            this.AppointmentTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.AppointmentTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AppointmentTab1.TitleVisible = false;
-            // 
-            // buttonItem10
-            // 
-            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
-            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem10.Name = "buttonItem10";
-            this.buttonItem10.SubItemsExpandWidth = 14;
-            this.buttonItem10.Text = "ទទួលការណាត់";
-            // 
-            // btnListAppointment
-            // 
-            this.btnListAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnListAppointment.Image")));
-            this.btnListAppointment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListAppointment.Name = "btnListAppointment";
-            this.btnListAppointment.SubItemsExpandWidth = 14;
-            this.btnListAppointment.Text = "បញ្ជីការណាត់ជួប";
-            this.btnListAppointment.Click += new System.EventHandler(this.btnListAppointment_Click);
-            // 
             // ribbonPanel5
             // 
             this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -787,7 +804,7 @@
             this.ribbonPanel5.Location = new System.Drawing.Point(0, 79);
             this.ribbonPanel5.Name = "ribbonPanel5";
             this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel5.Size = new System.Drawing.Size(1478, 133);
+            this.ribbonPanel5.Size = new System.Drawing.Size(1817, 133);
             // 
             // 
             // 
@@ -911,6 +928,397 @@
             this.buttonItem28.Name = "buttonItem28";
             this.buttonItem28.SubItemsExpandWidth = 14;
             this.buttonItem28.Text = "ចេញវិក័យប័ត្រ";
+            // 
+            // ribbonPanel9
+            // 
+            this.ribbonPanel9.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel9.Controls.Add(this.Visitor2);
+            this.ribbonPanel9.Controls.Add(this.Visitor1);
+            this.ribbonPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel9.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel9.Name = "ribbonPanel9";
+            this.ribbonPanel9.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel9.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel9.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel9.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel9.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel9.TabIndex = 9;
+            this.ribbonPanel9.Visible = false;
+            // 
+            // Visitor2
+            // 
+            this.Visitor2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.Visitor2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Visitor2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Visitor2.ContainerControlProcessDialogKey = true;
+            this.Visitor2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Visitor2.DragDropSupport = true;
+            this.Visitor2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem13});
+            this.Visitor2.Location = new System.Drawing.Point(412, 0);
+            this.Visitor2.Margin = new System.Windows.Forms.Padding(4);
+            this.Visitor2.Name = "Visitor2";
+            this.Visitor2.Size = new System.Drawing.Size(316, 131);
+            this.Visitor2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Visitor2.TabIndex = 7;
+            this.Visitor2.Text = "Visitor2";
+            // 
+            // 
+            // 
+            this.Visitor2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Visitor2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Visitor2.TitleVisible = false;
+            // 
+            // buttonItem13
+            // 
+            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
+            this.buttonItem13.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem13.Name = "buttonItem13";
+            this.buttonItem13.SubItemsExpandWidth = 14;
+            this.buttonItem13.Text = "តាមដានការចូលសួរសុខទុក្ខ";
+            // 
+            // Visitor1
+            // 
+            this.Visitor1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.Visitor1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Visitor1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Visitor1.ContainerControlProcessDialogKey = true;
+            this.Visitor1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Visitor1.DragDropSupport = true;
+            this.Visitor1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem15,
+            this.btnListVisitor});
+            this.Visitor1.Location = new System.Drawing.Point(3, 0);
+            this.Visitor1.Margin = new System.Windows.Forms.Padding(4);
+            this.Visitor1.Name = "Visitor1";
+            this.Visitor1.Size = new System.Drawing.Size(409, 131);
+            this.Visitor1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Visitor1.TabIndex = 8;
+            this.Visitor1.Text = "Visitor1";
+            // 
+            // 
+            // 
+            this.Visitor1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Visitor1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Visitor1.TitleVisible = false;
+            // 
+            // buttonItem15
+            // 
+            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
+            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem15.Name = "buttonItem15";
+            this.buttonItem15.SubItemsExpandWidth = 14;
+            this.buttonItem15.Text = "ចុះឈ្មោះអ្នកសួរសុខទុក្ខ";
+            // 
+            // btnListVisitor
+            // 
+            this.btnListVisitor.Image = ((System.Drawing.Image)(resources.GetObject("btnListVisitor.Image")));
+            this.btnListVisitor.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListVisitor.Name = "btnListVisitor";
+            this.btnListVisitor.SubItemsExpandWidth = 14;
+            this.btnListVisitor.Text = "បញ្ជីអ្នកសួរសុខទុក្ខ";
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.StaffTab2);
+            this.ribbonPanel2.Controls.Add(this.StaffTab1);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            // 
+            // StaffTab2
+            // 
+            this.StaffTab2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.StaffTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.StaffTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.StaffTab2.ContainerControlProcessDialogKey = true;
+            this.StaffTab2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.StaffTab2.DragDropSupport = true;
+            this.StaffTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnStaffDocument});
+            this.StaffTab2.Location = new System.Drawing.Point(374, 0);
+            this.StaffTab2.Margin = new System.Windows.Forms.Padding(4);
+            this.StaffTab2.Name = "StaffTab2";
+            this.StaffTab2.Size = new System.Drawing.Size(316, 131);
+            this.StaffTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.StaffTab2.TabIndex = 6;
+            this.StaffTab2.Text = "StaffTab2";
+            // 
+            // 
+            // 
+            this.StaffTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.StaffTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.StaffTab2.TitleVisible = false;
+            // 
+            // btnStaffDocument
+            // 
+            this.btnStaffDocument.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffDocument.Image")));
+            this.btnStaffDocument.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnStaffDocument.Name = "btnStaffDocument";
+            this.btnStaffDocument.SubItemsExpandWidth = 14;
+            this.btnStaffDocument.Text = "ឯកសារបុគ្គលិក";
+            // 
+            // StaffTab1
+            // 
+            this.StaffTab1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.StaffTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.StaffTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.StaffTab1.ContainerControlProcessDialogKey = true;
+            this.StaffTab1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.StaffTab1.DragDropSupport = true;
+            this.StaffTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnStaffRegistration,
+            this.btnListStaff});
+            this.StaffTab1.Location = new System.Drawing.Point(3, 0);
+            this.StaffTab1.Margin = new System.Windows.Forms.Padding(4);
+            this.StaffTab1.Name = "StaffTab1";
+            this.StaffTab1.Size = new System.Drawing.Size(371, 131);
+            this.StaffTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.StaffTab1.TabIndex = 5;
+            this.StaffTab1.Text = "StaffTab1";
+            // 
+            // 
+            // 
+            this.StaffTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.StaffTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.StaffTab1.TitleVisible = false;
+            // 
+            // btnStaffRegistration
+            // 
+            this.btnStaffRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffRegistration.Image")));
+            this.btnStaffRegistration.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnStaffRegistration.Name = "btnStaffRegistration";
+            this.btnStaffRegistration.SubItemsExpandWidth = 14;
+            this.btnStaffRegistration.Text = "ចុះឈ្មោះបុគ្គលិក";
+            this.btnStaffRegistration.Click += new System.EventHandler(this.btnStaffRegistration_Click);
+            // 
+            // btnListStaff
+            // 
+            this.btnListStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaff.Image")));
+            this.btnListStaff.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListStaff.Name = "btnListStaff";
+            this.btnListStaff.SubItemsExpandWidth = 14;
+            this.btnListStaff.Text = "បញ្ជីឈ្មោះបុគ្គលិក";
+            this.btnListStaff.Click += new System.EventHandler(this.btnListStaff_Click);
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel7.Controls.Add(this.UserTab);
+            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel7.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel7.Name = "ribbonPanel7";
+            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel7.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel7.TabIndex = 7;
+            this.ribbonPanel7.Visible = false;
+            // 
+            // UserTab
+            // 
+            this.UserTab.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.UserTab.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.UserTab.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.UserTab.ContainerControlProcessDialogKey = true;
+            this.UserTab.Dock = System.Windows.Forms.DockStyle.Left;
+            this.UserTab.DragDropSupport = true;
+            this.UserTab.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnCreateUser,
+            this.btnUserList});
+            this.UserTab.Location = new System.Drawing.Point(3, 0);
+            this.UserTab.Margin = new System.Windows.Forms.Padding(4);
+            this.UserTab.Name = "UserTab";
+            this.UserTab.Size = new System.Drawing.Size(501, 131);
+            this.UserTab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.UserTab.TabIndex = 2;
+            this.UserTab.Text = "UserTab";
+            // 
+            // 
+            // 
+            this.UserTab.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.UserTab.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.UserTab.TitleVisible = false;
+            // 
+            // btnCreateUser
+            // 
+            this.btnCreateUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateUser.Image")));
+            this.btnCreateUser.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.SubItemsExpandWidth = 14;
+            this.btnCreateUser.Text = "បង្កើតគណនីប្រើប្រាស់";
+            // 
+            // btnUserList
+            // 
+            this.btnUserList.Image = ((System.Drawing.Image)(resources.GetObject("btnUserList.Image")));
+            this.btnUserList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnUserList.Name = "btnUserList";
+            this.btnUserList.SubItemsExpandWidth = 14;
+            this.btnUserList.Text = "បញ្ជីអ្នកប្រើប្រាស់";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.MedicineTab);
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 79);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1817, 133);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
+            // 
+            // MedicineTab
+            // 
+            this.MedicineTab.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.MedicineTab.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.MedicineTab.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.MedicineTab.ContainerControlProcessDialogKey = true;
+            this.MedicineTab.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MedicineTab.DragDropSupport = true;
+            this.MedicineTab.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnAddMedicineStock,
+            this.btnListMedicine,
+            this.btnStockStatus});
+            this.MedicineTab.Location = new System.Drawing.Point(3, 0);
+            this.MedicineTab.Margin = new System.Windows.Forms.Padding(4);
+            this.MedicineTab.Name = "MedicineTab";
+            this.MedicineTab.Size = new System.Drawing.Size(425, 131);
+            this.MedicineTab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.MedicineTab.TabIndex = 14;
+            this.MedicineTab.Text = "MedicineTab";
+            // 
+            // 
+            // 
+            this.MedicineTab.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.MedicineTab.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.MedicineTab.TitleVisible = false;
+            // 
+            // btnAddMedicineStock
+            // 
+            this.btnAddMedicineStock.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMedicineStock.Image")));
+            this.btnAddMedicineStock.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnAddMedicineStock.Name = "btnAddMedicineStock";
+            this.btnAddMedicineStock.SubItemsExpandWidth = 14;
+            this.btnAddMedicineStock.Text = "បញ្ចូលស្តុកថ្នាំ";
+            // 
+            // btnListMedicine
+            // 
+            this.btnListMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnListMedicine.Image")));
+            this.btnListMedicine.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListMedicine.Name = "btnListMedicine";
+            this.btnListMedicine.SubItemsExpandWidth = 14;
+            this.btnListMedicine.Text = "បញ្ជីឱសថ";
+            this.btnListMedicine.Click += new System.EventHandler(this.btnListMedicine_Click);
+            // 
+            // btnStockStatus
+            // 
+            this.btnStockStatus.Image = ((System.Drawing.Image)(resources.GetObject("btnStockStatus.Image")));
+            this.btnStockStatus.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnStockStatus.Name = "btnStockStatus";
+            this.btnStockStatus.SubItemsExpandWidth = 14;
+            this.btnStockStatus.Text = "ស្ថានភាពស្តុកថ្នាំ";
             // 
             // ribbonPanel10
             // 
@@ -1039,321 +1447,6 @@
             this.buttonItem20.SubItemsExpandWidth = 14;
             this.buttonItem20.Text = "បញ្ជីព័ត៌មានបន្ទប់";
             // 
-            // ribbonPanel9
-            // 
-            this.ribbonPanel9.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel9.Controls.Add(this.Visitor2);
-            this.ribbonPanel9.Controls.Add(this.Visitor1);
-            this.ribbonPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel9.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel9.Name = "ribbonPanel9";
-            this.ribbonPanel9.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel9.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel9.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel9.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel9.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel9.TabIndex = 9;
-            this.ribbonPanel9.Visible = false;
-            // 
-            // Visitor2
-            // 
-            this.Visitor2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.Visitor2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Visitor2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Visitor2.ContainerControlProcessDialogKey = true;
-            this.Visitor2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Visitor2.DragDropSupport = true;
-            this.Visitor2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem13});
-            this.Visitor2.Location = new System.Drawing.Point(412, 0);
-            this.Visitor2.Margin = new System.Windows.Forms.Padding(4);
-            this.Visitor2.Name = "Visitor2";
-            this.Visitor2.Size = new System.Drawing.Size(316, 131);
-            this.Visitor2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Visitor2.TabIndex = 7;
-            this.Visitor2.Text = "Visitor2";
-            // 
-            // 
-            // 
-            this.Visitor2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Visitor2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Visitor2.TitleVisible = false;
-            // 
-            // buttonItem13
-            // 
-            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
-            this.buttonItem13.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem13.Name = "buttonItem13";
-            this.buttonItem13.SubItemsExpandWidth = 14;
-            this.buttonItem13.Text = "តាមដានការចូលសួរសុខទុក្ខ";
-            // 
-            // Visitor1
-            // 
-            this.Visitor1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.Visitor1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Visitor1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Visitor1.ContainerControlProcessDialogKey = true;
-            this.Visitor1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Visitor1.DragDropSupport = true;
-            this.Visitor1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem15,
-            this.buttonItem16});
-            this.Visitor1.Location = new System.Drawing.Point(3, 0);
-            this.Visitor1.Margin = new System.Windows.Forms.Padding(4);
-            this.Visitor1.Name = "Visitor1";
-            this.Visitor1.Size = new System.Drawing.Size(409, 131);
-            this.Visitor1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Visitor1.TabIndex = 8;
-            this.Visitor1.Text = "Visitor1";
-            // 
-            // 
-            // 
-            this.Visitor1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Visitor1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Visitor1.TitleVisible = false;
-            // 
-            // buttonItem15
-            // 
-            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
-            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem15.Name = "buttonItem15";
-            this.buttonItem15.SubItemsExpandWidth = 14;
-            this.buttonItem15.Text = "ចុះឈ្មោះអ្នកសួរសុខទុក្ខ";
-            // 
-            // buttonItem16
-            // 
-            this.buttonItem16.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem16.Image")));
-            this.buttonItem16.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem16.Name = "buttonItem16";
-            this.buttonItem16.SubItemsExpandWidth = 14;
-            this.buttonItem16.Text = "បញ្ជីអ្នកសួរសុខទុក្ខ";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.MedicineTab);
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
-            // 
-            // MedicineTab
-            // 
-            this.MedicineTab.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.MedicineTab.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.MedicineTab.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.MedicineTab.ContainerControlProcessDialogKey = true;
-            this.MedicineTab.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MedicineTab.DragDropSupport = true;
-            this.MedicineTab.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnAddMedicineStock,
-            this.btnListMedicine,
-            this.btnStockStatus});
-            this.MedicineTab.Location = new System.Drawing.Point(3, 0);
-            this.MedicineTab.Margin = new System.Windows.Forms.Padding(4);
-            this.MedicineTab.Name = "MedicineTab";
-            this.MedicineTab.Size = new System.Drawing.Size(425, 131);
-            this.MedicineTab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.MedicineTab.TabIndex = 14;
-            this.MedicineTab.Text = "MedicineTab";
-            // 
-            // 
-            // 
-            this.MedicineTab.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.MedicineTab.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.MedicineTab.TitleVisible = false;
-            // 
-            // btnAddMedicineStock
-            // 
-            this.btnAddMedicineStock.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMedicineStock.Image")));
-            this.btnAddMedicineStock.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnAddMedicineStock.Name = "btnAddMedicineStock";
-            this.btnAddMedicineStock.SubItemsExpandWidth = 14;
-            this.btnAddMedicineStock.Text = "បញ្ចូលស្តុកថ្នាំ";
-            // 
-            // btnListMedicine
-            // 
-            this.btnListMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnListMedicine.Image")));
-            this.btnListMedicine.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListMedicine.Name = "btnListMedicine";
-            this.btnListMedicine.SubItemsExpandWidth = 14;
-            this.btnListMedicine.Text = "បញ្ជីឱសថ";
-            // 
-            // btnStockStatus
-            // 
-            this.btnStockStatus.Image = ((System.Drawing.Image)(resources.GetObject("btnStockStatus.Image")));
-            this.btnStockStatus.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnStockStatus.Name = "btnStockStatus";
-            this.btnStockStatus.SubItemsExpandWidth = 14;
-            this.btnStockStatus.Text = "ស្ថានភាពស្តុកថ្នាំ";
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.StaffTab2);
-            this.ribbonPanel2.Controls.Add(this.StaffTab1);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // StaffTab2
-            // 
-            this.StaffTab2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.StaffTab2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.StaffTab2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.StaffTab2.ContainerControlProcessDialogKey = true;
-            this.StaffTab2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.StaffTab2.DragDropSupport = true;
-            this.StaffTab2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnStaffDocument});
-            this.StaffTab2.Location = new System.Drawing.Point(374, 0);
-            this.StaffTab2.Margin = new System.Windows.Forms.Padding(4);
-            this.StaffTab2.Name = "StaffTab2";
-            this.StaffTab2.Size = new System.Drawing.Size(316, 131);
-            this.StaffTab2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.StaffTab2.TabIndex = 6;
-            this.StaffTab2.Text = "StaffTab2";
-            // 
-            // 
-            // 
-            this.StaffTab2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.StaffTab2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.StaffTab2.TitleVisible = false;
-            // 
-            // btnStaffDocument
-            // 
-            this.btnStaffDocument.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffDocument.Image")));
-            this.btnStaffDocument.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnStaffDocument.Name = "btnStaffDocument";
-            this.btnStaffDocument.SubItemsExpandWidth = 14;
-            this.btnStaffDocument.Text = "ឯកសារបុគ្គលិក";
-            // 
-            // StaffTab1
-            // 
-            this.StaffTab1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.StaffTab1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.StaffTab1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.StaffTab1.ContainerControlProcessDialogKey = true;
-            this.StaffTab1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.StaffTab1.DragDropSupport = true;
-            this.StaffTab1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnStaffRegistration,
-            this.btnListStaff});
-            this.StaffTab1.Location = new System.Drawing.Point(3, 0);
-            this.StaffTab1.Margin = new System.Windows.Forms.Padding(4);
-            this.StaffTab1.Name = "StaffTab1";
-            this.StaffTab1.Size = new System.Drawing.Size(371, 131);
-            this.StaffTab1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.StaffTab1.TabIndex = 5;
-            this.StaffTab1.Text = "StaffTab1";
-            // 
-            // 
-            // 
-            this.StaffTab1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.StaffTab1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.StaffTab1.TitleVisible = false;
-            // 
-            // btnStaffRegistration
-            // 
-            this.btnStaffRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffRegistration.Image")));
-            this.btnStaffRegistration.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnStaffRegistration.Name = "btnStaffRegistration";
-            this.btnStaffRegistration.SubItemsExpandWidth = 14;
-            this.btnStaffRegistration.Text = "ចុះឈ្មោះបុគ្គលិក";
-            // 
-            // btnListStaff
-            // 
-            this.btnListStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnListStaff.Image")));
-            this.btnListStaff.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListStaff.Name = "btnListStaff";
-            this.btnListStaff.SubItemsExpandWidth = 14;
-            this.btnListStaff.Text = "បញ្ជីឈ្មោះបុគ្គលិក";
-            // 
             // ribbonPanel8
             // 
             this.ribbonPanel8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1428,80 +1521,6 @@
             this.btnRetore.SubItemsExpandWidth = 14;
             this.btnRetore.Text = "ស្តារទិន្នន័យឡើងវិញ";
             // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel7.Controls.Add(this.UserTab);
-            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel7.Location = new System.Drawing.Point(0, 79);
-            this.ribbonPanel7.Name = "ribbonPanel7";
-            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel7.Size = new System.Drawing.Size(1478, 133);
-            // 
-            // 
-            // 
-            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel7.TabIndex = 7;
-            this.ribbonPanel7.Visible = false;
-            // 
-            // UserTab
-            // 
-            this.UserTab.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.UserTab.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.UserTab.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.UserTab.ContainerControlProcessDialogKey = true;
-            this.UserTab.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UserTab.DragDropSupport = true;
-            this.UserTab.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnCreateUser,
-            this.btnUserList});
-            this.UserTab.Location = new System.Drawing.Point(3, 0);
-            this.UserTab.Margin = new System.Windows.Forms.Padding(4);
-            this.UserTab.Name = "UserTab";
-            this.UserTab.Size = new System.Drawing.Size(501, 131);
-            this.UserTab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.UserTab.TabIndex = 2;
-            this.UserTab.Text = "UserTab";
-            // 
-            // 
-            // 
-            this.UserTab.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.UserTab.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.UserTab.TitleVisible = false;
-            // 
-            // btnCreateUser
-            // 
-            this.btnCreateUser.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateUser.Image")));
-            this.btnCreateUser.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnCreateUser.Name = "btnCreateUser";
-            this.btnCreateUser.SubItemsExpandWidth = 14;
-            this.btnCreateUser.Text = "បង្កើតគណនីប្រើប្រាស់";
-            // 
-            // btnUserList
-            // 
-            this.btnUserList.Image = ((System.Drawing.Image)(resources.GetObject("btnUserList.Image")));
-            this.btnUserList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnUserList.Name = "btnUserList";
-            this.btnUserList.SubItemsExpandWidth = 14;
-            this.btnUserList.Text = "បញ្ជីអ្នកប្រើប្រាស់";
-            // 
             // applicationButton1
             // 
             this.applicationButton1.AutoExpandOnClick = true;
@@ -1530,13 +1549,13 @@
             // 
             // ribbonTabPatient
             // 
-            this.ribbonTabPatient.Checked = true;
             this.ribbonTabPatient.Name = "ribbonTabPatient";
             this.ribbonTabPatient.Panel = this.ribbonPanel1;
             this.ribbonTabPatient.Text = "គ្រប់គ្រងអ្នកជំងឺ";
             // 
             // ribbonTabStaff
             // 
+            this.ribbonTabStaff.Checked = true;
             this.ribbonTabStaff.Name = "ribbonTabStaff";
             this.ribbonTabStaff.Panel = this.ribbonPanel2;
             this.ribbonTabStaff.Text = "ផ្នែកបុគ្គលិក";
@@ -1605,7 +1624,7 @@
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelEx2.Location = new System.Drawing.Point(0, 703);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(1478, 54);
+            this.panelEx2.Size = new System.Drawing.Size(1817, 54);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1767,7 +1786,7 @@
             this.mainPanel.Font = new System.Drawing.Font("Khmer Kep", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainPanel.Location = new System.Drawing.Point(0, 212);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1478, 491);
+            this.mainPanel.Size = new System.Drawing.Size(1817, 491);
             this.mainPanel.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.mainPanel.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.mainPanel.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1782,7 +1801,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1478, 757);
+            this.ClientSize = new System.Drawing.Size(1817, 757);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelEx2);
             this.Controls.Add(this.menu);
@@ -1794,16 +1813,16 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            this.ribbonPanel1.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
+            this.ribbonPanel1.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
-            this.ribbonPanel10.ResumeLayout(false);
             this.ribbonPanel9.ResumeLayout(false);
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
-            this.ribbonPanel8.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
+            this.ribbonPanel4.ResumeLayout(false);
+            this.ribbonPanel10.ResumeLayout(false);
+            this.ribbonPanel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1817,9 +1836,9 @@
         private DevComponents.DotNetBar.RibbonBar PatientTab3;
         private DevComponents.DotNetBar.ButtonItem btnListInpatientResidence;
         private DevComponents.DotNetBar.RibbonBar PatientTab2;
-        private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem btnListDianogsis;
         private DevComponents.DotNetBar.ButtonItem btnListTreatment;
-        private DevComponents.DotNetBar.ButtonItem buttonItem6;
+        private DevComponents.DotNetBar.ButtonItem btnListPrescription;
         private DevComponents.DotNetBar.RibbonBar PatientTab1;
         private DevComponents.DotNetBar.ButtonItem btnAddNewPatient;
         private DevComponents.DotNetBar.ButtonItem btnListPatient;
@@ -1832,7 +1851,7 @@
         public DevComponents.DotNetBar.ButtonItem buttonItem13;
         private DevComponents.DotNetBar.RibbonBar Visitor1;
         public DevComponents.DotNetBar.ButtonItem buttonItem15;
-        public DevComponents.DotNetBar.ButtonItem buttonItem16;
+        public DevComponents.DotNetBar.ButtonItem btnListVisitor;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel5;
         private DevComponents.DotNetBar.RibbonBar ReportTab2;
         public DevComponents.DotNetBar.ButtonItem buttonItem22;
@@ -1869,11 +1888,11 @@
         private DevComponents.DotNetBar.RibbonBar FunctionTab4;
         public DevComponents.DotNetBar.ButtonItem btnListDepartment;
         private DevComponents.DotNetBar.RibbonBar FunctionTab3;
-        public DevComponents.DotNetBar.ButtonItem buttonItem24;
+        public DevComponents.DotNetBar.ButtonItem btnListAppointmentType;
         private DevComponents.DotNetBar.RibbonBar FunctionTab2;
-        public DevComponents.DotNetBar.ButtonItem btnEducationLevel;
-        public DevComponents.DotNetBar.ButtonItem btnPosition;
-        public DevComponents.DotNetBar.ButtonItem btnSkill;
+        public DevComponents.DotNetBar.ButtonItem btnListAcademicDegree;
+        public DevComponents.DotNetBar.ButtonItem btnListStaffPosition;
+        public DevComponents.DotNetBar.ButtonItem btnListStaffSpecialist;
         private DevComponents.DotNetBar.RibbonBar FunctionTab1;
         public DevComponents.DotNetBar.ButtonItem btnDiseaseType;
         private DevComponents.DotNetBar.ApplicationButton applicationButton1;
@@ -1919,5 +1938,6 @@
         public DevComponents.DotNetBar.ButtonItem btnListBed;
         public DevComponents.DotNetBar.ButtonItem btnListStaffActivity;
         public DevComponents.DotNetBar.ButtonItem btnTransferPatient;
+        public DevComponents.DotNetBar.ButtonItem btnListTreatmentType;
     }
 }
