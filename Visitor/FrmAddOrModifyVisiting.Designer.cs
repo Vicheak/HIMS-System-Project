@@ -1,7 +1,7 @@
 ﻿using HIMS.Utility;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System;
 
 namespace HIMS.Visitor
 {
@@ -366,6 +366,5 @@ namespace HIMS.Visitor
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtEntryDateTime;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtLeaveDateTime;
         private DevComponents.DotNetBar.LabelX labelX2;
-
     }
 }

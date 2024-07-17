@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDepartment));
             this.lbstaffid = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -45,18 +46,16 @@
             this.txtCapacity = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDescription = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvDepartment = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btnAddnewbtnAddnew = new DevComponents.DotNetBar.ButtonX();
+            this.btnUpdate = new DevComponents.DotNetBar.ButtonX();
+            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
+            this.btnClean = new DevComponents.DotNetBar.ButtonX();
             this.DepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuildingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FloorNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddnewbtnAddnew = new DevComponents.DotNetBar.ButtonX();
-            this.panelTitle = new DevComponents.DotNetBar.PanelEx();
-            this.btnUpdate = new DevComponents.DotNetBar.ButtonX();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.btnClean = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +65,7 @@
             // 
             // 
             this.lbstaffid.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbstaffid.Location = new System.Drawing.Point(38, 75);
+            this.lbstaffid.Location = new System.Drawing.Point(36, 28);
             this.lbstaffid.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.lbstaffid.Name = "lbstaffid";
             this.lbstaffid.Size = new System.Drawing.Size(176, 59);
@@ -79,7 +78,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(38, 180);
+            this.labelX1.Location = new System.Drawing.Point(36, 133);
             this.labelX1.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(176, 59);
@@ -92,7 +91,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(38, 296);
+            this.labelX2.Location = new System.Drawing.Point(36, 249);
             this.labelX2.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(176, 59);
@@ -105,7 +104,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(761, 75);
+            this.labelX3.Location = new System.Drawing.Point(759, 28);
             this.labelX3.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(176, 59);
@@ -118,7 +117,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(761, 180);
+            this.labelX4.Location = new System.Drawing.Point(759, 133);
             this.labelX4.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(176, 59);
@@ -131,7 +130,7 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(761, 296);
+            this.labelX5.Location = new System.Drawing.Point(759, 249);
             this.labelX5.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(176, 59);
@@ -148,7 +147,7 @@
             this.txtStaffID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtStaffID.DisabledBackColor = System.Drawing.Color.White;
             this.txtStaffID.ForeColor = System.Drawing.Color.Black;
-            this.txtStaffID.Location = new System.Drawing.Point(238, 75);
+            this.txtStaffID.Location = new System.Drawing.Point(236, 28);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.PreventEnterBeep = true;
             this.txtStaffID.Size = new System.Drawing.Size(383, 49);
@@ -164,7 +163,7 @@
             this.txtDepartmentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDepartmentName.DisabledBackColor = System.Drawing.Color.White;
             this.txtDepartmentName.ForeColor = System.Drawing.Color.Black;
-            this.txtDepartmentName.Location = new System.Drawing.Point(238, 180);
+            this.txtDepartmentName.Location = new System.Drawing.Point(236, 133);
             this.txtDepartmentName.Name = "txtDepartmentName";
             this.txtDepartmentName.PreventEnterBeep = true;
             this.txtDepartmentName.Size = new System.Drawing.Size(383, 49);
@@ -180,7 +179,7 @@
             this.txtBuildingName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBuildingName.DisabledBackColor = System.Drawing.Color.White;
             this.txtBuildingName.ForeColor = System.Drawing.Color.Black;
-            this.txtBuildingName.Location = new System.Drawing.Point(238, 296);
+            this.txtBuildingName.Location = new System.Drawing.Point(236, 249);
             this.txtBuildingName.Name = "txtBuildingName";
             this.txtBuildingName.PreventEnterBeep = true;
             this.txtBuildingName.Size = new System.Drawing.Size(383, 49);
@@ -196,7 +195,7 @@
             this.txtfloorNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtfloorNumber.DisabledBackColor = System.Drawing.Color.White;
             this.txtfloorNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtfloorNumber.Location = new System.Drawing.Point(959, 75);
+            this.txtfloorNumber.Location = new System.Drawing.Point(957, 28);
             this.txtfloorNumber.Name = "txtfloorNumber";
             this.txtfloorNumber.PreventEnterBeep = true;
             this.txtfloorNumber.Size = new System.Drawing.Size(383, 49);
@@ -212,7 +211,7 @@
             this.txtCapacity.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCapacity.DisabledBackColor = System.Drawing.Color.White;
             this.txtCapacity.ForeColor = System.Drawing.Color.Black;
-            this.txtCapacity.Location = new System.Drawing.Point(959, 180);
+            this.txtCapacity.Location = new System.Drawing.Point(957, 133);
             this.txtCapacity.Name = "txtCapacity";
             this.txtCapacity.PreventEnterBeep = true;
             this.txtCapacity.Size = new System.Drawing.Size(383, 49);
@@ -228,7 +227,7 @@
             this.txtDescription.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDescription.DisabledBackColor = System.Drawing.Color.White;
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(959, 296);
+            this.txtDescription.Location = new System.Drawing.Point(957, 249);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PreventEnterBeep = true;
             this.txtDescription.Size = new System.Drawing.Size(383, 49);
@@ -256,7 +255,6 @@
             this.dgvDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDepartment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DepartmentID,
-            this.StaffID,
             this.DepartmentName,
             this.BuildingName,
             this.FloorNumber,
@@ -273,7 +271,7 @@
             this.dgvDepartment.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDepartment.EnableHeadersVisualStyles = false;
             this.dgvDepartment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvDepartment.Location = new System.Drawing.Point(38, 499);
+            this.dgvDepartment.Location = new System.Drawing.Point(10, 452);
             this.dgvDepartment.Name = "dgvDepartment";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
@@ -290,8 +288,64 @@
             this.dgvDepartment.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDepartment.RowTemplate.Height = 35;
             this.dgvDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDepartment.Size = new System.Drawing.Size(1304, 255);
+            this.dgvDepartment.Size = new System.Drawing.Size(1350, 277);
             this.dgvDepartment.TabIndex = 12;
+            // 
+            // btnAddnewbtnAddnew
+            // 
+            this.btnAddnewbtnAddnew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddnewbtnAddnew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddnewbtnAddnew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddnewbtnAddnew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddnewbtnAddnew.Image")));
+            this.btnAddnewbtnAddnew.Location = new System.Drawing.Point(36, 350);
+            this.btnAddnewbtnAddnew.Name = "btnAddnewbtnAddnew";
+            this.btnAddnewbtnAddnew.Size = new System.Drawing.Size(146, 55);
+            this.btnAddnewbtnAddnew.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnAddnewbtnAddnew.TabIndex = 13;
+            this.btnAddnewbtnAddnew.Text = "បញ្ចូល";
+            this.btnAddnewbtnAddnew.Click += new System.EventHandler(this.btnAddnewbtnAddnew_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(263, 350);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(146, 55);
+            this.btnUpdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "កែប្រែ";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(484, 350);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(146, 55);
+            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClean.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClean.Image = ((System.Drawing.Image)(resources.GetObject("btnClean.Image")));
+            this.btnClean.Location = new System.Drawing.Point(720, 350);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(146, 55);
+            this.btnClean.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.btnClean.TabIndex = 23;
+            this.btnClean.Text = "សម្អាត";
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // DepartmentID
             // 
@@ -301,15 +355,6 @@
             this.DepartmentID.MinimumWidth = 6;
             this.DepartmentID.Name = "DepartmentID";
             this.DepartmentID.Width = 221;
-            // 
-            // StaffID
-            // 
-            this.StaffID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.HeaderText = "លេខសម្គាល់បុគ្គលិក";
-            this.StaffID.MinimumWidth = 6;
-            this.StaffID.Name = "StaffID";
-            this.StaffID.Width = 201;
             // 
             // DepartmentName
             // 
@@ -353,89 +398,14 @@
             this.Description.Name = "Description";
             this.Description.Width = 125;
             // 
-            // btnAddnewbtnAddnew
-            // 
-            this.btnAddnewbtnAddnew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddnewbtnAddnew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddnewbtnAddnew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddnewbtnAddnew.Location = new System.Drawing.Point(38, 397);
-            this.btnAddnewbtnAddnew.Name = "btnAddnewbtnAddnew";
-            this.btnAddnewbtnAddnew.Size = new System.Drawing.Size(146, 55);
-            this.btnAddnewbtnAddnew.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnAddnewbtnAddnew.TabIndex = 13;
-            this.btnAddnewbtnAddnew.Text = "បញ្ចូល";
-            this.btnAddnewbtnAddnew.Click += new System.EventHandler(this.btnAddnewbtnAddnew_Click);
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelTitle.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.panelTitle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelTitle.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1374, 64);
-            this.panelTitle.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelTitle.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelTitle.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelTitle.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelTitle.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelTitle.Style.GradientAngle = 90;
-            this.panelTitle.Style.MarginLeft = 20;
-            this.panelTitle.StyleMouseOver.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199)))));
-            this.panelTitle.StyleMouseOver.MarginLeft = 20;
-            this.panelTitle.TabIndex = 17;
-            this.panelTitle.Text = "ព័ត៌មាននាយកដ្ឋាន";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnUpdate.Location = new System.Drawing.Point(265, 397);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(146, 55);
-            this.btnUpdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnUpdate.TabIndex = 21;
-            this.btnUpdate.Text = "កែប្រែ";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Location = new System.Drawing.Point(486, 397);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(146, 55);
-            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnDelete.TabIndex = 22;
-            this.btnDelete.Text = "លុប";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnClean
-            // 
-            this.btnClean.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClean.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnClean.Location = new System.Drawing.Point(722, 397);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(146, 55);
-            this.btnClean.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-            this.btnClean.TabIndex = 23;
-            this.btnClean.Text = "សម្អាត";
-            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
-            // 
             // FrmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1374, 777);
+            this.ClientSize = new System.Drawing.Size(1374, 741);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.btnAddnewbtnAddnew);
             this.Controls.Add(this.dgvDepartment);
             this.Controls.Add(this.txtDescription);
@@ -475,17 +445,14 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtDescription;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvDepartment;
         private DevComponents.DotNetBar.ButtonX btnAddnewbtnAddnew;
-        private DevComponents.DotNetBar.PanelEx panelTitle;
+        private DevComponents.DotNetBar.ButtonX btnUpdate;
+        private DevComponents.DotNetBar.ButtonX btnDelete;
+        private DevComponents.DotNetBar.ButtonX btnClean;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StaffID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuildingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FloorNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private DevComponents.DotNetBar.ButtonX btnUpdate;
-        private DevComponents.DotNetBar.ButtonX btnDelete;
-        private DevComponents.DotNetBar.ButtonX btnClean;
-
     }
 }
