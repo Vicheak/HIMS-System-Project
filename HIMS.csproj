@@ -312,19 +312,6 @@
     <Compile Include="Utility\GeneralUtil.cs" />
     <Compile Include="Utility\NotificationUtil.cs" />
     <Compile Include="Utility\ValidateUtil.cs" />
-    <Compile Include="Visitor\FrmAddOrModifyVisiting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visitor\FrmAddOrModifyVisiting.Designer.cs">
-      <DependentUpon>FrmAddOrModifyVisiting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visitor\FrmVisitorDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visitor\FrmVisitorDetail.Designer.cs">
-      <DependentUpon>FrmVisitorDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visitor\PatientSelectedEventArgs.cs" />
     <EmbeddedResource Include="Appointment\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </EmbeddedResource>

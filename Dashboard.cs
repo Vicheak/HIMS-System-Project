@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HIMS.Appointment;
 using HIMS.Medicine;
-using HIMS.Visitor;
 using HIMS.Staff;
 
 namespace HIMS
