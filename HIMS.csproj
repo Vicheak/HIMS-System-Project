@@ -385,6 +385,9 @@
     <EmbeddedResource Include="Patient\FrmAddOrModifyTreatment.resx">
       <DependentUpon>FrmAddOrModifyTreatment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmDianogsis.resx">
+      <DependentUpon>FrmDianogsis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmInpatientResidence.resx">
       <DependentUpon>FrmInpatientResidence.cs</DependentUpon>
     </EmbeddedResource>

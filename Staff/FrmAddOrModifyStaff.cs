@@ -357,8 +357,7 @@ namespace HIMS.Staff
 
             var emailValue = new object();
 
-            //&& !ValidateUtil.IsValidEmail(txtEmail.Text)
-            if (!string.IsNullOrWhiteSpace(txtEmail.Text) )
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text) && !ValidateUtil.IsValidEmail(txtEmail.Text))
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សូមបញ្ចូលអ៊ីម៉ែលឱ្យបានត្រឹមត្រូវ", Color.Yellow);
                 txtEmail.Focus();
@@ -367,18 +366,16 @@ namespace HIMS.Staff
             else if (string.IsNullOrWhiteSpace(txtEmail.Text) || txtEmail.Text.Equals("N/A")) emailValue = DBNull.Value;
             else emailValue = txtEmail.Text;
 
-            //&& !ValidateUtil.IsValidNumericInput(txtNationalCardID.Text)
-            //if (!string.IsNullOrWhiteSpace(txtNationalCardID.Text) )
-            //{
-            //    NotificationUtil.AlertNotificationWarning("Warning", "សូមបញ្ចូលលេខអត្តសញ្ញាណបណ្ណឱ្យបានត្រឹមត្រូវ", Color.Yellow);
-            //    txtNationalCardID.Focus();
-            //    return;
-            //}
+            if (!string.IsNullOrWhiteSpace(txtNationalCardID.Text) && !ValidateUtil.IsValidNumericInput(txtNationalCardID.Text))
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សូមបញ្ចូលលេខអត្តសញ្ញាណបណ្ណឱ្យបានត្រឹមត្រូវ", Color.Yellow);
+                txtNationalCardID.Focus();
+                return;
+            }
 
             var backAccNoValue = new object();
 
-            //&& !ValidateUtil.IsValidNumericInput(txtBankNo.Text)
-            if (!string.IsNullOrEmpty(txtBankNo.Text) )
+            if (!string.IsNullOrEmpty(txtBankNo.Text) && !ValidateUtil.IsValidNumericInput(txtBankNo.Text))
             {
                 NotificationUtil.AlertNotificationWarning("Warning", "សូមបញ្ចូលលេខលេខកុងធនាគារឱ្យបានត្រឹមត្រូវ", Color.Yellow);
                 txtBankNo.Focus();

@@ -64,3 +64,4 @@ D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmA
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Function.FrmAppointmentType.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Staff.FrmAddOrModifyStaff.resources
 D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Staff.FrmStaff.resources
+D:\Target document\C# programming\HIMS Project\HIMS\obj\Debug\HIMS.Patient.FrmDianogsis.resources
