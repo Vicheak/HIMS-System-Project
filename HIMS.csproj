@@ -351,6 +351,9 @@
     <EmbeddedResource Include="Function\FrmStaffPosition.resx">
       <DependentUpon>FrmStaffPosition.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Function\FrmTreatmentType.resx">
+      <DependentUpon>FrmTreatmentType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Helper\CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,10 +437,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-    <Folder Include="User\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets" Condition="Exists('packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
