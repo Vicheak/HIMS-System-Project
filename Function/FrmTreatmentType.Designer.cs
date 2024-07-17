@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.TreatmentTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TreatmentTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,47 +51,48 @@
             // dgv
             // 
             this.dgv.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TreatmentTypeID,
             this.TreatmentTypeName,
             this.Description});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgv.EnableHeadersVisualStyles = false;
-            this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgv.Location = new System.Drawing.Point(12, 12);
+            this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgv.Location = new System.Drawing.Point(12, 17);
             this.dgv.Name = "dgv";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv.Size = new System.Drawing.Size(558, 473);
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Khmer Kep", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.Size = new System.Drawing.Size(621, 673);
             this.dgv.TabIndex = 0;
             // 
             // TreatmentTypeID
@@ -99,23 +100,26 @@
             this.TreatmentTypeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.TreatmentTypeID.DataPropertyName = "TreatmentTypeID";
             this.TreatmentTypeID.HeaderText = "លេខសម្គាល់";
+            this.TreatmentTypeID.MinimumWidth = 6;
             this.TreatmentTypeID.Name = "TreatmentTypeID";
             this.TreatmentTypeID.ReadOnly = true;
-            this.TreatmentTypeID.Width = 115;
+            this.TreatmentTypeID.Width = 142;
             // 
             // TreatmentTypeName
             // 
             this.TreatmentTypeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.TreatmentTypeName.DataPropertyName = "TreatmentTypeName";
             this.TreatmentTypeName.HeaderText = "ឈ្មោះប្រភេទនៃការព្យាបាល";
+            this.TreatmentTypeName.MinimumWidth = 6;
             this.TreatmentTypeName.Name = "TreatmentTypeName";
-            this.TreatmentTypeName.Width = 201;
+            this.TreatmentTypeName.Width = 254;
             // 
             // Description
             // 
             this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Description.DataPropertyName = "Description";
             this.Description.HeaderText = "ការបរិយាយ";
+            this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
             // 
             // labelX1
@@ -125,7 +129,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(588, 17);
+            this.labelX1.Location = new System.Drawing.Point(651, 17);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(131, 23);
             this.labelX1.TabIndex = 1;
@@ -138,9 +142,9 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(588, 116);
+            this.labelX2.Location = new System.Drawing.Point(651, 116);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(190, 23);
+            this.labelX2.Size = new System.Drawing.Size(248, 23);
             this.labelX2.TabIndex = 2;
             this.labelX2.Text = "<font color=\"#000000\">ឈ្មោះប្រភេទនៃការព្យាបាល</font>";
             // 
@@ -151,7 +155,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(588, 191);
+            this.labelX3.Location = new System.Drawing.Point(651, 215);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(190, 23);
             this.labelX3.TabIndex = 3;
@@ -168,10 +172,10 @@
             this.txtID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtID.DisabledBackColor = System.Drawing.Color.White;
             this.txtID.ForeColor = System.Drawing.Color.Black;
-            this.txtID.Location = new System.Drawing.Point(588, 46);
+            this.txtID.Location = new System.Drawing.Point(651, 46);
             this.txtID.Name = "txtID";
             this.txtID.PreventEnterBeep = true;
-            this.txtID.Size = new System.Drawing.Size(359, 41);
+            this.txtID.Size = new System.Drawing.Size(359, 49);
             this.txtID.TabIndex = 4;
             // 
             // txtName
@@ -185,10 +189,10 @@
             this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtName.DisabledBackColor = System.Drawing.Color.White;
             this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(588, 145);
+            this.txtName.Location = new System.Drawing.Point(651, 145);
             this.txtName.Name = "txtName";
             this.txtName.PreventEnterBeep = true;
-            this.txtName.Size = new System.Drawing.Size(359, 41);
+            this.txtName.Size = new System.Drawing.Size(359, 49);
             this.txtName.TabIndex = 5;
             // 
             // txtDesc
@@ -202,10 +206,10 @@
             this.txtDesc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDesc.DisabledBackColor = System.Drawing.Color.White;
             this.txtDesc.ForeColor = System.Drawing.Color.Black;
-            this.txtDesc.Location = new System.Drawing.Point(588, 220);
+            this.txtDesc.Location = new System.Drawing.Point(651, 244);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.PreventEnterBeep = true;
-            this.txtDesc.Size = new System.Drawing.Size(359, 41);
+            this.txtDesc.Size = new System.Drawing.Size(359, 49);
             this.txtDesc.TabIndex = 6;
             // 
             // btnSave
@@ -213,7 +217,7 @@
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Location = new System.Drawing.Point(588, 292);
+            this.btnSave.Location = new System.Drawing.Point(651, 316);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 40);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -226,7 +230,7 @@
             this.btnAdd.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdd.Location = new System.Drawing.Point(731, 292);
+            this.btnAdd.Location = new System.Drawing.Point(794, 316);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(77, 40);
             this.btnAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -239,7 +243,7 @@
             this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Location = new System.Drawing.Point(859, 292);
+            this.btnDelete.Location = new System.Drawing.Point(922, 316);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 40);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -249,9 +253,9 @@
             // 
             // FrmTreatmentType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 33F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(1047, 755);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSave);

@@ -19,6 +19,7 @@ namespace HIMS.Patient
         protected SqlDataAdapter diagnosisAdapter = new SqlDataAdapter();
         protected BindingSource diagnosisBindingSource = new BindingSource();
         DataSet dataSet = new DataSet();
+        private bool isAdded = false;
 
         public string VIEW_DIAGNOSIS = "vDiagnosis";
         public string INSERT_DIAGNOSIS = "InserttbDiagnosis";
@@ -52,7 +53,7 @@ namespace HIMS.Patient
             diagnosisAdapter.Fill(dataSet);
             diagnosisBindingSource.DataSource = dataSet;
             diagnosisBindingSource.DataMember = VIEW_DIAGNOSIS;
-            //dgvDiagnosis.DataSource = diagnosisBindingSource;
+
         }
 
         private void SetUpCommand()
@@ -131,29 +132,65 @@ namespace HIMS.Patient
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
+            //check patient ID
+            SqlCommand cmd = new SqlCommand($"EXEC spSearchPatientInfoByPreciseID '{txtPatientID.Text}'", this.connection);
+            cmd.Connection.Open();
+            SqlDataReader dataReader = cmd.ExecuteReader();
+            if (!dataReader.Read())
             {
-                diagnosisBindingSource.EndEdit();
-                diagnosisAdapter.Update(dataSet, VIEW_DIAGNOSIS);
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសលេខកូដអ្នកជំងឺអោយបានត្រឹមត្រូវ", Color.Yellow);
+                cmd.Connection.Close();
+                return;
+            }
+            cmd.Connection.Close();
 
-                NotificationUtil.AlertNotificationInsert();
-            }
-            catch (Exception ex)
+            //check staffID exist
+            SqlCommand cmdcheckstaff = new SqlCommand($"EXEC spSearchStaffInfoByPreciseID '{txtStaffID.Text}'", this.connection);
+            cmdcheckstaff.Connection.Open();
+            SqlDataReader read = cmdcheckstaff.ExecuteReader();
+            if (!read.Read())
             {
-                NotificationUtil.AlertNotificationWarning("Warning", ex.Message, Color.Yellow);
+                NotificationUtil.AlertNotificationWarning("Warning", "សូមបញ្ចូលលេខសំគាល់បុគ្គលិកអោយបានត្រឹមត្រូវ", Color.Yellow);
+                cmdcheckstaff.Connection.Close();
+                return;
             }
+            cmdcheckstaff.Connection.Close();
+
+            if (string.IsNullOrWhiteSpace(DiagnosisDatetime.Text))
+            {
+                NotificationUtil.AlertNotificationWarning("Warning", "សួមជ្រើសរើសកាលបរិច្ឆេទ", Color.Yellow);
+                return;
+            }
+            if (!ValidateUtil.ValidateTextBox(txtPhysicianNote, "Warning", "សូមបញ្ចូលលទ្ធផល") ||
+            !ValidateUtil.ValidateTextBox(txtDescription, "Warning", "សូមបញ្ចូលការបរិយាយ"))
+                return;
+
+
+
+            this.diagnosisBindingSource.EndEdit();
+            this.diagnosisAdapter.Update(dataSet, VIEW_DIAGNOSIS);
+
+            if (isAdded)
+                NotificationUtil.AlertNotificationInsert();
+            else
+                NotificationUtil.AlertNotificationEdit();
+
+            isAdded = false;
         }
 
         private void btnAddDiagnosis_Click(object sender, EventArgs e)
         {
 
-            var newRow = this.diagnosisBindingSource.AddNew() as DataRowView;
-            if (newRow != null)
+            if (!isAdded)
             {
-                newRow.Row["DiagnosisID"] = -1;
-                txtDiagnosisID.Text = "បង្កើតស្វ័យប្រវត្តិ";
+                var newRow = this.diagnosisBindingSource.AddNew() as DataRowView;
+                if (newRow != null)
+                {
+                    newRow.Row["DiagnosisID"] = -1;
+                    txtDiagnosisID.Text = "បង្កើតស្វ័យប្រវត្តិ";
+                }
             }
-
+            isAdded = true;
         }
 
         private void dgvDiagnosis_Paint(object sender, PaintEventArgs e)
@@ -181,7 +218,7 @@ namespace HIMS.Patient
             }
 
             var current = diagnosisBindingSource.Current as DataRowView;
-            CustomMessageBox result = new CustomMessageBox($"តើអ្នកពិតជាចង់លុបព័ត៌មានដែលមានលេខសំគាល់ ({current.Row["DiagnosisID"]}) មែនទេ?");
+            CustomMessageBox result = new CustomMessageBox($"តើអ្នកពិតជាចង់លុបព័ត៌មានដែលមានលេខសំគាល់ប័ណ្ណ ({current.Row["DiagnosisID"]}) មែនទេ?");
             if (result.ShowDialog() == DialogResult.OK)
             {
                 this.diagnosisBindingSource.RemoveCurrent();
@@ -191,11 +228,14 @@ namespace HIMS.Patient
 
                 NotificationUtil.AlertNotificationDelete();
             }
+
+            isAdded = false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.diagnosisBindingSource.CancelEdit();
+            isAdded = false;
 
         }
 

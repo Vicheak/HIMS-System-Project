@@ -704,5 +704,6 @@ namespace HIMS.Patient
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffID;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPhysicianNote;
+
     }
 }
